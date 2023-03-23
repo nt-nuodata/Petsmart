@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_UPC_OFFER_0
 
+# DBTITLE 1, SALES_TRANS_UPC_OFFER_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_TRANS_UPC_OFFER_0")
 
 # COMMAND ----------
-# DBTITLE 1, TRANS_AGG_PRE_1
 
+# DBTITLE 1, TRANS_AGG_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("TRANS_AGG_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SERVICES_MARGIN_CTRL_2
 
+# DBTITLE 1, SERVICES_MARGIN_CTRL_2
 
 df_2=spark.sql("""
     SELECT
@@ -89,8 +89,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SERVICES_MARGIN_CTRL_2")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_CUST_3
 
+# DBTITLE 1, SALES_TRANS_CUST_3
 
 df_3=spark.sql("""
     SELECT
@@ -106,8 +106,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SALES_TRANS_CUST_3")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_UPC_4
 
+# DBTITLE 1, SALES_TRANS_UPC_4
 
 df_4=spark.sql("""
     SELECT
@@ -155,8 +155,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SALES_TRANS_UPC_4")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_SPECIAL_5
 
+# DBTITLE 1, SALES_TRANS_SPECIAL_5
 
 df_5=spark.sql("""
     SELECT
@@ -182,8 +182,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SALES_TRANS_SPECIAL_5")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_SOURCE_6
 
+# DBTITLE 1, MA_EVENT_SOURCE_6
 
 df_6=spark.sql("""
     SELECT
@@ -199,8 +199,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("MA_EVENT_SOURCE_6")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_TYPE_7
 
+# DBTITLE 1, MA_EVENT_TYPE_7
 
 df_7=spark.sql("""
     SELECT
@@ -218,8 +218,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("MA_EVENT_TYPE_7")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_8
 
+# DBTITLE 1, MA_EVENT_8
 
 df_8=spark.sql("""
     SELECT
@@ -268,8 +268,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("MA_EVENT_8")
 
 # COMMAND ----------
-# DBTITLE 1, STX_UPC_PRE_9
 
+# DBTITLE 1, STX_UPC_PRE_9
 
 df_9=spark.sql("""
     SELECT
@@ -317,8 +317,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("STX_UPC_PRE_9")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_DISCOUNT_10
 
+# DBTITLE 1, SALES_TRANS_DISCOUNT_10
 
 df_10=spark.sql("""
     SELECT
@@ -355,8 +355,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("SALES_TRANS_DISCOUNT_10")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_TRANSFORM_DUMMY_SOURCE_11
 
+# DBTITLE 1, SQL_TRANSFORM_DUMMY_SOURCE_11
 
 df_11=spark.sql("""
     SELECT
@@ -370,8 +370,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("SQL_TRANSFORM_DUMMY_SOURCE_11")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_GL_PLAN_FORECAST_MONTH_12
 
+# DBTITLE 1, SQ_Shortcut_to_GL_PLAN_FORECAST_MONTH_12
 
 df_12=spark.sql("""
     SELECT
@@ -384,8 +384,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("SQ_Shortcut_to_GL_PLAN_FORECAST_MONTH_12")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_INS_and_DUPS_CHECK_13
 
+# DBTITLE 1, SQL_INS_and_DUPS_CHECK_13
 
 df_13=spark.sql("""
     SELECT
@@ -399,8 +399,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("SQL_INS_and_DUPS_CHECK_13")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_GET_SESSION_INFO_14
 
+# DBTITLE 1, EXP_GET_SESSION_INFO_14
 
 df_14=spark.sql("""
     SELECT
@@ -425,8 +425,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("EXP_GET_SESSION_INFO_14")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_15
 
+# DBTITLE 1, AGG_15
 
 df_15=spark.sql("""
     SELECT
@@ -452,8 +452,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("AGG_15")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CREATE_INS_SQL_16
 
+# DBTITLE 1, EXP_CREATE_INS_SQL_16
 
 df_16=spark.sql("""
     SELECT
@@ -475,8 +475,8 @@ df_16=spark.sql("""
 df_16.createOrReplaceTempView("EXP_CREATE_INS_SQL_16")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_INS_to_SQL_TRANSFORM_LOG_17
 
+# DBTITLE 1, SQL_INS_to_SQL_TRANSFORM_LOG_17
 
 df_17=spark.sql("""
     SELECT
@@ -498,8 +498,8 @@ df_17=spark.sql("""
 df_17.createOrReplaceTempView("SQL_INS_to_SQL_TRANSFORM_LOG_17")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ABORT_SESSION_18
 
+# DBTITLE 1, EXP_ABORT_SESSION_18
 
 df_18=spark.sql("""
     SELECT
@@ -516,8 +516,8 @@ df_18=spark.sql("""
 df_18.createOrReplaceTempView("EXP_ABORT_SESSION_18")
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_DAY_19
 
+# DBTITLE 1, CURRENCY_DAY_19
 
 df_19=spark.sql("""
     SELECT
@@ -538,8 +538,8 @@ df_19=spark.sql("""
 df_19.createOrReplaceTempView("CURRENCY_DAY_19")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_TXN_20
 
+# DBTITLE 1, SALES_TRANS_TXN_20
 
 df_20=spark.sql("""
     SELECT
@@ -631,8 +631,8 @@ df_20=spark.sql("""
 df_20.createOrReplaceTempView("SALES_TRANS_TXN_20")
 
 # COMMAND ----------
-# DBTITLE 1, SUPPLY_CHAIN_21
 
+# DBTITLE 1, SUPPLY_CHAIN_21
 
 df_21=spark.sql("""
     SELECT
@@ -649,8 +649,8 @@ df_21=spark.sql("""
 df_21.createOrReplaceTempView("SUPPLY_CHAIN_21")
 
 # COMMAND ----------
-# DBTITLE 1, CR_CUST_ACCT_TYPE_22
 
+# DBTITLE 1, CR_CUST_ACCT_TYPE_22
 
 df_22=spark.sql("""
     SELECT
@@ -667,8 +667,8 @@ df_22=spark.sql("""
 df_22.createOrReplaceTempView("CR_CUST_ACCT_TYPE_22")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_CUST_CAPTURE_23
 
+# DBTITLE 1, SALES_CUST_CAPTURE_23
 
 df_23=spark.sql("""
     SELECT
@@ -682,8 +682,8 @@ df_23=spark.sql("""
 df_23.createOrReplaceTempView("SALES_CUST_CAPTURE_23")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_CLEARANCE_24
 
+# DBTITLE 1, SALES_TRANS_CLEARANCE_24
 
 df_24=spark.sql("""
     SELECT
@@ -716,8 +716,8 @@ df_24=spark.sql("""
 df_24.createOrReplaceTempView("SALES_TRANS_CLEARANCE_24")
 
 # COMMAND ----------
-# DBTITLE 1, UPC_25
 
+# DBTITLE 1, UPC_25
 
 df_25=spark.sql("""
     SELECT
@@ -735,8 +735,8 @@ df_25=spark.sql("""
 df_25.createOrReplaceTempView("UPC_25")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_26
 
+# DBTITLE 1, DAYS_26
 
 df_26=spark.sql("""
     SELECT
@@ -794,8 +794,8 @@ df_26=spark.sql("""
 df_26.createOrReplaceTempView("DAYS_26")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_27
 
+# DBTITLE 1, SKU_PROFILE_27
 
 df_27=spark.sql("""
     SELECT
@@ -879,8 +879,8 @@ df_27=spark.sql("""
 df_27.createOrReplaceTempView("SKU_PROFILE_27")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_28
 
+# DBTITLE 1, SITE_PROFILE_28
 
 df_28=spark.sql("""
     SELECT
@@ -992,8 +992,8 @@ df_28=spark.sql("""
 df_28.createOrReplaceTempView("SITE_PROFILE_28")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_RESTATE_HIST_29
 
+# DBTITLE 1, MA_EVENT_RESTATE_HIST_29
 
 df_29=spark.sql("""
     SELECT
@@ -1041,8 +1041,8 @@ df_29=spark.sql("""
 df_29.createOrReplaceTempView("MA_EVENT_RESTATE_HIST_29")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_TRANSFORM_DUMMY_TARGET
 
+# DBTITLE 1, SQL_TRANSFORM_DUMMY_TARGET
 
 spark.sql("""INSERT INTO SQL_TRANSFORM_DUMMY_TARGET SELECT DUPLICATE_ROW_CNT AS DUPLICATE_ROW_CNT,
 SQL_TRANSFORM_ERROR AS SQL_TRANSFORM_ERROR,

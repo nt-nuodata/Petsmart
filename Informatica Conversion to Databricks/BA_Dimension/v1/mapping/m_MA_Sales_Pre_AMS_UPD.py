@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_UPC_OFFER_0
 
+# DBTITLE 1, SALES_TRANS_UPC_OFFER_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_TRANS_UPC_OFFER_0")
 
 # COMMAND ----------
-# DBTITLE 1, MA_SALES_PRE_1
 
+# DBTITLE 1, MA_SALES_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -60,8 +60,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("MA_SALES_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_2
 
+# DBTITLE 1, MA_EVENT_2
 
 df_2=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("MA_EVENT_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MA_SALES_PRE_3
 
+# DBTITLE 1, SQ_Shortcut_to_MA_SALES_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -212,8 +212,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_MA_SALES_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_UpdateOnly_4
 
+# DBTITLE 1, UPD_UpdateOnly_4
 
 df_4=spark.sql("""
     SELECT
@@ -234,8 +234,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPD_UpdateOnly_4")
 
 # COMMAND ----------
-# DBTITLE 1, MA_SALES_PRE
 
+# DBTITLE 1, MA_SALES_PRE
 
 spark.sql("""INSERT INTO MA_SALES_PRE SELECT DAY_DT AS DAY_DT,
 LOCATION_ID AS LOCATION_ID,

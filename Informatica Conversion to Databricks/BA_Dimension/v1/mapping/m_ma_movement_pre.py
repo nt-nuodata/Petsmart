@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_0
 
+# DBTITLE 1, MA_EVENT_0
 
 df_0=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MA_EVENT_0")
 
 # COMMAND ----------
-# DBTITLE 1, EM_EVENT_1
 
+# DBTITLE 1, EM_EVENT_1
 
 df_1=spark.sql("""
     SELECT
@@ -91,8 +91,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("EM_EVENT_1")
 
 # COMMAND ----------
-# DBTITLE 1, MA_MOVEMENT_DAY_2
 
+# DBTITLE 1, MA_MOVEMENT_DAY_2
 
 df_2=spark.sql("""
     SELECT
@@ -118,8 +118,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("MA_MOVEMENT_DAY_2")
 
 # COMMAND ----------
-# DBTITLE 1, MOVEMENT_INFO_3
 
+# DBTITLE 1, MOVEMENT_INFO_3
 
 df_3=spark.sql("""
     SELECT
@@ -137,8 +137,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("MOVEMENT_INFO_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MA_MOVEMENT_DAY_4
 
+# DBTITLE 1, SQ_Shortcut_to_MA_MOVEMENT_DAY_4
 
 df_4=spark.sql("""
     SELECT
@@ -269,8 +269,8 @@ LEFT OUTER JOIN
 df_4.createOrReplaceTempView("SQ_Shortcut_to_MA_MOVEMENT_DAY_4")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_5
 
+# DBTITLE 1, SKU_PROFILE_5
 
 df_5=spark.sql("""
     SELECT
@@ -354,8 +354,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SKU_PROFILE_5")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_6
 
+# DBTITLE 1, SITE_PROFILE_6
 
 df_6=spark.sql("""
     SELECT
@@ -467,8 +467,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SITE_PROFILE_6")
 
 # COMMAND ----------
-# DBTITLE 1, MOVEMENT_DAY_7
 
+# DBTITLE 1, MOVEMENT_DAY_7
 
 df_7=spark.sql("""
     SELECT
@@ -500,8 +500,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("MOVEMENT_DAY_7")
 
 # COMMAND ----------
-# DBTITLE 1, MA_MOVEMENT_PRE
 
+# DBTITLE 1, MA_MOVEMENT_PRE
 
 spark.sql("""INSERT INTO MA_MOVEMENT_PRE SELECT DAY_DT AS DAY_DT,
 PRODUCT_ID AS PRODUCT_ID,

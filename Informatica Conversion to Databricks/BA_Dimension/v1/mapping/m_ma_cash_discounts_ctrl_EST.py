@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MA_CASH_DISCOUNT_CTRL_0
 
+# DBTITLE 1, MA_CASH_DISCOUNT_CTRL_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MA_CASH_DISCOUNT_CTRL_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MA_CASH_DISCOUNT_CTRL_1
 
+# DBTITLE 1, SQ_Shortcut_to_MA_CASH_DISCOUNT_CTRL_1
 
 df_1=spark.sql("""
     SELECT
@@ -48,8 +48,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_MA_CASH_DISCOUNT_CTRL_1")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_RPT_2
 
+# DBTITLE 1, VENDOR_PROFILE_RPT_2
 
 df_2=spark.sql("""
     SELECT
@@ -102,8 +102,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("VENDOR_PROFILE_RPT_2")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_DAY_SKU_STORE_RPT_3
 
+# DBTITLE 1, SALES_DAY_SKU_STORE_RPT_3
 
 df_3=spark.sql("""
     SELECT
@@ -162,8 +162,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SALES_DAY_SKU_STORE_RPT_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_EST_CASH_DISCOUNT_PCT_4
 
+# DBTITLE 1, SQ_EST_CASH_DISCOUNT_PCT_4
 
 df_4=spark.sql("""
     SELECT
@@ -184,8 +184,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_EST_CASH_DISCOUNT_PCT_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_VENDOR_ID_5
 
+# DBTITLE 1, EXP_VENDOR_ID_5
 
 df_5=spark.sql("""
     SELECT
@@ -201,8 +201,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_VENDOR_ID_5")
 
 # COMMAND ----------
-# DBTITLE 1, FTR_REMOVE_INVALID_6
 
+# DBTITLE 1, FTR_REMOVE_INVALID_6
 
 df_6=spark.sql("""
     SELECT
@@ -218,8 +218,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("FTR_REMOVE_INVALID_6")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_7
 
+# DBTITLE 1, DAYS_7
 
 df_7=spark.sql("""
     SELECT
@@ -277,8 +277,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("DAYS_7")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_DAYS_8
 
+# DBTITLE 1, SQ_Shortcut_To_DAYS_8
 
 df_8=spark.sql("""
     SELECT
@@ -293,8 +293,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("SQ_Shortcut_To_DAYS_8")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_FLAG_9
 
+# DBTITLE 1, EXP_FLAG_9
 
 df_9=spark.sql("""
     SELECT
@@ -307,8 +307,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("EXP_FLAG_9")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_CROSS_JOIN_10
 
+# DBTITLE 1, JNR_CROSS_JOIN_10
 
 df_10=spark.sql("""
     SELECT
@@ -327,8 +327,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("JNR_CROSS_JOIN_10")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_MA_CASH_DISCOUNT_CTRL_11
 
+# DBTITLE 1, JNR_MA_CASH_DISCOUNT_CTRL_11
 
 df_11=spark.sql("""
     SELECT
@@ -350,8 +350,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("JNR_MA_CASH_DISCOUNT_CTRL_11")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_INS_UPD_FLAG_12
 
+# DBTITLE 1, EXP_INS_UPD_FLAG_12
 
 df_12=spark.sql("""
     SELECT
@@ -374,8 +374,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("EXP_INS_UPD_FLAG_12")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_INS_UPD_FLAG_13
 
+# DBTITLE 1, FIL_INS_UPD_FLAG_13
 
 df_13=spark.sql("""
     SELECT
@@ -394,8 +394,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("FIL_INS_UPD_FLAG_13")
 
 # COMMAND ----------
-# DBTITLE 1, SRT_DISTINCT_14
 
+# DBTITLE 1, SRT_DISTINCT_14
 
 df_14=spark.sql("""
     SELECT
@@ -419,8 +419,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("SRT_DISTINCT_14")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_STRATEGY_15
 
+# DBTITLE 1, UPD_STRATEGY_15
 
 df_15=spark.sql("""
     SELECT
@@ -437,8 +437,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("UPD_STRATEGY_15")
 
 # COMMAND ----------
-# DBTITLE 1, MA_CASH_DISCOUNT_CTRL
 
+# DBTITLE 1, MA_CASH_DISCOUNT_CTRL
 
 spark.sql("""INSERT INTO MA_CASH_DISCOUNT_CTRL SELECT FISCAL_MO AS FISCAL_MO,
 SOURCE_VENDOR_ID AS SOURCE_VENDOR_ID,

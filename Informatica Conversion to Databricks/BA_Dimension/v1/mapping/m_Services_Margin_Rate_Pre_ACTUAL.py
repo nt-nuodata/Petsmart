@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SERVICES_MARGIN_WAGE_TYPE_CTRL_0
 
+# DBTITLE 1, SERVICES_MARGIN_WAGE_TYPE_CTRL_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SERVICES_MARGIN_WAGE_TYPE_CTRL_0")
 
 # COMMAND ----------
-# DBTITLE 1, SERVICES_MARGIN_CTRL_1
 
+# DBTITLE 1, SERVICES_MARGIN_CTRL_1
 
 df_1=spark.sql("""
     SELECT
@@ -47,8 +47,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SERVICES_MARGIN_CTRL_1")
 
 # COMMAND ----------
-# DBTITLE 1, EMPL_EMPL_LOC_WK_2
 
+# DBTITLE 1, EMPL_EMPL_LOC_WK_2
 
 df_2=spark.sql("""
     SELECT
@@ -72,8 +72,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EMPL_EMPL_LOC_WK_2")
 
 # COMMAND ----------
-# DBTITLE 1, EARNINGS_ID_3
 
+# DBTITLE 1, EARNINGS_ID_3
 
 df_3=spark.sql("""
     SELECT
@@ -90,8 +90,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EARNINGS_ID_3")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_4
 
+# DBTITLE 1, DAYS_4
 
 df_4=spark.sql("""
     SELECT
@@ -149,8 +149,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("DAYS_4")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_RPT_5
 
+# DBTITLE 1, SITE_PROFILE_RPT_5
 
 df_5=spark.sql("""
     SELECT
@@ -298,8 +298,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SITE_PROFILE_RPT_5")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_SKU_6
 
+# DBTITLE 1, SALES_TRANS_SKU_6
 
 df_6=spark.sql("""
     SELECT
@@ -375,8 +375,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SALES_TRANS_SKU_6")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_SERVICES_MARGIN_RATE_PRE_7
 
+# DBTITLE 1, SQ_SERVICES_MARGIN_RATE_PRE_7
 
 df_7=spark.sql("""
     SELECT
@@ -513,8 +513,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("SQ_SERVICES_MARGIN_RATE_PRE_7")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_RATE_8
 
+# DBTITLE 1, EXP_RATE_8
 
 df_8=spark.sql("""
     SELECT
@@ -529,8 +529,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("EXP_RATE_8")
 
 # COMMAND ----------
-# DBTITLE 1, SERVICES_MARGIN_RATE_PRE
 
+# DBTITLE 1, SERVICES_MARGIN_RATE_PRE
 
 spark.sql("""INSERT INTO SERVICES_MARGIN_RATE_PRE SELECT WEEK_DT AS WEEK_DT,
 LOCATION_ID AS LOCATION_ID,
