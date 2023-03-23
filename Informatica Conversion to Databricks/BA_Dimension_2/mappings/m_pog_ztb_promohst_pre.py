@@ -1,0 +1,83 @@
+# Databricks notebook source
+# MAGIC %run "./udf_informatica"
+
+# COMMAND ----------
+
+
+from pyspark.sql.types import *
+
+spark.sql("use DELTA_TRAINING")
+spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
+
+
+# COMMAND ----------
+# DBTITLE 1, POG_ZTB_PROMO_0
+
+
+df_0=spark.sql("""
+    SELECT
+        SKU_NBR AS SKU_NBR,
+        STORE_NBR AS STORE_NBR,
+        POG_NBR AS POG_NBR,
+        REPL_START_DT AS REPL_START_DT,
+        REPL_END_DT AS REPL_END_DT,
+        LIST_START_DT AS LIST_START_DT,
+        LIST_END_DT AS LIST_END_DT,
+        PROMO_QTY AS PROMO_QTY,
+        LAST_CHNG_DT AS LAST_CHNG_DT,
+        POG_STATUS AS POG_STATUS,
+        DELETE_IND AS DELETE_IND,
+        DATE_ADDED AS DATE_ADDED,
+        DATE_REFRESHED AS DATE_REFRESHED,
+        DATE_DELETED AS DATE_DELETED,
+        monotonically_increasing_id() AS Monotonically_Increasing_Id 
+    FROM
+        POG_ZTB_PROMO""")
+
+df_0.createOrReplaceTempView("POG_ZTB_PROMO_0")
+
+# COMMAND ----------
+# DBTITLE 1, ASQ_Shortcut_to_POG_ZTB_PROMO_1
+
+
+df_1=spark.sql("""
+    SELECT
+        POG_ZTB_PROMO.SKU_NBR,
+        POG_ZTB_PROMO.STORE_NBR,
+        POG_ZTB_PROMO.POG_NBR,
+        POG_ZTB_PROMO.REPL_START_DT,
+        POG_ZTB_PROMO.REPL_END_DT,
+        POG_ZTB_PROMO.LIST_START_DT,
+        POG_ZTB_PROMO.LIST_END_DT,
+        POG_ZTB_PROMO.PROMO_QTY,
+        POG_ZTB_PROMO.LAST_CHNG_DT,
+        POG_ZTB_PROMO.POG_STATUS,
+        POG_ZTB_PROMO.DELETE_IND,
+        POG_ZTB_PROMO.DATE_ADDED,
+        POG_ZTB_PROMO.DATE_REFRESHED,
+        POG_ZTB_PROMO.DATE_DELETED 
+    FROM
+        POG_ZTB_PROMO 
+    WHERE
+        POG_ZTB_PROMO.DELETE_IND = ' '""")
+
+df_1.createOrReplaceTempView("ASQ_Shortcut_to_POG_ZTB_PROMO_1")
+
+# COMMAND ----------
+# DBTITLE 1, POG_ZTB_PROMOHST_PRE
+
+
+spark.sql("""INSERT INTO POG_ZTB_PROMOHST_PRE SELECT SKU_NBR AS SKU_NBR,
+STORE_NBR AS STORE_NBR,
+POG_NBR AS POG_NBR,
+REPL_START_DT AS REPL_START_DT,
+REPL_END_DT AS REPL_END_DT,
+LIST_START_DT AS LIST_START_DT,
+LIST_END_DT AS LIST_END_DT,
+PROMO_QTY AS PROMO_QTY,
+LAST_CHNG_DT AS LAST_CHNG_DT,
+POG_STATUS AS POG_STATUS,
+DELETE_IND AS DELETE_IND,
+DATE_ADDED AS DATE_ADDED,
+DATE_REFRESHED AS DATE_REFRESHED,
+DATE_DELETED AS DATE_DELETED FROM ASQ_Shortcut_to_POG_ZTB_PROMO_1""")

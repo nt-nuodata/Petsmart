@@ -1,0 +1,126 @@
+# Databricks notebook source
+# MAGIC %run "./udf_informatica"
+
+# COMMAND ----------
+
+
+from pyspark.sql.types import *
+
+spark.sql("use DELTA_TRAINING")
+spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
+
+
+# COMMAND ----------
+# DBTITLE 1, PRODUCT_KEY_PRE_0
+
+
+df_0=spark.sql("""
+    SELECT
+        PRODUCT_ID AS PRODUCT_ID,
+        BUYER_ID AS BUYER_ID,
+        PRIMARY_UPC AS PRIMARY_UPC,
+        PRIMARY_VENDOR_ID AS PRIMARY_VENDOR_ID,
+        PURCH_GROUP_ID AS PURCH_GROUP_ID,
+        SKU_NBR AS SKU_NBR,
+        SAP_CATEGORY_ID AS SAP_CATEGORY_ID,
+        OLD_ARTICLE_NBR AS OLD_ARTICLE_NBR,
+        ITEM_CONCATENATED AS ITEM_CONCATENATED,
+        monotonically_increasing_id() AS Monotonically_Increasing_Id 
+    FROM
+        PRODUCT_KEY_PRE""")
+
+df_0.createOrReplaceTempView("PRODUCT_KEY_PRE_0")
+
+# COMMAND ----------
+# DBTITLE 1, PRODUCT_HISTORY_1
+
+
+df_1=spark.sql("""
+    SELECT
+        PRODUCT_ID AS PRODUCT_ID,
+        PROD_HIST_EFF_DT AS PROD_HIST_EFF_DT,
+        PROD_HIST_END_DT AS PROD_HIST_END_DT,
+        BUYER_ID AS BUYER_ID,
+        PRIMARY_UPC AS PRIMARY_UPC,
+        PRIMARY_VENDOR_ID AS PRIMARY_VENDOR_ID,
+        PURCH_GROUP_ID AS PURCH_GROUP_ID,
+        SKU_NBR AS SKU_NBR,
+        SAP_CATEGORY_ID AS SAP_CATEGORY_ID,
+        OLD_ARTICLE_NBR AS OLD_ARTICLE_NBR,
+        ITEM_CONCATENATED AS ITEM_CONCATENATED,
+        monotonically_increasing_id() AS Monotonically_Increasing_Id 
+    FROM
+        PRODUCT_HISTORY""")
+
+df_1.createOrReplaceTempView("PRODUCT_HISTORY_1")
+
+# COMMAND ----------
+# DBTITLE 1, ASQ_PRODUCT_HISTORY_JOIN_PRODUCT_2
+
+
+df_2=spark.sql("""
+    SELECT
+        HIST.PRODUCT_ID,
+        HIST.PROD_HIST_EFF_DT,
+        CURRENT_DATE - 1 AS PROD_HIST_END_DT,
+        HIST.BUYER_ID,
+        HIST.PRIMARY_UPC,
+        HIST.PRIMARY_VENDOR_ID,
+        HIST.PURCH_GROUP_ID,
+        HIST.SKU_NBR,
+        HIST.SAP_CATEGORY_ID,
+        HIST.OLD_ARTICLE_NBR,
+        HIST.ITEM_CONCATENATED 
+    FROM
+        PRODUCT_HISTORY HIST 
+    WHERE
+        HIST.PROD_HIST_END_DT = TO_DATE('9999-12-31', 'YYYY-MM-DD') 
+        AND NOT EXISTS (
+            SELECT
+                PROD.PRODUCT_ID 
+            FROM
+                PRODUCT_KEY_PRE PROD 
+            WHERE
+                HIST.PRODUCT_ID = PROD.PRODUCT_ID
+        )""")
+
+df_2.createOrReplaceTempView("ASQ_PRODUCT_HISTORY_JOIN_PRODUCT_2")
+
+# COMMAND ----------
+# DBTITLE 1, UPD_ENDDT_OLD_3
+
+
+df_3=spark.sql("""
+    SELECT
+        PRODUCT_ID AS PRODUCT_ID,
+        PROD_HIST_EFF_DT AS PROD_HIST_EFF_DT,
+        PROD_HIST_END_DT AS PROD_HIST_END_DT,
+        BUYER_ID AS BUYER_ID,
+        PRIMARY_UPC AS PRIMARY_UPC,
+        PRIMARY_VENDOR_ID AS PRIMARY_VENDOR_ID,
+        PURCH_GROUP_ID AS PURCH_GROUP_ID,
+        SKU_NBR AS SKU_NBR,
+        SAP_CATEGORY_ID AS SAP_CATEGORY_ID,
+        OLD_ARTICLE_NBR AS OLD_ARTICLE_NBR,
+        ITEM_CONCATENATED AS ITEM_CONCATENATED,
+        Monotonically_Increasing_Id AS Monotonically_Increasing_Id 
+    FROM
+        ASQ_PRODUCT_HISTORY_JOIN_PRODUCT_2""")
+
+df_3.createOrReplaceTempView("UPD_ENDDT_OLD_3")
+
+# COMMAND ----------
+# DBTITLE 1, PRODUCT_HISTORY
+
+
+spark.sql("""INSERT INTO PRODUCT_HISTORY SELECT PRODUCT_ID AS PRODUCT_ID,
+PROD_HIST_EFF_DT AS PROD_HIST_EFF_DT,
+PROD_HIST_END_DT AS PROD_HIST_END_DT,
+BUYER_ID AS BUYER_ID,
+PRIMARY_UPC AS PRIMARY_UPC,
+PRIMARY_VENDOR_ID AS PRIMARY_VENDOR_ID,
+PURCH_GROUP_ID AS PURCH_GROUP_ID,
+SKU_NBR AS SKU_NBR,
+SAP_CATEGORY_ID AS SAP_CATEGORY_ID,
+OLD_ARTICLE_NBR AS OLD_ARTICLE_NBR,
+ITEM_CONCATENATED AS ITEM_CONCATENATED FROM UPD_ENDDT_OLD_3""")
