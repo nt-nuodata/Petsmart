@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_0
 
+# DBTITLE 1, CURRENCY_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("CURRENCY_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_CURRENCY_1
 
+# DBTITLE 1, SQ_Shortcut_To_CURRENCY_1
 
 df_1=spark.sql("""
     SELECT
@@ -52,8 +52,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_CURRENCY_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_NULLS_2
 
+# DBTITLE 1, FIL_NULLS_2
 
 df_2=spark.sql("""
     SELECT
@@ -75,8 +75,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_NULLS_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DATE_RATE_START_FORMAT_3
 
+# DBTITLE 1, EXP_DATE_RATE_START_FORMAT_3
 
 df_3=spark.sql("""
     SELECT
@@ -97,8 +97,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_DATE_RATE_START_FORMAT_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_CURRENCY_4
 
+# DBTITLE 1, LKP_CURRENCY_4
 
 df_4=spark.sql("""
     SELECT
@@ -123,8 +123,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_CURRENCY_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DetectChanges_5
 
+# DBTITLE 1, EXP_DetectChanges_5
 
 df_5=spark.sql("""
     SELECT
@@ -145,8 +145,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_DetectChanges_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Convert_6
 
+# DBTITLE 1, EXP_Convert_6
 
 df_6=spark.sql("""
     SELECT
@@ -175,8 +175,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_Convert_6")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_Ins_Upd_7
 
+# DBTITLE 1, UPD_Ins_Upd_7
 
 df_7=spark.sql("""
     SELECT
@@ -198,8 +198,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("UPD_Ins_Upd_7")
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY
 
+# DBTITLE 1, CURRENCY
 
 spark.sql("""INSERT INTO CURRENCY SELECT CURRENCY_ID AS CURRENCY_ID,
 V_DATE_RATE_START AS DATE_RATE_START,

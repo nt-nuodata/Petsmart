@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, WM_SHIP_VIA_0
 
+# DBTITLE 1, WM_SHIP_VIA_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("WM_SHIP_VIA_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_WM_SHIP_VIA_1
 
+# DBTITLE 1, SQ_Shortcut_to_WM_SHIP_VIA_1
 
 df_1=spark.sql("""
     SELECT
@@ -50,8 +50,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_WM_SHIP_VIA_1")
 
 # COMMAND ----------
-# DBTITLE 1, CARRIER_PROFILE_WMS_PRE
 
+# DBTITLE 1, CARRIER_PROFILE_WMS_PRE
 
 spark.sql("""INSERT INTO CARRIER_PROFILE_WMS_PRE SELECT SHIP_VIA AS SHIP_VIA,
 SHIP_VIA_DESC AS SHIP_VIA_DESC FROM SQ_Shortcut_to_WM_SHIP_VIA_1""")

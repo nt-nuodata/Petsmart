@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Days_Pre1_0
 
+# DBTITLE 1, Days_Pre1_0
 
 df_0=spark.sql("""
     SELECT
@@ -24,8 +24,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Days_Pre1_0")
 
 # COMMAND ----------
-# DBTITLE 1, FiscalPeriod_1
 
+# DBTITLE 1, FiscalPeriod_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("FiscalPeriod_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Days_Pre1_2
 
+# DBTITLE 1, SQ_Days_Pre1_2
 
 df_2=spark.sql("""select * from (SELECT DAYDT,
        CASE WHEN DATEPART (DW, DAYDT) IN (1, 7)  -- SATURDAY AND SUNDAY
@@ -95,8 +95,8 @@ df_2=spark.sql("""select * from (SELECT DAYDT,
 df_2.createOrReplaceTempView("SQ_Days_Pre1_2")
 
 # COMMAND ----------
-# DBTITLE 1, Days_Pre2
 
+# DBTITLE 1, Days_Pre2
 
 spark.sql("""INSERT INTO Days_Pre2 SELECT DAYDT AS DayDt,
 BUSINESS_DAY_FLAG AS BusinessDayFlag,

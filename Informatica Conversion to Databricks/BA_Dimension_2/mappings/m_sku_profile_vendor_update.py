@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PRIMARY_VENDOR_PRE_0
 
+# DBTITLE 1, PRIMARY_VENDOR_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -30,8 +30,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PRIMARY_VENDOR_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_VENDOR_DAY_1
 
+# DBTITLE 1, SKU_VENDOR_DAY_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SKU_VENDOR_DAY_1")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_2
 
+# DBTITLE 1, VENDOR_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -104,8 +104,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("VENDOR_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_SHORTCUT_TO_PRIMARY_VENDOR_PRE_3
 
+# DBTITLE 1, ASQ_SHORTCUT_TO_PRIMARY_VENDOR_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -171,8 +171,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_SHORTCUT_TO_PRIMARY_VENDOR_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_SKU_PROFILE_4
 
+# DBTITLE 1, UPD_SKU_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -193,8 +193,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPD_SKU_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE
 
+# DBTITLE 1, SKU_PROFILE
 
 spark.sql("""INSERT INTO SKU_PROFILE SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,
@@ -271,8 +271,8 @@ ZDISCO_STR_OWNRSHP_DT AS ZDISCO_STR_OWNRSHP_DT,
 ZDISCO_STR_WRT_OFF_DT AS ZDISCO_STR_WRT_OFF_DT FROM UPD_SKU_PROFILE_4""")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_RPT
 
+# DBTITLE 1, SKU_PROFILE_RPT
 
 spark.sql("""INSERT INTO SKU_PROFILE_RPT SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

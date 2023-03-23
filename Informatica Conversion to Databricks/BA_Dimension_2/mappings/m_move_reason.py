@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MOVE_INFO_0
 
+# DBTITLE 1, MOVE_INFO_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MOVE_INFO_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_MOVE_INFO_1
 
+# DBTITLE 1, SQ_Shortcut_To_MOVE_INFO_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_MOVE_INFO_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_RTRIM_2
 
+# DBTITLE 1, EXP_RTRIM_2
 
 df_2=spark.sql("""
     SELECT
@@ -58,8 +58,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_RTRIM_2")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_NULLS_3
 
+# DBTITLE 1, FIL_NULLS_3
 
 df_3=spark.sql("""
     SELECT
@@ -77,8 +77,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("FIL_NULLS_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_MOVE_REASON_4
 
+# DBTITLE 1, LKP_MOVE_REASON_4
 
 df_4=spark.sql("""
     SELECT
@@ -95,8 +95,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_MOVE_REASON_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DetectChanges_5
 
+# DBTITLE 1, EXP_DetectChanges_5
 
 df_5=spark.sql("""
     SELECT
@@ -122,8 +122,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_DetectChanges_5")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_Ins_Upd_6
 
+# DBTITLE 1, UPD_Ins_Upd_6
 
 df_6=spark.sql("""
     SELECT
@@ -138,8 +138,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("UPD_Ins_Upd_6")
 
 # COMMAND ----------
-# DBTITLE 1, MOVE_REASON
 
+# DBTITLE 1, MOVE_REASON
 
 spark.sql("""INSERT INTO MOVE_REASON SELECT MOVE_REASON_ID AS MOVE_REASON_ID,
 MOVE_REASON_DESC AS MOVE_REASON_DESC FROM UPD_Ins_Upd_6""")

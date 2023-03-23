@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, POG_ZTB_PROMO_0
 
+# DBTITLE 1, POG_ZTB_PROMO_0
 
 df_0=spark.sql("""
     SELECT
@@ -37,8 +37,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("POG_ZTB_PROMO_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_POG_ZTB_PROMO_1
 
+# DBTITLE 1, ASQ_Shortcut_to_POG_ZTB_PROMO_1
 
 df_1=spark.sql("""
     SELECT
@@ -64,8 +64,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_POG_ZTB_PROMO_1")
 
 # COMMAND ----------
-# DBTITLE 1, POG_ZTB_PROMOHST_PRE
 
+# DBTITLE 1, POG_ZTB_PROMOHST_PRE
 
 spark.sql("""INSERT INTO POG_ZTB_PROMOHST_PRE SELECT SKU_NBR AS SKU_NBR,
 STORE_NBR AS STORE_NBR,

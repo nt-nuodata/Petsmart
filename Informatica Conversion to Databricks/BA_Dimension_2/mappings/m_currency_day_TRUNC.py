@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_DAY_0
 
+# DBTITLE 1, CURRENCY_DAY_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("CURRENCY_DAY_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_CURRENCY_DAY_1
 
+# DBTITLE 1, ASQ_Shortcut_to_CURRENCY_DAY_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_CURRENCY_DAY_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_TRUNC_2
 
+# DBTITLE 1, FIL_TRUNC_2
 
 df_2=spark.sql("""
     SELECT
@@ -58,14 +58,14 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_TRUNC_2")
 
 # COMMAND ----------
-# DBTITLE 1, DUMMY_TARGET
 
+# DBTITLE 1, DUMMY_TARGET
 
 spark.sql("""INSERT INTO DUMMY_TARGET SELECT TABLE_NAME AS COMMENT FROM ASQ_Shortcut_to_CURRENCY_DAY_1""")
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_DAY
 
+# DBTITLE 1, CURRENCY_DAY
 
 spark.sql("""INSERT INTO CURRENCY_DAY SELECT DAY_DT AS DAY_DT,
 TABLE_NAME AS CURRENCY_ID,

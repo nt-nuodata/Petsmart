@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKUAttrTypeValues_0
 
+# DBTITLE 1, SKUAttrTypeValues_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKUAttrTypeValues_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKUAttrTypeValues_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKUAttrTypeValues_1
 
 df_1=spark.sql("""
     SELECT
@@ -49,8 +49,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKUAttrTypeValues_1")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_Load_Tstmp_2
 
+# DBTITLE 1, Exp_Load_Tstmp_2
 
 df_2=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("Exp_Load_Tstmp_2")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_TXS_ATTR_TYPE_VALUES_PRE
 
+# DBTITLE 1, SKU_TXS_ATTR_TYPE_VALUES_PRE
 
 spark.sql("""INSERT INTO SKU_TXS_ATTR_TYPE_VALUES_PRE SELECT SKU_TXS_ATTR_TYPE_ID AS SKU_TXS_ATTR_TYPE_ID,
 SKU_TXS_ATTR_TYPE_VALUE_ID AS SKU_TXS_ATTR_TYPE_VALUE_ID,

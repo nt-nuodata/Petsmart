@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_ATTR_0
 
+# DBTITLE 1, SKU_ATTR_0
 
 df_0=spark.sql("""
     SELECT
@@ -126,8 +126,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_ATTR_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_ATTR_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_ATTR_1
 
 df_1=spark.sql("""
     SELECT
@@ -143,8 +143,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKU_ATTR_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PIM_ATTR_TYPE_VALUES_2
 
+# DBTITLE 1, SKU_PIM_ATTR_TYPE_VALUES_2
 
 df_2=spark.sql("""
     SELECT
@@ -161,8 +161,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SKU_PIM_ATTR_TYPE_VALUES_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_PIM_ATTR_TYPE_VALUES_3
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_PIM_ATTR_TYPE_VALUES_3
 
 df_3=spark.sql("""
     SELECT
@@ -176,8 +176,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_SKU_PIM_ATTR_TYPE_VALUES_3")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PIM_ATTR_4
 
+# DBTITLE 1, SKU_PIM_ATTR_4
 
 df_4=spark.sql("""
     SELECT
@@ -195,8 +195,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SKU_PIM_ATTR_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_PIM_ATTR_5
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_PIM_ATTR_5
 
 df_5=spark.sql("""
     SELECT
@@ -210,8 +210,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_to_SKU_PIM_ATTR_5")
 
 # COMMAND ----------
-# DBTITLE 1, Fil_SKU_PIM_Attr_6
 
+# DBTITLE 1, Fil_SKU_PIM_Attr_6
 
 df_6=spark.sql("""
     SELECT
@@ -228,8 +228,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("Fil_SKU_PIM_Attr_6")
 
 # COMMAND ----------
-# DBTITLE 1, Jnr_SKu_Type_And_Values_7
 
+# DBTITLE 1, Jnr_SKu_Type_And_Values_7
 
 df_7=spark.sql("""
     SELECT
@@ -250,8 +250,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("Jnr_SKu_Type_And_Values_7")
 
 # COMMAND ----------
-# DBTITLE 1, Srt_SKU_Attr_8
 
+# DBTITLE 1, Srt_SKU_Attr_8
 
 df_8=spark.sql("""
     SELECT
@@ -269,8 +269,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("Srt_SKU_Attr_8")
 
 # COMMAND ----------
-# DBTITLE 1, Agg_Sku_Attr_9
 
+# DBTITLE 1, Agg_Sku_Attr_9
 
 df_9=spark.sql("""
     SELECT
@@ -291,8 +291,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("Agg_Sku_Attr_9")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_Sku_Attr_10
 
+# DBTITLE 1, Exp_Sku_Attr_10
 
 df_10=spark.sql("""
     SELECT
@@ -309,8 +309,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("Exp_Sku_Attr_10")
 
 # COMMAND ----------
-# DBTITLE 1, Jnr_SKU_Attr_11
 
+# DBTITLE 1, Jnr_SKU_Attr_11
 
 df_11=spark.sql("""
     SELECT
@@ -335,8 +335,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("Jnr_SKU_Attr_11")
 
 # COMMAND ----------
-# DBTITLE 1, Fil_SKU_Attr_12
 
+# DBTITLE 1, Fil_SKU_Attr_12
 
 df_12=spark.sql("""
     SELECT
@@ -367,8 +367,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("Fil_SKU_Attr_12")
 
 # COMMAND ----------
-# DBTITLE 1, Ups_Sku_Attr_13
 
+# DBTITLE 1, Ups_Sku_Attr_13
 
 df_13=spark.sql("""
     SELECT
@@ -385,8 +385,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("Ups_Sku_Attr_13")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_ATTR
 
+# DBTITLE 1, SKU_ATTR
 
 spark.sql("""INSERT INTO SKU_ATTR SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_ATTR1_ID AS SKU_ATTR1_ID,

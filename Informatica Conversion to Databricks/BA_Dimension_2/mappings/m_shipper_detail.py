@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SHIPPER_STPO_PRE_0
 
+# DBTITLE 1, SHIPPER_STPO_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -41,8 +41,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SHIPPER_STPO_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SHIPPER_DETAIL_1
 
+# DBTITLE 1, SHIPPER_DETAIL_1
 
 df_1=spark.sql("""
     SELECT
@@ -58,8 +58,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SHIPPER_DETAIL_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_SHIPPER_DETAIL_2
 
+# DBTITLE 1, ASQ_SHIPPER_DETAIL_2
 
 df_2=spark.sql("""SELECT a1.product_id, sp2.product_id bom_product_id,
        TRUNC (a2.component_qty) bom_product_qty, CURRENT_DATE update_dt,
@@ -99,8 +99,8 @@ SELECT *, 'D' ins_upd_del_flag
 df_2.createOrReplaceTempView("ASQ_SHIPPER_DETAIL_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_SHIPPER_DETAIL_3
 
+# DBTITLE 1, UPD_SHIPPER_DETAIL_3
 
 df_3=spark.sql("""
     SELECT
@@ -117,8 +117,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPD_SHIPPER_DETAIL_3")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_4
 
+# DBTITLE 1, SKU_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -202,8 +202,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SKU_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SHIPPER_DETAIL
 
+# DBTITLE 1, SHIPPER_DETAIL
 
 spark.sql("""INSERT INTO SHIPPER_DETAIL SELECT PRODUCT_ID AS PRODUCT_ID,
 BOM_PRODUCT_ID AS BOM_PRODUCT_ID,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_0
 
+# DBTITLE 1, DAYS_0
 
 df_0=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DAYS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_DAYS_1
 
+# DBTITLE 1, SQ_Shortcut_to_DAYS_1
 
 df_1=spark.sql("""
     SELECT
@@ -129,8 +129,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_DAYS_1")
 
 # COMMAND ----------
-# DBTITLE 1, Fil_Day_Dt_2
 
+# DBTITLE 1, Fil_Day_Dt_2
 
 df_2=spark.sql("""
     SELECT
@@ -147,8 +147,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("Fil_Day_Dt_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_3
 
+# DBTITLE 1, EXPTRANS_3
 
 df_3=spark.sql("""SELECT DAY_DT AS DAY_DT,
 DAY_OF_WK_NBR AS DAY_OF_WK_NBR,
@@ -159,8 +159,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM Fil_Day_Dt_2""")
 df_3.createOrReplaceTempView("EXPTRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_RPT_4
 
+# DBTITLE 1, SITE_PROFILE_RPT_4
 
 df_4=spark.sql("""
     SELECT
@@ -308,8 +308,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SITE_PROFILE_RPT_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_RPT_5
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_RPT_5
 
 df_5=spark.sql("""
     SELECT
@@ -457,8 +457,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_to_SITE_PROFILE_RPT_5")
 
 # COMMAND ----------
-# DBTITLE 1, Fil_Store_NBr_6
 
+# DBTITLE 1, Fil_Store_NBr_6
 
 df_6=spark.sql("""
     SELECT
@@ -476,8 +476,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("Fil_Store_NBr_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS1_7
 
+# DBTITLE 1, EXPTRANS1_7
 
 df_7=spark.sql("""SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,
@@ -489,8 +489,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM Fil_Store_NBr_6"
 df_7.createOrReplaceTempView("EXPTRANS1_7")
 
 # COMMAND ----------
-# DBTITLE 1, JNRTRANS_8
 
+# DBTITLE 1, JNRTRANS_8
 
 df_8=spark.sql("""SELECT DETAIL.LOCATION_ID AS LOCATION_ID,
 DETAIL.LOCATION_TYPE_ID AS LOCATION_TYPE_ID,
@@ -506,8 +506,8 @@ MASTER.Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM EXPTRANS_
 df_8.createOrReplaceTempView("JNRTRANS_8")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS2_9
 
+# DBTITLE 1, EXPTRANS2_9
 
 df_9=spark.sql("""
     SELECT
@@ -536,8 +536,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("EXPTRANS2_9")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_HOURS_DAY_PRE
 
+# DBTITLE 1, SITE_HOURS_DAY_PRE
 
 spark.sql("""INSERT INTO SITE_HOURS_DAY_PRE SELECT DAY_DT AS DAY_DT,
 LOCATION_NBR AS LOCATION_NBR,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_CODE_0
 
+# DBTITLE 1, SALES_RANKING_CODE_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_RANKING_CODE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_MERCH_1
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_MERCH_1
 
 df_1=spark.sql("""
     SELECT
@@ -50,8 +50,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_MERCH_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_MERCH_LKUP_2
 
+# DBTITLE 1, EXP_MERCH_LKUP_2
 
 df_2=spark.sql("""
     SELECT
@@ -69,8 +69,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_MERCH_LKUP_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_3
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_3
 
 df_3=spark.sql("""
     SELECT
@@ -88,8 +88,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_TOTAL_LKUP_4
 
+# DBTITLE 1, EXP_TOTAL_LKUP_4
 
 df_4=spark.sql("""
     SELECT
@@ -107,8 +107,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_TOTAL_LKUP_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_HOTEL_5
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_HOTEL_5
 
 df_5=spark.sql("""
     SELECT
@@ -126,8 +126,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_HOTEL_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_HOTEL_LKUP_6
 
+# DBTITLE 1, EXP_HOTEL_LKUP_6
 
 df_6=spark.sql("""
     SELECT
@@ -145,8 +145,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_HOTEL_LKUP_6")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_SALON_7
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_SALON_7
 
 df_7=spark.sql("""
     SELECT
@@ -164,8 +164,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_SALON_7")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SALON_LKUP_8
 
+# DBTITLE 1, EXP_SALON_LKUP_8
 
 df_8=spark.sql("""
     SELECT
@@ -183,8 +183,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("EXP_SALON_LKUP_8")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_CONSUM_9
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_CONSUM_9
 
 df_9=spark.sql("""
     SELECT
@@ -202,8 +202,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_CONSUM_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CONSUM_LKUP_10
 
+# DBTITLE 1, EXP_CONSUM_LKUP_10
 
 df_10=spark.sql("""
     SELECT
@@ -221,8 +221,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("EXP_CONSUM_LKUP_10")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_HGOODS_11
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_HGOODS_11
 
 df_11=spark.sql("""
     SELECT
@@ -240,8 +240,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_HGOODS_11")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_HGOODS_LKUP_12
 
+# DBTITLE 1, EXP_HGOODS_LKUP_12
 
 df_12=spark.sql("""
     SELECT
@@ -259,8 +259,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("EXP_HGOODS_LKUP_12")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_SPECIALTY_13
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_SPECIALTY_13
 
 df_13=spark.sql("""
     SELECT
@@ -278,8 +278,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_SPECIALTY_13")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SPECIALTY_LKUP_14
 
+# DBTITLE 1, EXP_SPECIALTY_LKUP_14
 
 df_14=spark.sql("""
     SELECT
@@ -297,8 +297,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("EXP_SPECIALTY_LKUP_14")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_SERVICES_15
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_SERVICES_15
 
 df_15=spark.sql("""
     SELECT
@@ -316,8 +316,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_SERVICES_15")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SERVICES_LKUP_16
 
+# DBTITLE 1, EXP_SERVICES_LKUP_16
 
 df_16=spark.sql("""
     SELECT
@@ -335,8 +335,8 @@ df_16=spark.sql("""
 df_16.createOrReplaceTempView("EXP_SERVICES_LKUP_16")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_TRAINING_17
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_CODE_TRAINING_17
 
 df_17=spark.sql("""
     SELECT
@@ -354,8 +354,8 @@ df_17=spark.sql("""
 df_17.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_CODE_TRAINING_17")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_TRAINING_LKUP_18
 
+# DBTITLE 1, EXP_TRAINING_LKUP_18
 
 df_18=spark.sql("""
     SELECT
@@ -373,8 +373,8 @@ df_18=spark.sql("""
 df_18.createOrReplaceTempView("EXP_TRAINING_LKUP_18")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_RUNNING_SUM_PRE_19
 
+# DBTITLE 1, SALES_RANKING_RUNNING_SUM_PRE_19
 
 df_19=spark.sql("""
     SELECT
@@ -425,8 +425,8 @@ df_19=spark.sql("""
 df_19.createOrReplaceTempView("SALES_RANKING_RUNNING_SUM_PRE_19")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_RUNNING_SUM_PRE_20
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_RUNNING_SUM_PRE_20
 
 df_20=spark.sql("""
     SELECT
@@ -477,8 +477,8 @@ df_20=spark.sql("""
 df_20.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_RUNNING_SUM_PRE_20")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_PRE_DUMMY_21
 
+# DBTITLE 1, EXP_PRE_DUMMY_21
 
 df_21=spark.sql("""
     SELECT
@@ -530,8 +530,8 @@ df_21=spark.sql("""
 df_21.createOrReplaceTempView("EXP_PRE_DUMMY_21")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_TOTALS_LKUP_22
 
+# DBTITLE 1, JNR_TOTALS_LKUP_22
 
 df_22=spark.sql("""
     SELECT
@@ -593,8 +593,8 @@ df_22=spark.sql("""
 df_22.createOrReplaceTempView("JNR_TOTALS_LKUP_22")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_TOTALS_LKUP_23
 
+# DBTITLE 1, FIL_TOTALS_LKUP_23
 
 df_23=spark.sql("""
     SELECT
@@ -657,8 +657,8 @@ df_23=spark.sql("""
 df_23.createOrReplaceTempView("FIL_TOTALS_LKUP_23")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_MERCH_LKUP_24
 
+# DBTITLE 1, JNR_MERCH_LKUP_24
 
 df_24=spark.sql("""
     SELECT
@@ -722,8 +722,8 @@ df_24=spark.sql("""
 df_24.createOrReplaceTempView("JNR_MERCH_LKUP_24")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_MERCH_LKUP_25
 
+# DBTITLE 1, FIL_MERCH_LKUP_25
 
 df_25=spark.sql("""
     SELECT
@@ -788,8 +788,8 @@ df_25=spark.sql("""
 df_25.createOrReplaceTempView("FIL_MERCH_LKUP_25")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SERVICES_LKUP_26
 
+# DBTITLE 1, JNR_SERVICES_LKUP_26
 
 df_26=spark.sql("""
     SELECT
@@ -855,8 +855,8 @@ df_26=spark.sql("""
 df_26.createOrReplaceTempView("JNR_SERVICES_LKUP_26")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_SERVICES_LKUP_27
 
+# DBTITLE 1, FIL_SERVICES_LKUP_27
 
 df_27=spark.sql("""
     SELECT
@@ -923,8 +923,8 @@ df_27=spark.sql("""
 df_27.createOrReplaceTempView("FIL_SERVICES_LKUP_27")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SALON_LKUP_28
 
+# DBTITLE 1, JNR_SALON_LKUP_28
 
 df_28=spark.sql("""
     SELECT
@@ -992,8 +992,8 @@ df_28=spark.sql("""
 df_28.createOrReplaceTempView("JNR_SALON_LKUP_28")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_SALON_LKUP_29
 
+# DBTITLE 1, FIL_SALON_LKUP_29
 
 df_29=spark.sql("""
     SELECT
@@ -1062,8 +1062,8 @@ df_29=spark.sql("""
 df_29.createOrReplaceTempView("FIL_SALON_LKUP_29")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_TRAINING_LKUP_30
 
+# DBTITLE 1, JNR_TRAINING_LKUP_30
 
 df_30=spark.sql("""
     SELECT
@@ -1133,8 +1133,8 @@ df_30=spark.sql("""
 df_30.createOrReplaceTempView("JNR_TRAINING_LKUP_30")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_TRAINING_LKUP_31
 
+# DBTITLE 1, FIL_TRAINING_LKUP_31
 
 df_31=spark.sql("""
     SELECT
@@ -1205,8 +1205,8 @@ df_31=spark.sql("""
 df_31.createOrReplaceTempView("FIL_TRAINING_LKUP_31")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_HOTEL_LKUP_32
 
+# DBTITLE 1, JNR_HOTEL_LKUP_32
 
 df_32=spark.sql("""
     SELECT
@@ -1278,8 +1278,8 @@ df_32=spark.sql("""
 df_32.createOrReplaceTempView("JNR_HOTEL_LKUP_32")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_HOTEL_LKUP_33
 
+# DBTITLE 1, FIL_HOTEL_LKUP_33
 
 df_33=spark.sql("""
     SELECT
@@ -1352,8 +1352,8 @@ df_33=spark.sql("""
 df_33.createOrReplaceTempView("FIL_HOTEL_LKUP_33")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_CONSUM_LKUP_34
 
+# DBTITLE 1, JNR_CONSUM_LKUP_34
 
 df_34=spark.sql("""
     SELECT
@@ -1427,8 +1427,8 @@ df_34=spark.sql("""
 df_34.createOrReplaceTempView("JNR_CONSUM_LKUP_34")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_CONSUM_LKUP_35
 
+# DBTITLE 1, FIL_CONSUM_LKUP_35
 
 df_35=spark.sql("""
     SELECT
@@ -1503,8 +1503,8 @@ df_35=spark.sql("""
 df_35.createOrReplaceTempView("FIL_CONSUM_LKUP_35")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_HGOODS_LKUP_36
 
+# DBTITLE 1, JNR_HGOODS_LKUP_36
 
 df_36=spark.sql("""
     SELECT
@@ -1580,8 +1580,8 @@ df_36=spark.sql("""
 df_36.createOrReplaceTempView("JNR_HGOODS_LKUP_36")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_HGOODS_LKUP_37
 
+# DBTITLE 1, FIL_HGOODS_LKUP_37
 
 df_37=spark.sql("""
     SELECT
@@ -1658,8 +1658,8 @@ df_37=spark.sql("""
 df_37.createOrReplaceTempView("FIL_HGOODS_LKUP_37")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SPECIALTY_LKUP_38
 
+# DBTITLE 1, JNR_SPECIALTY_LKUP_38
 
 df_38=spark.sql("""
     SELECT
@@ -1737,8 +1737,8 @@ df_38=spark.sql("""
 df_38.createOrReplaceTempView("JNR_SPECIALTY_LKUP_38")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_SPECIALTY_LKUP_39
 
+# DBTITLE 1, FIL_SPECIALTY_LKUP_39
 
 df_39=spark.sql("""
     SELECT
@@ -1817,8 +1817,8 @@ df_39=spark.sql("""
 df_39.createOrReplaceTempView("FIL_SPECIALTY_LKUP_39")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_WK_PRE
 
+# DBTITLE 1, SALES_RANKING_WK_PRE
 
 spark.sql("""INSERT INTO SALES_RANKING_WK_PRE SELECT WEEK_DT AS WEEK_DT,
 LOCATION_ID AS LOCATION_ID,

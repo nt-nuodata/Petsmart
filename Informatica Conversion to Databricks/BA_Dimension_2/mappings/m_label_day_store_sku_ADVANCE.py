@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_ADV_LBL_CHGS_PRE_0
 
+# DBTITLE 1, ZTB_ADV_LBL_CHGS_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -35,8 +35,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_ADV_LBL_CHGS_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ZTB_ADV_LBL_CHGS_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_to_ZTB_ADV_LBL_CHGS_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -59,8 +59,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_ZTB_ADV_LBL_CHGS_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_LBL_FIELDS_CONVERSION_2
 
+# DBTITLE 1, EXP_LBL_FIELDS_CONVERSION_2
 
 df_2=spark.sql("""
     SELECT
@@ -93,8 +93,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_LBL_FIELDS_CONVERSION_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_GET_LOCATION_ID_3
 
+# DBTITLE 1, LKP_GET_LOCATION_ID_3
 
 df_3=spark.sql("""
     SELECT
@@ -112,8 +112,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKP_GET_LOCATION_ID_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_GET_PRODUCT_ID_4
 
+# DBTITLE 1, LKP_GET_PRODUCT_ID_4
 
 df_4=spark.sql("""
     SELECT
@@ -130,8 +130,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_GET_PRODUCT_ID_4")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_GET_TIME_DIMENSIONS_5
 
+# DBTITLE 1, LKP_GET_TIME_DIMENSIONS_5
 
 df_5=spark.sql("""
     SELECT
@@ -151,8 +151,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("LKP_GET_TIME_DIMENSIONS_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_LOAD_TSTMP_6
 
+# DBTITLE 1, EXP_LOAD_TSTMP_6
 
 df_6=spark.sql("""
     SELECT
@@ -189,8 +189,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_LOAD_TSTMP_6")
 
 # COMMAND ----------
-# DBTITLE 1, LABEL_DAY_STORE_SKU_7
 
+# DBTITLE 1, LABEL_DAY_STORE_SKU_7
 
 df_7=spark.sql("""
     SELECT
@@ -219,8 +219,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("LABEL_DAY_STORE_SKU_7")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_LABEL_DAY_STORE_SKU_8
 
+# DBTITLE 1, SQ_Shortcut_to_LABEL_DAY_STORE_SKU_8
 
 df_8=spark.sql("""
     SELECT
@@ -251,8 +251,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("SQ_Shortcut_to_LABEL_DAY_STORE_SKU_8")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_LABEL_DAY_STORE_SKU__ZTB_9
 
+# DBTITLE 1, JNR_LABEL_DAY_STORE_SKU__ZTB_9
 
 df_9=spark.sql("""
     SELECT
@@ -307,8 +307,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("JNR_LABEL_DAY_STORE_SKU__ZTB_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_MD5_10
 
+# DBTITLE 1, EXP_MD5_10
 
 df_10=spark.sql("""
     SELECT
@@ -344,8 +344,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("EXP_MD5_10")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_INS_UPD_11
 
+# DBTITLE 1, FIL_INS_UPD_11
 
 df_11=spark.sql("""
     SELECT
@@ -377,8 +377,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("FIL_INS_UPD_11")
 
 # COMMAND ----------
-# DBTITLE 1, UPS_LABEL_DAY_STORE_SKU_12
 
+# DBTITLE 1, UPS_LABEL_DAY_STORE_SKU_12
 
 df_12=spark.sql("""
     SELECT
@@ -408,8 +408,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("UPS_LABEL_DAY_STORE_SKU_12")
 
 # COMMAND ----------
-# DBTITLE 1, LABEL_DAY_STORE_SKU
 
+# DBTITLE 1, LABEL_DAY_STORE_SKU
 
 spark.sql("""INSERT INTO LABEL_DAY_STORE_SKU SELECT LABEL_CHANGE_DT AS LABEL_CHANGE_DT,
 LOCATION_ID AS LOCATION_ID,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PO_COND_A044_FLAT_0
 
+# DBTITLE 1, VENDOR_PO_COND_A044_FLAT_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("VENDOR_PO_COND_A044_FLAT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_VENDOR_PO_COND_A044_FILE_1
 
+# DBTITLE 1, SQ_VENDOR_PO_COND_A044_FILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -53,8 +53,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_VENDOR_PO_COND_A044_FILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, FILTRANS_2
 
+# DBTITLE 1, FILTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -76,8 +76,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FILTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_VENDOR_SUBRANGE_CD_3
 
+# DBTITLE 1, EXP_VENDOR_SUBRANGE_CD_3
 
 df_3=spark.sql("""
     SELECT
@@ -91,8 +91,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_VENDOR_SUBRANGE_CD_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_4
 
+# DBTITLE 1, EXPTRANS_4
 
 df_4=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXPTRANS_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_COMMON_DATE_TRANS_5
 
+# DBTITLE 1, EXP_COMMON_DATE_TRANS_5
 
 df_5=spark.sql("""
     SELECT
@@ -144,8 +144,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_COMMON_DATE_TRANS_5")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PO_COND_PRE
 
+# DBTITLE 1, VENDOR_PO_COND_PRE
 
 spark.sql("""INSERT INTO VENDOR_PO_COND_PRE SELECT PO_COND_CD AS PO_COND_CD,
 PURCH_ORG_CD AS PURCH_ORG_CD,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SAP_DEPT_0
 
+# DBTITLE 1, SAP_DEPT_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SAP_DEPT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SAP_DEPT_1
 
+# DBTITLE 1, SQ_Shortcut_to_SAP_DEPT_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SAP_DEPT_1")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_DEPT
 
+# DBTITLE 1, SAP_DEPT
 
 spark.sql("""INSERT INTO SAP_DEPT SELECT SAP_DEPT_ID AS SAP_DEPT_ID,
 SAP_DEPT_DESC AS SAP_DEPT_DESC,

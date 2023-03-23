@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, POG_STORE_PRO_0
 
+# DBTITLE 1, POG_STORE_PRO_0
 
 df_0=spark.sql("""
     SELECT
@@ -34,8 +34,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("POG_STORE_PRO_0")
 
 # COMMAND ----------
-# DBTITLE 1, PLANOGRAM_PRO_1
 
+# DBTITLE 1, PLANOGRAM_PRO_1
 
 df_1=spark.sql("""
     SELECT
@@ -75,8 +75,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("PLANOGRAM_PRO_1")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_2
 
+# DBTITLE 1, SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -188,8 +188,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_SITE_PROFILE_3
 
+# DBTITLE 1, ASQ_Shortcut_to_SITE_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -212,8 +212,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_Shortcut_to_SITE_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_RPT
 
+# DBTITLE 1, SITE_PROFILE_RPT
 
 spark.sql("""INSERT INTO SITE_PROFILE_RPT SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,
@@ -354,8 +354,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM ASQ_Shortcut_to_SITE_PROFILE_3""")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, USR_MA_DC_COST_CTRL_0
 
+# DBTITLE 1, USR_MA_DC_COST_CTRL_0
 
 df_0=spark.sql("""
     SELECT
@@ -29,8 +29,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("USR_MA_DC_COST_CTRL_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_USR_MA_DC_COST_CTRL_1
 
+# DBTITLE 1, SQ_Shortcut_to_USR_MA_DC_COST_CTRL_1
 
 df_1=spark.sql("""
     SELECT
@@ -47,8 +47,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_USR_MA_DC_COST_CTRL_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_USR_MA_DC_COST_CTRL_2
 
+# DBTITLE 1, EXP_USR_MA_DC_COST_CTRL_2
 
 df_2=spark.sql("""
     SELECT
@@ -65,8 +65,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_USR_MA_DC_COST_CTRL_2")
 
 # COMMAND ----------
-# DBTITLE 1, USR_MA_DC_COST_CTRL
 
+# DBTITLE 1, USR_MA_DC_COST_CTRL
 
 spark.sql("""INSERT INTO USR_MA_DC_COST_CTRL SELECT MA_EVENT_TYPE_ID AS MA_EVENT_TYPE_ID,
 SAP_CATEGORY_ID AS SAP_CATEGORY_ID,

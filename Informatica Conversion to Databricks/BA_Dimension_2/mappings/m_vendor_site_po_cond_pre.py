@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_SITE_PO_COND_A907_FLAT_0
 
+# DBTITLE 1, VENDOR_SITE_PO_COND_A907_FLAT_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("VENDOR_SITE_PO_COND_A907_FLAT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_VENDOR_SITE_PO_COND_A907_FILE_1
 
+# DBTITLE 1, SQ_VENDOR_SITE_PO_COND_A907_FILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_VENDOR_SITE_PO_COND_A907_FILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_VENDOR_SUBRANGE_CD_2
 
+# DBTITLE 1, EXP_VENDOR_SUBRANGE_CD_2
 
 df_2=spark.sql("""
     SELECT
@@ -72,8 +72,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_VENDOR_SUBRANGE_CD_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_COMMON_DATE_TRANS_3
 
+# DBTITLE 1, EXP_COMMON_DATE_TRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -111,8 +111,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_COMMON_DATE_TRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_SITE_PO_COND_PRE
 
+# DBTITLE 1, VENDOR_SITE_PO_COND_PRE
 
 spark.sql("""INSERT INTO VENDOR_SITE_PO_COND_PRE SELECT COND_TYPE_CD AS PO_COND_CD,
 PURCH_ORD_CD AS PURCH_ORG_CD,

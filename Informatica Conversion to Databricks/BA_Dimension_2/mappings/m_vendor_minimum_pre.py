@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_MINIMUM_FLATFILE_0
 
+# DBTITLE 1, VENDOR_MINIMUM_FLATFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -38,8 +38,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("VENDOR_MINIMUM_FLATFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_VENDOR_MINIMUM_FLATFILE_1
 
+# DBTITLE 1, SQ_Shortcut_To_VENDOR_MINIMUM_FLATFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -65,8 +65,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_VENDOR_MINIMUM_FLATFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_2
 
+# DBTITLE 1, EXPTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -79,8 +79,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXPTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_MINIMUM_PRE
 
+# DBTITLE 1, VENDOR_MINIMUM_PRE
 
 spark.sql("""INSERT INTO VENDOR_MINIMUM_PRE SELECT VENDOR_ID AS VENDOR_ID,
 STORE_NBR AS STORE_NBR,

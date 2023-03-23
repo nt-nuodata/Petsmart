@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PB_MANAGER_0
 
+# DBTITLE 1, PB_MANAGER_0
 
 df_0=spark.sql("""
     SELECT
@@ -29,8 +29,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PB_MANAGER_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PB_MANAGER_1
 
+# DBTITLE 1, SQ_Shortcut_to_PB_MANAGER_1
 
 df_1=spark.sql("""
     SELECT
@@ -47,8 +47,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_PB_MANAGER_1")
 
 # COMMAND ----------
-# DBTITLE 1, PB_MANAGER_PRE_2
 
+# DBTITLE 1, PB_MANAGER_PRE_2
 
 df_2=spark.sql("""
     SELECT
@@ -62,8 +62,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("PB_MANAGER_PRE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PB_MANAGER_PRE_3
 
+# DBTITLE 1, SQ_Shortcut_to_PB_MANAGER_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -77,8 +77,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_PB_MANAGER_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_MANAGER_4
 
+# DBTITLE 1, JNR_MANAGER_4
 
 df_4=spark.sql("""
     SELECT
@@ -98,8 +98,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("JNR_MANAGER_4")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_MANAGER_5
 
+# DBTITLE 1, FIL_MANAGER_5
 
 df_5=spark.sql("""
     SELECT
@@ -124,8 +124,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("FIL_MANAGER_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_MANAGER_6
 
+# DBTITLE 1, EXP_MANAGER_6
 
 df_6=spark.sql("""
     SELECT
@@ -173,8 +173,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_MANAGER_6")
 
 # COMMAND ----------
-# DBTITLE 1, UPS_PB_BRAND_7
 
+# DBTITLE 1, UPS_PB_BRAND_7
 
 df_7=spark.sql("""
     SELECT
@@ -192,8 +192,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("UPS_PB_BRAND_7")
 
 # COMMAND ----------
-# DBTITLE 1, PB_MANAGER
 
+# DBTITLE 1, PB_MANAGER
 
 spark.sql("""INSERT INTO PB_MANAGER SELECT PB_MANAGER_ID AS PB_MANAGER_ID,
 PB_MANAGER_NAME AS PB_MANAGER_NAME,

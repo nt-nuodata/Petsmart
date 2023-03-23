@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTPIM_ART_ATTR_0
 
+# DBTITLE 1, ZTPIM_ART_ATTR_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,12 +31,13 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTPIM_ART_ATTR_0")
 
 # COMMAND ----------
+
 # DBTITLE 1, Fil_ZTPIM_ART_ATTR
 
 
 # COMMAND ----------
-# DBTITLE 1, Exp_SAP_KOI_2
 
+# DBTITLE 1, Exp_SAP_KOI_2
 
 df_2=spark.sql("""SELECT TO_INTEGER(MATNR) AS o_MATNR,
 TO_INTEGER(ATTVALNUM) AS SKU_SAP_KOI_ID,
@@ -46,8 +47,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_2.createOrReplaceTempView("Exp_SAP_KOI_2")
 
 # COMMAND ----------
-# DBTITLE 1, ZTPIM_MAP_3
 
+# DBTITLE 1, ZTPIM_MAP_3
 
 df_3=spark.sql("""
     SELECT
@@ -66,12 +67,13 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ZTPIM_MAP_3")
 
 # COMMAND ----------
+
 # DBTITLE 1, FIL_DATE_IN_DATAB_DATBI
 
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ZM_ARTICLE_CHANGE_TO_INTEGER_5
 
+# DBTITLE 1, EXP_ZM_ARTICLE_CHANGE_TO_INTEGER_5
 
 df_5=spark.sql("""SELECT TO_INTEGER(ARTICLE) AS o_ARTICLE,
 TO_CHAR(MAP_PRICE) AS o_MAP_PRICE,
@@ -80,8 +82,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_5.createOrReplaceTempView("EXP_ZM_ARTICLE_CHANGE_TO_INTEGER_5")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_PVT_LBL_GAP_6
 
+# DBTITLE 1, ZTB_PVT_LBL_GAP_6
 
 df_6=spark.sql("""
     SELECT
@@ -102,8 +104,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("ZTB_PVT_LBL_GAP_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ZPLG_MATNR_CHANGE_TO_INTEGER_7
 
+# DBTITLE 1, EXP_ZPLG_MATNR_CHANGE_TO_INTEGER_7
 
 df_7=spark.sql("""SELECT PLG_NUMBER AS PLG_NUMBER,
 TO_INTEGER(MATNR) AS o_MATNR,
@@ -114,8 +116,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_7.createOrReplaceTempView("EXP_ZPLG_MATNR_CHANGE_TO_INTEGER_7")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_PR_LABEL_8
 
+# DBTITLE 1, ZTB_PR_LABEL_8
 
 df_8=spark.sql("""
     SELECT
@@ -129,8 +131,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("ZTB_PR_LABEL_8")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_SIZE_PARITY_9
 
+# DBTITLE 1, ZTB_SIZE_PARITY_9
 
 df_9=spark.sql("""
     SELECT
@@ -147,8 +149,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("ZTB_SIZE_PARITY_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ZSP_MATNR_CHANGE_TO_INTEGER_10
 
+# DBTITLE 1, EXP_ZSP_MATNR_CHANGE_TO_INTEGER_10
 
 df_10=spark.sql("""SELECT TO_INTEGER(MATNR) AS o_MATNR,
 SP_GRP_ID AS SP_GRP_ID,
@@ -158,8 +160,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_10.createOrReplaceTempView("EXP_ZSP_MATNR_CHANGE_TO_INTEGER_10")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_PR_FAM_ART_11
 
+# DBTITLE 1, ZTB_PR_FAM_ART_11
 
 df_11=spark.sql("""
     SELECT
@@ -177,8 +179,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("ZTB_PR_FAM_ART_11")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ZPFA_MATNR_CHANGE_TO_INTEGER_12
 
+# DBTITLE 1, EXP_ZPFA_MATNR_CHANGE_TO_INTEGER_12
 
 df_12=spark.sql("""SELECT PRICE_FAMILY_NO AS PRICE_FAMILY_NO,
 TO_INTEGER(MATNR) AS o_MATNR,
@@ -188,8 +190,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_12.createOrReplaceTempView("EXP_ZPFA_MATNR_CHANGE_TO_INTEGER_12")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_PR_GRP_ART_13
 
+# DBTITLE 1, ZTB_PR_GRP_ART_13
 
 df_13=spark.sql("""
     SELECT
@@ -210,12 +212,13 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("ZTB_PR_GRP_ART_13")
 
 # COMMAND ----------
+
 # DBTITLE 1, AGG_KVI_CODE_KVI_NAME
 
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ZPGA_MATNR_CHANGE_TO_INTEGER_15
 
+# DBTITLE 1, EXP_ZPGA_MATNR_CHANGE_TO_INTEGER_15
 
 df_15=spark.sql("""SELECT KVI_CODE AS KVI_CODE,
 KVI_NAME AS KVI_NAME,
@@ -225,8 +228,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_15.createOrReplaceTempView("EXP_ZPGA_MATNR_CHANGE_TO_INTEGER_15")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_16
 
+# DBTITLE 1, SKU_PROFILE_16
 
 df_16=spark.sql("""
     SELECT
@@ -310,8 +313,8 @@ df_16=spark.sql("""
 df_16.createOrReplaceTempView("SKU_PROFILE_16")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_17
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_17
 
 df_17=spark.sql("""
     SELECT
@@ -395,8 +398,8 @@ df_17=spark.sql("""
 df_17.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE_17")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_ZTB_PR_GRP_ART_18
 
+# DBTITLE 1, JNR_ZTB_PR_GRP_ART_18
 
 df_18=spark.sql("""
     SELECT
@@ -415,8 +418,8 @@ df_18=spark.sql("""
 df_18.createOrReplaceTempView("JNR_ZTB_PR_GRP_ART_18")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_ZTB_PR_FAM_ART_19
 
+# DBTITLE 1, JNR_ZTB_PR_FAM_ART_19
 
 df_19=spark.sql("""
     SELECT
@@ -437,8 +440,8 @@ df_19=spark.sql("""
 df_19.createOrReplaceTempView("JNR_ZTB_PR_FAM_ART_19")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_ZTB_SIZE_PARITY_20
 
+# DBTITLE 1, JNR_ZTB_SIZE_PARITY_20
 
 df_20=spark.sql("""
     SELECT
@@ -461,8 +464,8 @@ df_20=spark.sql("""
 df_20.createOrReplaceTempView("JNR_ZTB_SIZE_PARITY_20")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_ZTB_PVT_LBL_GAP_21
 
+# DBTITLE 1, JNR_ZTB_PVT_LBL_GAP_21
 
 df_21=spark.sql("""
     SELECT
@@ -487,8 +490,8 @@ df_21=spark.sql("""
 df_21.createOrReplaceTempView("JNR_ZTB_PVT_LBL_GAP_21")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_ZTB_PR_LABEL_22
 
+# DBTITLE 1, JNR_ZTB_PR_LABEL_22
 
 df_22=spark.sql("""SELECT DETAIL.PRODUCT_ID AS PRODUCT_ID,
 DETAIL.SKU_NBR AS SKU_NBR,
@@ -507,8 +510,8 @@ MASTER.Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null MAST
 df_22.createOrReplaceTempView("JNR_ZTB_PR_LABEL_22")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_ZTPIM_MAP_23
 
+# DBTITLE 1, JNR_ZTPIM_MAP_23
 
 df_23=spark.sql("""
     SELECT
@@ -535,8 +538,8 @@ df_23=spark.sql("""
 df_23.createOrReplaceTempView("JNR_ZTPIM_MAP_23")
 
 # COMMAND ----------
-# DBTITLE 1, Jnr_SAP_KOI_24
 
+# DBTITLE 1, Jnr_SAP_KOI_24
 
 df_24=spark.sql("""
     SELECT
@@ -566,8 +569,8 @@ df_24=spark.sql("""
 df_24.createOrReplaceTempView("Jnr_SAP_KOI_24")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_LOAD_TSTMP_25
 
+# DBTITLE 1, EXP_LOAD_TSTMP_25
 
 df_25=spark.sql("""
     SELECT
@@ -594,8 +597,8 @@ df_25=spark.sql("""
 df_25.createOrReplaceTempView("EXP_LOAD_TSTMP_25")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_SAP_ATTR_PRE
 
+# DBTITLE 1, SKU_SAP_ATTR_PRE
 
 spark.sql("""INSERT INTO SKU_SAP_ATTR_PRE SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

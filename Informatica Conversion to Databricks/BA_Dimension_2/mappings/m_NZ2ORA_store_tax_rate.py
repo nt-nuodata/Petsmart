@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STORE_TAX_RATE_0
 
+# DBTITLE 1, STORE_TAX_RATE_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STORE_TAX_RATE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_STORE_TAX_RATE_1
 
+# DBTITLE 1, SQ_Shortcut_to_STORE_TAX_RATE_1
 
 df_1=spark.sql("""
     SELECT
@@ -51,8 +51,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_STORE_TAX_RATE_1")
 
 # COMMAND ----------
-# DBTITLE 1, STORE_TAX_RATE
 
+# DBTITLE 1, STORE_TAX_RATE
 
 spark.sql("""INSERT INTO STORE_TAX_RATE SELECT SITE_NBR AS SITE_NBR,
 COUNTRY_CD AS COUNTRY_CD,

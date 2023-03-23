@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STPO_0
 
+# DBTITLE 1, STPO_0
 
 df_0=spark.sql("""
     SELECT
@@ -143,8 +143,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STPO_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_STPO_1
 
+# DBTITLE 1, SQ_STPO_1
 
 df_1=spark.sql("""
     SELECT
@@ -172,8 +172,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_STPO_1")
 
 # COMMAND ----------
-# DBTITLE 1, SHIPPER_STPO_PRE
 
+# DBTITLE 1, SHIPPER_STPO_PRE
 
 spark.sql("""INSERT INTO SHIPPER_STPO_PRE SELECT STLTY AS BOM_CATEGORY_ID,
 STLNR AS BILL_OF_MATERIAL,

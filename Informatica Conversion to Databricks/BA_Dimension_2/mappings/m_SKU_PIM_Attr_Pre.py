@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PIMArticleAttr_0
 
+# DBTITLE 1, PIMArticleAttr_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PIMArticleAttr_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PIMArticleAttr_1
 
+# DBTITLE 1, SQ_Shortcut_to_PIMArticleAttr_1
 
 df_1=spark.sql("""
     SELECT
@@ -49,8 +49,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_PIMArticleAttr_1")
 
 # COMMAND ----------
-# DBTITLE 1, PIMArticleAssignment_2
 
+# DBTITLE 1, PIMArticleAssignment_2
 
 df_2=spark.sql("""
     SELECT
@@ -75,8 +75,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("PIMArticleAssignment_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PIMArticleAssignment_3
 
+# DBTITLE 1, SQ_Shortcut_to_PIMArticleAssignment_3
 
 df_3=spark.sql("""
     SELECT
@@ -90,8 +90,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_PIMArticleAssignment_3")
 
 # COMMAND ----------
-# DBTITLE 1, FILTRANS_4
 
+# DBTITLE 1, FILTRANS_4
 
 df_4=spark.sql("""
     SELECT
@@ -108,8 +108,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("FILTRANS_4")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_PIMWebStyle_5
 
+# DBTITLE 1, Exp_PIMWebStyle_5
 
 df_5=spark.sql("""
     SELECT
@@ -126,8 +126,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("Exp_PIMWebStyle_5")
 
 # COMMAND ----------
-# DBTITLE 1, Union_6
 
+# DBTITLE 1, Union_6
 
 df_6=spark.sql("""SELECT ArticleNbr AS ARTICLENBR,
 DelInd AS DELIND,
@@ -146,8 +146,8 @@ SLICESEQNBR2 AS SLICESEQNBR FROM Exp_PIMWebStyle_5""")
 df_6.createOrReplaceTempView("Union_6")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_Load_Tstmp_7
 
+# DBTITLE 1, Exp_Load_Tstmp_7
 
 df_7=spark.sql("""
     SELECT
@@ -165,8 +165,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("Exp_Load_Tstmp_7")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PIM_ATTR_PRE
 
+# DBTITLE 1, SKU_PIM_ATTR_PRE
 
 spark.sql("""INSERT INTO SKU_PIM_ATTR_PRE SELECT ARTICLENBR AS ARTICLE_NBR,
 PIMATTRID AS PIM_ATTR_ID,

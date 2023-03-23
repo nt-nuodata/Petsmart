@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, REPLENISHMENT_DAY_0
 
+# DBTITLE 1, REPLENISHMENT_DAY_0
 
 df_0=spark.sql("""
     SELECT
@@ -34,8 +34,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("REPLENISHMENT_DAY_0")
 
 # COMMAND ----------
-# DBTITLE 1, REPLENISHMENT_PRE_1
 
+# DBTITLE 1, REPLENISHMENT_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -57,8 +57,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("REPLENISHMENT_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_REPLENISHMENT_DAY_2
 
+# DBTITLE 1, ASQ_Shortcut_to_REPLENISHMENT_DAY_2
 
 df_2=spark.sql("""
     SELECT
@@ -84,8 +84,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Shortcut_to_REPLENISHMENT_DAY_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_REPLENISHMENT_DAY_3
 
+# DBTITLE 1, UPD_REPLENISHMENT_DAY_3
 
 df_3=spark.sql("""
     SELECT
@@ -108,8 +108,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPD_REPLENISHMENT_DAY_3")
 
 # COMMAND ----------
-# DBTITLE 1, REPLENISHMENT_DAY
 
+# DBTITLE 1, REPLENISHMENT_DAY
 
 spark.sql("""INSERT INTO REPLENISHMENT_DAY SELECT SKU_NBR AS SKU_NBR,
 STORE_NBR AS STORE_NBR,

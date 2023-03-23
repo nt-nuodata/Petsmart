@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PIMWebstyle_0
 
+# DBTITLE 1, PIMWebstyle_0
 
 df_0=spark.sql("""
     SELECT
@@ -36,8 +36,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PIMWebstyle_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PIMWebstyle_1
 
+# DBTITLE 1, SQ_Shortcut_to_PIMWebstyle_1
 
 df_1=spark.sql("""
     SELECT
@@ -51,8 +51,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_PIMWebstyle_1")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_WebStyle_2
 
+# DBTITLE 1, Exp_WebStyle_2
 
 df_2=spark.sql("""
     SELECT
@@ -68,8 +68,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("Exp_WebStyle_2")
 
 # COMMAND ----------
-# DBTITLE 1, PIMAttrValues_3
 
+# DBTITLE 1, PIMAttrValues_3
 
 df_3=spark.sql("""
     SELECT
@@ -87,8 +87,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("PIMAttrValues_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PIMAttrValues_4
 
+# DBTITLE 1, SQ_Shortcut_to_PIMAttrValues_4
 
 df_4=spark.sql("""
     SELECT
@@ -104,8 +104,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_Shortcut_to_PIMAttrValues_4")
 
 # COMMAND ----------
-# DBTITLE 1, Union_5
 
+# DBTITLE 1, Union_5
 
 df_5=spark.sql("""SELECT DelInd AS DEL_IND,
 EntryPosition AS ENTRY_POSITION,
@@ -122,8 +122,8 @@ PIM_ATTR_ID2 AS PIM_ATTR_ID FROM Exp_WebStyle_2""")
 df_5.createOrReplaceTempView("Union_5")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_SKU_PIM_Attr_Values_Pre_6
 
+# DBTITLE 1, Exp_SKU_PIM_Attr_Values_Pre_6
 
 df_6=spark.sql("""
     SELECT
@@ -140,8 +140,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("Exp_SKU_PIM_Attr_Values_Pre_6")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PIM_ATTR_TYPE_VALUES_PRE
 
+# DBTITLE 1, SKU_PIM_ATTR_TYPE_VALUES_PRE
 
 spark.sql("""INSERT INTO SKU_PIM_ATTR_TYPE_VALUES_PRE SELECT PIM_ATTR_ID AS PIM_ATTR_ID,
 PIM_ATTR_VAL_ID AS PIM_ATTR_VAL_ID,

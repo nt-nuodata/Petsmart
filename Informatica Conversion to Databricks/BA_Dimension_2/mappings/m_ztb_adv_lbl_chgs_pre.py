@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_ADV_LBL_CHGS_0
 
+# DBTITLE 1, ZTB_ADV_LBL_CHGS_0
 
 df_0=spark.sql("""
     SELECT
@@ -34,8 +34,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_ADV_LBL_CHGS_0")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_EFFECTIVE_DATE_1
 
+# DBTITLE 1, EXP_EFFECTIVE_DATE_1
 
 df_1=spark.sql("""SELECT MANDT AS MANDT,
 TO_CHAR(EFFECTIVE_DATE,'YYYYMMDD') AS EFFECTIVE_DATE,
@@ -54,8 +54,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_1.createOrReplaceTempView("EXP_EFFECTIVE_DATE_1")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_ADV_LBL_CHGS_PRE
 
+# DBTITLE 1, ZTB_ADV_LBL_CHGS_PRE
 
 spark.sql("""INSERT INTO ZTB_ADV_LBL_CHGS_PRE SELECT MANDT AS MANDT,
 EFFECTIVE_DATE AS EFFECTIVE_DATE,

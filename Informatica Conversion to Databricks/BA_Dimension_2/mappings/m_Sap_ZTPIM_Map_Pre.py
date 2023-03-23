@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTPIM_MAP_0
 
+# DBTITLE 1, ZTPIM_MAP_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTPIM_MAP_0")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_LOAD_TSTMP_1
 
+# DBTITLE 1, EXP_LOAD_TSTMP_1
 
 df_1=spark.sql("""SELECT MANDT AS MANDT,
 ARTICLE AS ARTICLE,
@@ -48,8 +48,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_1.createOrReplaceTempView("EXP_LOAD_TSTMP_1")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ZTPIM_MAP_PRE
 
+# DBTITLE 1, SAP_ZTPIM_MAP_PRE
 
 spark.sql("""INSERT INTO SAP_ZTPIM_MAP_PRE SELECT MANDT AS MANDT,
 ARTICLE AS ARTICLE,

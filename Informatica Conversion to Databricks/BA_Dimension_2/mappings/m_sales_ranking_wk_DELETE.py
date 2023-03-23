@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_DATE_PRE_0
 
+# DBTITLE 1, SALES_RANKING_DATE_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_RANKING_DATE_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_DATE_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_DATE_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_DATE_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_PASS_PROCESSING_WK_2
 
+# DBTITLE 1, AGG_PASS_PROCESSING_WK_2
 
 df_2=spark.sql("""
     SELECT
@@ -53,8 +53,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("AGG_PASS_PROCESSING_WK_2")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_WK_3
 
+# DBTITLE 1, SALES_RANKING_WK_3
 
 df_3=spark.sql("""
     SELECT
@@ -125,8 +125,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SALES_RANKING_WK_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_WK_4
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_WK_4
 
 df_4=spark.sql("""
     SELECT
@@ -197,8 +197,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_WK_4")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_RECENT_TXNS_5
 
+# DBTITLE 1, FIL_RECENT_TXNS_5
 
 df_5=spark.sql("""
     SELECT
@@ -213,8 +213,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("FIL_RECENT_TXNS_5")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SALES_RANKING_WK_DEL_6
 
+# DBTITLE 1, JNR_SALES_RANKING_WK_DEL_6
 
 df_6=spark.sql("""
     SELECT
@@ -231,8 +231,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("JNR_SALES_RANKING_WK_DEL_6")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_SALES_RANING_WK_DEL_7
 
+# DBTITLE 1, UPD_SALES_RANING_WK_DEL_7
 
 df_7=spark.sql("""
     SELECT
@@ -245,8 +245,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("UPD_SALES_RANING_WK_DEL_7")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_WK
 
+# DBTITLE 1, SALES_RANKING_WK
 
 spark.sql("""INSERT INTO SALES_RANKING_WK SELECT WEEK_DT AS WEEK_DT,
 LOCATION_ID AS LOCATION_ID,

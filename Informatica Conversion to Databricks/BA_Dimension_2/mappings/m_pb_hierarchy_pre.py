@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, BrandDirector_0
 
+# DBTITLE 1, BrandDirector_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("BrandDirector_0")
 
 # COMMAND ----------
-# DBTITLE 1, BrandManager_1
 
+# DBTITLE 1, BrandManager_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("BrandManager_1")
 
 # COMMAND ----------
-# DBTITLE 1, DeptBrand_2
 
+# DBTITLE 1, DeptBrand_2
 
 df_2=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("DeptBrand_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_ADH_BrandHierarchy_3
 
+# DBTITLE 1, SQ_ADH_BrandHierarchy_3
 
 df_3=spark.sql("""SELECT DeptBrand.MerchDeptCd AS MerchDeptCd,
 DeptBrand.DeptBrandCd AS DeptBrandCd,
@@ -88,8 +88,8 @@ AND BrandManager.BrandDirectorId = BrandDirector.BrandDirectorId""")
 df_3.createOrReplaceTempView("SQ_ADH_BrandHierarchy_3")
 
 # COMMAND ----------
-# DBTITLE 1, ArtAttribute_4
 
+# DBTITLE 1, ArtAttribute_4
 
 df_4=spark.sql("""
     SELECT
@@ -108,8 +108,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("ArtAttribute_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ArtAttribute_5
 
+# DBTITLE 1, SQ_Shortcut_to_ArtAttribute_5
 
 df_5=spark.sql("""
     SELECT
@@ -131,8 +131,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_to_ArtAttribute_5")
 
 # COMMAND ----------
-# DBTITLE 1, Brand_6
 
+# DBTITLE 1, Brand_6
 
 df_6=spark.sql("""
     SELECT
@@ -149,8 +149,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("Brand_6")
 
 # COMMAND ----------
-# DBTITLE 1, ArtMas_7
 
+# DBTITLE 1, ArtMas_7
 
 df_7=spark.sql("""
     SELECT
@@ -227,8 +227,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("ArtMas_7")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_ArtMast_Brand_8
 
+# DBTITLE 1, SQ_ArtMast_Brand_8
 
 df_8=spark.sql("""SELECT ArtMas.BrandCd AS BrandCd,
 ArtMas.ArticleNbr AS ArticleNbr,
@@ -240,8 +240,8 @@ Brand.BrandClassificationCd is not null""")
 df_8.createOrReplaceTempView("SQ_ArtMast_Brand_8")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_LPAD_ArtAttibute_9
 
+# DBTITLE 1, Exp_LPAD_ArtAttibute_9
 
 df_9=spark.sql("""
     SELECT
@@ -258,8 +258,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("Exp_LPAD_ArtAttibute_9")
 
 # COMMAND ----------
-# DBTITLE 1, Jnr_Brand_Art_10
 
+# DBTITLE 1, Jnr_Brand_Art_10
 
 df_10=spark.sql("""
     SELECT
@@ -278,8 +278,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("Jnr_Brand_Art_10")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_Brand_Classification_11
 
+# DBTITLE 1, Exp_Brand_Classification_11
 
 df_11=spark.sql("""
     SELECT
@@ -294,8 +294,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("Exp_Brand_Classification_11")
 
 # COMMAND ----------
-# DBTITLE 1, SRTTRANS_12
 
+# DBTITLE 1, SRTTRANS_12
 
 df_12=spark.sql("""
     SELECT
@@ -311,8 +311,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("SRTTRANS_12")
 
 # COMMAND ----------
-# DBTITLE 1, Jnr_ADH_EDW__Brand_13
 
+# DBTITLE 1, Jnr_ADH_EDW__Brand_13
 
 df_13=spark.sql("""
     SELECT
@@ -332,8 +332,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("Jnr_ADH_EDW__Brand_13")
 
 # COMMAND ----------
-# DBTITLE 1, PB_HIERARCHY_PRE
 
+# DBTITLE 1, PB_HIERARCHY_PRE
 
 spark.sql("""INSERT INTO PB_HIERARCHY_PRE SELECT BRAND_CD AS BRAND_CD,
 MerchDeptCd AS SAP_DEPT_ID,

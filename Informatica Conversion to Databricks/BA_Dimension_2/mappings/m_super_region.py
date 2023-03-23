@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, REGION_0
 
+# DBTITLE 1, REGION_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("REGION_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_REGION_1
 
+# DBTITLE 1, SQ_Shortcut_to_REGION_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_REGION_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SUPER_REGION_2
 
+# DBTITLE 1, EXP_SUPER_REGION_2
 
 df_2=spark.sql("""
     SELECT
@@ -89,8 +89,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_SUPER_REGION_2")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_SUPER_REGION_3
 
+# DBTITLE 1, AGG_SUPER_REGION_3
 
 df_3=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("AGG_SUPER_REGION_3")
 
 # COMMAND ----------
-# DBTITLE 1, SUPER_REGION
 
+# DBTITLE 1, SUPER_REGION
 
 spark.sql("""INSERT INTO SUPER_REGION SELECT SUPER_REGION_ID AS SUPER_REGION_ID,
 SUPER_REGION_DESC AS SUPER_REGION_DESC FROM AGG_SUPER_REGION_3""")

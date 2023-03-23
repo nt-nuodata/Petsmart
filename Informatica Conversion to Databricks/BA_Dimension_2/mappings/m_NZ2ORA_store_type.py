@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STORE_TYPE_0
 
+# DBTITLE 1, STORE_TYPE_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STORE_TYPE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_STORE_TYPE_1
 
+# DBTITLE 1, SQ_Shortcut_to_STORE_TYPE_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_STORE_TYPE_1")
 
 # COMMAND ----------
-# DBTITLE 1, STORE_TYPE
 
+# DBTITLE 1, STORE_TYPE
 
 spark.sql("""INSERT INTO STORE_TYPE SELECT STORE_TYPE_ID AS STORE_TYPE_ID,
 STORE_TYPE_DESC AS STORE_TYPE_DESC FROM SQ_Shortcut_to_STORE_TYPE_1""")

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_TYPE_VAR_CTRL_0
 
+# DBTITLE 1, MA_EVENT_TYPE_VAR_CTRL_0
 
 df_0=spark.sql("""
     SELECT
@@ -30,8 +30,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MA_EVENT_TYPE_VAR_CTRL_0")
 
 # COMMAND ----------
-# DBTITLE 1, MA_CASH_DISCOUNT_CTRL_1
 
+# DBTITLE 1, MA_CASH_DISCOUNT_CTRL_1
 
 df_1=spark.sql("""
     SELECT
@@ -51,8 +51,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("MA_CASH_DISCOUNT_CTRL_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MA_CASH_DISCOUNT_CTRL_2
 
+# DBTITLE 1, SQ_Shortcut_to_MA_CASH_DISCOUNT_CTRL_2
 
 df_2=spark.sql("""
     SELECT
@@ -67,8 +67,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SQ_Shortcut_to_MA_CASH_DISCOUNT_CTRL_2")
 
 # COMMAND ----------
-# DBTITLE 1, MA_FISCAL_MO_CTRL_3
 
+# DBTITLE 1, MA_FISCAL_MO_CTRL_3
 
 df_3=spark.sql("""
     SELECT
@@ -83,8 +83,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("MA_FISCAL_MO_CTRL_3")
 
 # COMMAND ----------
-# DBTITLE 1, MONTHS_4
 
+# DBTITLE 1, MONTHS_4
 
 df_4=spark.sql("""
     SELECT
@@ -103,8 +103,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("MONTHS_4")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_RPT_5
 
+# DBTITLE 1, VENDOR_PROFILE_RPT_5
 
 df_5=spark.sql("""
     SELECT
@@ -157,8 +157,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("VENDOR_PROFILE_RPT_5")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_DAY_SKU_STORE_RPT_6
 
+# DBTITLE 1, SALES_DAY_SKU_STORE_RPT_6
 
 df_6=spark.sql("""
     SELECT
@@ -217,8 +217,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SALES_DAY_SKU_STORE_RPT_6")
 
 # COMMAND ----------
-# DBTITLE 1, GL_ACCOUNT_PROFILE_7
 
+# DBTITLE 1, GL_ACCOUNT_PROFILE_7
 
 df_7=spark.sql("""
     SELECT
@@ -239,8 +239,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("GL_ACCOUNT_PROFILE_7")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_8
 
+# DBTITLE 1, DAYS_8
 
 df_8=spark.sql("""
     SELECT
@@ -298,8 +298,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("DAYS_8")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_SALES_QUERY_9
 
+# DBTITLE 1, SQ_SALES_QUERY_9
 
 df_9=spark.sql("""
     SELECT
@@ -327,8 +327,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("SQ_SALES_QUERY_9")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_RPT_10
 
+# DBTITLE 1, SITE_PROFILE_RPT_10
 
 df_10=spark.sql("""
     SELECT
@@ -476,8 +476,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("SITE_PROFILE_RPT_10")
 
 # COMMAND ----------
-# DBTITLE 1, GL_ACTUAL_DETAIL_11
 
+# DBTITLE 1, GL_ACTUAL_DETAIL_11
 
 df_11=spark.sql("""
     SELECT
@@ -535,8 +535,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("GL_ACTUAL_DETAIL_11")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_GL_QUERY_12
 
+# DBTITLE 1, SQ_GL_QUERY_12
 
 df_12=spark.sql("""
     SELECT
@@ -635,8 +635,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("SQ_GL_QUERY_12")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_GL_SALES_13
 
+# DBTITLE 1, JNR_GL_SALES_13
 
 df_13=spark.sql("""
     SELECT
@@ -657,8 +657,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("JNR_GL_SALES_13")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_MA_CASH_DISCOUNT_14
 
+# DBTITLE 1, JNR_MA_CASH_DISCOUNT_14
 
 df_14=spark.sql("""
     SELECT
@@ -681,8 +681,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("JNR_MA_CASH_DISCOUNT_14")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ACT_CASH_DISCOUNT_PCT_15
 
+# DBTITLE 1, EXP_ACT_CASH_DISCOUNT_PCT_15
 
 df_15=spark.sql("""
     SELECT
@@ -707,8 +707,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("EXP_ACT_CASH_DISCOUNT_PCT_15")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_INS_UPD_FLAG_16
 
+# DBTITLE 1, FIL_INS_UPD_FLAG_16
 
 df_16=spark.sql("""
     SELECT
@@ -729,8 +729,8 @@ df_16=spark.sql("""
 df_16.createOrReplaceTempView("FIL_INS_UPD_FLAG_16")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_STRATEGY_17
 
+# DBTITLE 1, UPD_STRATEGY_17
 
 df_17=spark.sql("""
     SELECT
@@ -749,8 +749,8 @@ df_17=spark.sql("""
 df_17.createOrReplaceTempView("UPD_STRATEGY_17")
 
 # COMMAND ----------
-# DBTITLE 1, MA_CASH_DISCOUNT_CTRL
 
+# DBTITLE 1, MA_CASH_DISCOUNT_CTRL
 
 spark.sql("""INSERT INTO MA_CASH_DISCOUNT_CTRL SELECT FISCAL_MO AS FISCAL_MO,
 SOURCE_VENDOR_ID AS SOURCE_VENDOR_ID,

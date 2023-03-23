@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_0
 
+# DBTITLE 1, DAYS_0
 
 df_0=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DAYS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_DAYS_1
 
+# DBTITLE 1, SQ_Shortcut_To_DAYS_1
 
 df_1=spark.sql("""SELECT 1 AS DATE_TYPE_ID, 'DAY' AS DATE_TYPE_DESC, 49 AS DATE_TYPE_SORT_ID, 'DAY' AS DATE_TYPE_DESC2, '' AS DATE_TYPE_DESC3, 'Active' AS DATE_TYPE_5WK_STATUS, 0 AS TW_LW_FLAG UNION
 SELECT 2 AS DATE_TYPE_ID, 'WTD' AS DATE_TYPE_DESC, 50 AS DATE_TYPE_SORT_ID, 'WTD' AS DATE_TYPE_DESC2, '' AS DATE_TYPE_DESC3, 'Active' AS DATE_TYPE_5WK_STATUS, 0 AS TW_LW_FLAG UNION
@@ -160,8 +160,8 @@ SELECT 82 DATE_TYPE_ID, 'Cal MTD' DATE_TYPE_DESC, 82 DATE_TYPE_SORT_ID, 'CMTD' D
 df_1.createOrReplaceTempView("SQ_Shortcut_To_DAYS_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DATE_TYPE_LKUP_2
 
+# DBTITLE 1, EXP_DATE_TYPE_LKUP_2
 
 df_2=spark.sql("""
     SELECT
@@ -179,8 +179,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_DATE_TYPE_LKUP_2")
 
 # COMMAND ----------
-# DBTITLE 1, DATE_TYPE_LKUP
 
+# DBTITLE 1, DATE_TYPE_LKUP
 
 spark.sql("""INSERT INTO DATE_TYPE_LKUP SELECT DATE_TYPE_ID AS DATE_TYPE_ID,
 DATE_TYPE_DESC AS DATE_TYPE_DESC,

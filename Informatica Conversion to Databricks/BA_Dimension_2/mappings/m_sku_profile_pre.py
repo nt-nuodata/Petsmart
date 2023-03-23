@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_FLAT_0
 
+# DBTITLE 1, SKU_PROFILE_FLAT_0
 
 df_0=spark.sql("""
     SELECT
@@ -69,8 +69,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_PROFILE_FLAT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_FLAT_1
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_FLAT_1
 
 df_1=spark.sql("""
     SELECT
@@ -127,8 +127,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE_FLAT_1")
 
 # COMMAND ----------
-# DBTITLE 1, BUYERID_2
 
+# DBTITLE 1, BUYERID_2
 
 df_2=spark.sql("""
     SELECT
@@ -141,8 +141,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("BUYERID_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_3
 
+# DBTITLE 1, EXPTRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -160,8 +160,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXPTRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_MARKDOWN_DATE_4
 
+# DBTITLE 1, EXP_MARKDOWN_DATE_4
 
 df_4=spark.sql("""
     SELECT
@@ -181,8 +181,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_MARKDOWN_DATE_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_COMMON_DATE_TRANS_5
 
+# DBTITLE 1, EXP_COMMON_DATE_TRANS_5
 
 df_5=spark.sql("""
     SELECT
@@ -220,8 +220,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_COMMON_DATE_TRANS_5")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_PRE
 
+# DBTITLE 1, SKU_PROFILE_PRE
 
 spark.sql("""INSERT INTO SKU_PROFILE_PRE SELECT PRODUCT_ID AS PRODUCT_ID,
 DELETE_IND AS DELETE_IND,

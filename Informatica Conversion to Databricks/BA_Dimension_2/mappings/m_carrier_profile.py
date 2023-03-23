@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, CARRIER_PROFILE_0
 
+# DBTITLE 1, CARRIER_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("CARRIER_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, CARRIER_PROFILE_PRE_1
 
+# DBTITLE 1, CARRIER_PROFILE_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -52,8 +52,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("CARRIER_PROFILE_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_CARRIER_PROFILE_PRE_2
 
+# DBTITLE 1, SQ_Shortcut_to_CARRIER_PROFILE_PRE_2
 
 df_2=spark.sql("""SELECT CARRIER_ID,
        SCAC_CD,
@@ -92,8 +92,8 @@ SELECT P.CARRIER_ID,
 df_2.createOrReplaceTempView("SQ_Shortcut_to_CARRIER_PROFILE_PRE_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_ins_upd_3
 
+# DBTITLE 1, UPD_ins_upd_3
 
 df_3=spark.sql("""
     SELECT
@@ -114,8 +114,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPD_ins_upd_3")
 
 # COMMAND ----------
-# DBTITLE 1, CARRIER_PROFILE
 
+# DBTITLE 1, CARRIER_PROFILE
 
 spark.sql("""INSERT INTO CARRIER_PROFILE SELECT CARRIER_ID AS CARRIER_ID,
 SCAC_CD AS SCAC_CD,

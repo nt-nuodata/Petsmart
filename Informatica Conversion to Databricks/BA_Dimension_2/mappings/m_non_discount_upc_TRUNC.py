@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS_0
 
+# DBTITLE 1, WEEKS_0
 
 df_0=spark.sql("""
     SELECT
@@ -46,8 +46,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("WEEKS_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_WEEKS_1
 
+# DBTITLE 1, ASQ_Shortcut_To_WEEKS_1
 
 df_1=spark.sql("""
     SELECT
@@ -56,8 +56,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_To_WEEKS_1")
 
 # COMMAND ----------
-# DBTITLE 1, FLT_NON_DISCOUNT_UPC_2
 
+# DBTITLE 1, FLT_NON_DISCOUNT_UPC_2
 
 df_2=spark.sql("""
     SELECT
@@ -72,13 +72,13 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FLT_NON_DISCOUNT_UPC_2")
 
 # COMMAND ----------
-# DBTITLE 1, BIW_SCRIPT_DUMMY
 
+# DBTITLE 1, BIW_SCRIPT_DUMMY
 
 spark.sql("""INSERT INTO BIW_SCRIPT_DUMMY SELECT WEEK_DT AS DATE_TIME FROM ASQ_Shortcut_To_WEEKS_1""")
 
 # COMMAND ----------
-# DBTITLE 1, NON_DISCOUNT_UPC
 
+# DBTITLE 1, NON_DISCOUNT_UPC
 
 spark.sql("""INSERT INTO NON_DISCOUNT_UPC SELECT UPC_ID AS UPC_ID FROM FLT_NON_DISCOUNT_UPC_2""")

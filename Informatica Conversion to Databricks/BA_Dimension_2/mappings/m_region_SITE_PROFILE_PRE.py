@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_PRE_0
 
+# DBTITLE 1, SITE_PROFILE_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -66,8 +66,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITE_PROFILE_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_SITE_PROFILE_PRE_1
 
+# DBTITLE 1, ASQ_SITE_PROFILE_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -82,8 +82,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_SITE_PROFILE_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, REGION
 
+# DBTITLE 1, REGION
 
 spark.sql("""INSERT INTO REGION SELECT REGION_ID AS REGION_ID,
 REGION_DESC AS REGION_DESC FROM ASQ_SITE_PROFILE_PRE_1""")

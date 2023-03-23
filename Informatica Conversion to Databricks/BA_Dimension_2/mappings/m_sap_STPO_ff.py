@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STPO_0
 
+# DBTITLE 1, STPO_0
 
 df_0=spark.sql("""
     SELECT
@@ -141,6 +141,3 @@ df_0=spark.sql("""
         STPO""")
 
 df_0.createOrReplaceTempView("STPO_0")
-
-# COMMAND ----------
-# DBTITLE 1, SAP_STPO_ff

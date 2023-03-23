@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, USR_DC_NAMES_0
 
+# DBTITLE 1, USR_DC_NAMES_0
 
 df_0=spark.sql("""
     SELECT
@@ -38,8 +38,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("USR_DC_NAMES_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_USR_DC_NAMES_1
 
+# DBTITLE 1, SQ_USR_DC_NAMES_1
 
 df_1=spark.sql("""
     SELECT
@@ -51,8 +51,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_USR_DC_NAMES_1")
 
 # COMMAND ----------
-# DBTITLE 1, EMPLOYEE_PROFILE_2
 
+# DBTITLE 1, EMPLOYEE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -128,8 +128,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EMPLOYEE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_EMPLOYEE_PROFILE_3
 
+# DBTITLE 1, ASQ_Shortcut_to_EMPLOYEE_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -187,8 +187,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_Shortcut_to_EMPLOYEE_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_MANAGER_ID_4
 
+# DBTITLE 1, UPD_MANAGER_ID_4
 
 df_4=spark.sql("""
     SELECT
@@ -201,8 +201,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPD_MANAGER_ID_4")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_EMPLOYEE_PROFILE1_5
 
+# DBTITLE 1, ASQ_Shortcut_to_EMPLOYEE_PROFILE1_5
 
 df_5=spark.sql("""
     SELECT
@@ -214,8 +214,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("ASQ_Shortcut_to_EMPLOYEE_PROFILE1_5")
 
 # COMMAND ----------
-# DBTITLE 1, JNRTRANS_6
 
+# DBTITLE 1, JNRTRANS_6
 
 df_6=spark.sql("""
     SELECT
@@ -233,8 +233,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("JNRTRANS_6")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_7
 
+# DBTITLE 1, SITE_PROFILE_7
 
 df_7=spark.sql("""
     SELECT
@@ -346,8 +346,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("SITE_PROFILE_7")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_8
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_8
 
 df_8=spark.sql("""
     SELECT
@@ -360,8 +360,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("SQ_Shortcut_to_SITE_PROFILE_8")
 
 # COMMAND ----------
-# DBTITLE 1, JNRTRANS1_9
 
+# DBTITLE 1, JNRTRANS1_9
 
 df_9=spark.sql("""
     SELECT
@@ -380,8 +380,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("JNRTRANS1_9")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_MANAGER_ID1_10
 
+# DBTITLE 1, UPD_MANAGER_ID1_10
 
 df_10=spark.sql("""
     SELECT
@@ -395,8 +395,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("UPD_MANAGER_ID1_10")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,
@@ -501,8 +501,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM UPD_MANAGER_ID_4""")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

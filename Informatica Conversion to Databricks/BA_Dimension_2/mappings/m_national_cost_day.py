@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, NATIONAL_COST_PRE_0
 
+# DBTITLE 1, NATIONAL_COST_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -40,8 +40,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("NATIONAL_COST_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_NATIONAL_COST_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_To_NATIONAL_COST_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -80,8 +80,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_NATIONAL_COST_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_Insert_Update_2
 
+# DBTITLE 1, UPD_Insert_Update_2
 
 df_2=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("UPD_Insert_Update_2")
 
 # COMMAND ----------
-# DBTITLE 1, NATIONAL_COST_DAY
 
+# DBTITLE 1, NATIONAL_COST_DAY
 
 spark.sql("""INSERT INTO NATIONAL_COST_DAY SELECT SKU_NBR AS SKU_NBR,
 VENDOR_ID AS VENDOR_ID,

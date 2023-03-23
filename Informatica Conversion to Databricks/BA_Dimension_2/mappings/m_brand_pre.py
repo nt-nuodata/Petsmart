@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Brand_0
 
+# DBTITLE 1, Brand_0
 
 df_0=spark.sql("""
     SELECT
@@ -29,8 +29,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Brand_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_ArtMast_Brand_1
 
+# DBTITLE 1, SQ_ArtMast_Brand_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_ArtMast_Brand_1")
 
 # COMMAND ----------
-# DBTITLE 1, BRAND_PRE
 
+# DBTITLE 1, BRAND_PRE
 
 spark.sql("""INSERT INTO BRAND_PRE SELECT BrandCd AS BRAND_CD,
 BrandName AS BRAND_NAME FROM SQ_ArtMast_Brand_1""")

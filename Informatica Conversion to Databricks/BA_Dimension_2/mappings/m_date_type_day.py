@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_0
 
+# DBTITLE 1, DAYS_0
 
 df_0=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DAYS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_DAYS_1
 
+# DBTITLE 1, SQ_Shortcut_To_DAYS_1
 
 df_1=spark.sql("""--DAY
 SELECT 1 date_type_id,
@@ -195,8 +195,8 @@ SELECT A.DATE_TYPE_ID,
 df_1.createOrReplaceTempView("SQ_Shortcut_To_DAYS_1")
 
 # COMMAND ----------
-# DBTITLE 1, DATE_TYPE_DAY
 
+# DBTITLE 1, DATE_TYPE_DAY
 
 spark.sql("""INSERT INTO DATE_TYPE_DAY SELECT DATE_TYPE_ID AS DATE_TYPE_ID,
 DAY_DT AS DAY_DT FROM SQ_Shortcut_To_DAYS_1""")

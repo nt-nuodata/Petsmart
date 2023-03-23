@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Vendor_0
 
+# DBTITLE 1, Vendor_0
 
 df_0=spark.sql("""
     SELECT
@@ -88,8 +88,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Vendor_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Vendor_1
 
+# DBTITLE 1, SQ_Shortcut_to_Vendor_1
 
 df_1=spark.sql("""
     SELECT
@@ -165,8 +165,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_Vendor_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_Company_vendor_Relation_2
 
+# DBTITLE 1, LKP_Company_vendor_Relation_2
 
 df_2=spark.sql("""
     SELECT
@@ -189,8 +189,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKP_Company_vendor_Relation_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_LFA1_PRE_3
 
+# DBTITLE 1, LKP_LFA1_PRE_3
 
 df_3=spark.sql("""SELECT LIFNR AS LIFNR,
 WERKS AS WERKS,
@@ -201,8 +201,8 @@ SQ_Shortcut_to_Vendor_1.Monotonically_Increasing_Id AS Monotonically_Increasing_
 df_3.createOrReplaceTempView("LKP_LFA1_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_VENDOR1_4
 
+# DBTITLE 1, EXP_VENDOR1_4
 
 df_4=spark.sql("""
     SELECT
@@ -230,8 +230,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_VENDOR1_4")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_Purchasing_Organization_to_vendor_5
 
+# DBTITLE 1, LKP_Purchasing_Organization_to_vendor_5
 
 df_5=spark.sql("""
     SELECT
@@ -267,8 +267,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("LKP_Purchasing_Organization_to_vendor_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_FINAL_6
 
+# DBTITLE 1, EXP_FINAL_6
 
 df_6=spark.sql("""
     SELECT
@@ -324,8 +324,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_FINAL_6")
 
 # COMMAND ----------
-# DBTITLE 1, FLTR_7
 
+# DBTITLE 1, FLTR_7
 
 df_7=spark.sql("""
     SELECT
@@ -366,8 +366,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("FLTR_7")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_PRE
 
+# DBTITLE 1, VENDOR_PROFILE_PRE
 
 spark.sql("""INSERT INTO VENDOR_PROFILE_PRE SELECT VendorAccountGroup AS VENDOR_TYPE_ID,
 VendorNbr AS VENDOR_NBR,

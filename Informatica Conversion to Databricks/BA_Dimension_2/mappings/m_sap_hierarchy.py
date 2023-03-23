@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SAP_HIERARCHY_VIEW_0
 
+# DBTITLE 1, SAP_HIERARCHY_VIEW_0
 
 df_0=spark.sql("""
     SELECT
@@ -44,8 +44,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SAP_HIERARCHY_VIEW_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_SAP_HIERARCHY_VIEW_1
 
+# DBTITLE 1, ASQ_Shortcut_to_SAP_HIERARCHY_VIEW_1
 
 df_1=spark.sql("""
     SELECT
@@ -77,8 +77,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_SAP_HIERARCHY_VIEW_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_ZERO_PRODUCT_ID_2
 
+# DBTITLE 1, FIL_ZERO_PRODUCT_ID_2
 
 df_2=spark.sql("""
     SELECT
@@ -112,8 +112,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_ZERO_PRODUCT_ID_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_HIERARCHY_3
 
+# DBTITLE 1, EXP_HIERARCHY_3
 
 df_3=spark.sql("""
     SELECT
@@ -145,8 +145,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_HIERARCHY_3")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_HIERARCHY
 
+# DBTITLE 1, SAP_HIERARCHY
 
 spark.sql("""INSERT INTO SAP_HIERARCHY SELECT PRODUCT_ID AS PRODUCT_ID,
 HL5_CODE_ID AS HL5_CODE_ID,

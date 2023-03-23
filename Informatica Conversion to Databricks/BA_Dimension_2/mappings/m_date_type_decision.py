@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_0
 
+# DBTITLE 1, DAYS_0
 
 df_0=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DAYS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_DAYS_1
 
+# DBTITLE 1, SQ_Shortcut_To_DAYS_1
 
 df_1=spark.sql("""
     SELECT
@@ -134,8 +134,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_DAYS_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DECISION_2
 
+# DBTITLE 1, EXP_DECISION_2
 
 df_2=spark.sql("""
     SELECT
@@ -147,7 +147,7 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_DECISION_2")
 
 # COMMAND ----------
-# DBTITLE 1, DATE_TYPE_DECISION
 
+# DBTITLE 1, DATE_TYPE_DECISION
 
 spark.sql("""INSERT INTO DATE_TYPE_DECISION SELECT DAY_DT AS DATE_DT FROM EXP_DECISION_2""")

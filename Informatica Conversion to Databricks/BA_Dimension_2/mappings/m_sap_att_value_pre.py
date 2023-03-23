@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ATT_VALUES_0
 
+# DBTITLE 1, ATT_VALUES_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ATT_VALUES_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_ATT_VALUES_1
 
+# DBTITLE 1, SQ_ATT_VALUES_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_ATT_VALUES_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ATT_VALUES_2
 
+# DBTITLE 1, EXP_ATT_VALUES_2
 
 df_2=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_ATT_VALUES_2")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATT_VALUE_PRE
 
+# DBTITLE 1, SAP_ATT_VALUE_PRE
 
 spark.sql("""INSERT INTO SAP_ATT_VALUE_PRE SELECT SAP_ATT_CODE_ID AS SAP_ATT_CODE_ID,
 SAP_ATT_VALUE_ID AS SAP_ATT_VALUE_ID,

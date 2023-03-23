@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SEQ_MA_EVENT_ID
 
+# DBTITLE 1, SEQ_MA_EVENT_ID
 
 spark.sql("""CREATE TABLE SEQ_MA_EVENT_ID(NEXTVAL BIGINT,
 CURRVAL BIGINT,
@@ -23,8 +23,8 @@ CURRVAL BIGINT,
 Increment_By Int) VALUES(2, 1, 1)""")
 
 # COMMAND ----------
-# DBTITLE 1, USR_MA_DEF_ALLOW_CTRL_1
 
+# DBTITLE 1, USR_MA_DEF_ALLOW_CTRL_1
 
 df_1=spark.sql("""
     SELECT
@@ -38,8 +38,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("USR_MA_DEF_ALLOW_CTRL_1")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_2
 
+# DBTITLE 1, MA_EVENT_2
 
 df_2=spark.sql("""
     SELECT
@@ -88,8 +88,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("MA_EVENT_2")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_3
 
+# DBTITLE 1, DAYS_3
 
 df_3=spark.sql("""
     SELECT
@@ -147,8 +147,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("DAYS_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_USR_MA_DEF_ALLOW_CTRL_INSERTS_4
 
+# DBTITLE 1, SQ_USR_MA_DEF_ALLOW_CTRL_INSERTS_4
 
 df_4=spark.sql("""
     SELECT
@@ -196,8 +196,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_USR_MA_DEF_ALLOW_CTRL_INSERTS_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_NEW_5
 
+# DBTITLE 1, EXP_NEW_5
 
 df_5=spark.sql("""
     SELECT
@@ -237,8 +237,8 @@ df_5.createOrReplaceTempView("EXP_NEW_5")
 spark.sql("""UPDATE SEQ_MA_EVENT_ID SET CURRVAL = (SELECT MAX(MA_EVENT_ID) FROM EXP_NEW_5) , NEXTVAL = (SELECT MAX(MA_EVENT_ID) FROM EXP_NEW_5) + (SELECT Increment_By FROM EXP_NEW_5)""")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_USR_MA_DEF_ALLOW_CTRL_UPDATES_6
 
+# DBTITLE 1, SQ_USR_MA_DEF_ALLOW_CTRL_UPDATES_6
 
 df_6=spark.sql("""
     SELECT
@@ -276,8 +276,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SQ_USR_MA_DEF_ALLOW_CTRL_UPDATES_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ORIG_7
 
+# DBTITLE 1, EXP_ORIG_7
 
 df_7=spark.sql("""
     SELECT
@@ -302,8 +302,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("EXP_ORIG_7")
 
 # COMMAND ----------
-# DBTITLE 1, UNI_NEW_ORIG_8
 
+# DBTITLE 1, UNI_NEW_ORIG_8
 
 df_8=spark.sql("""SELECT END_DT AS END_DT,
 FISCAL_MO AS FISCAL_MO,
@@ -338,8 +338,8 @@ UPDATE_DT AS UPDATE_DT FROM EXP_ORIG_7""")
 df_8.createOrReplaceTempView("UNI_NEW_ORIG_8")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_INS_UPD_9
 
+# DBTITLE 1, EXP_INS_UPD_9
 
 df_9=spark.sql("""
     SELECT
@@ -365,8 +365,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("EXP_INS_UPD_9")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_STRATEGY_10
 
+# DBTITLE 1, UPD_STRATEGY_10
 
 df_10=spark.sql("""
     SELECT
@@ -390,8 +390,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("UPD_STRATEGY_10")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT
 
+# DBTITLE 1, MA_EVENT
 
 spark.sql("""INSERT INTO MA_EVENT SELECT MA_EVENT_ID AS MA_EVENT_ID,
 OFFER_ID AS OFFER_ID,
@@ -433,8 +433,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM UPD_STRATEGY_10""")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_RESTATE_HIST
 
+# DBTITLE 1, MA_EVENT_RESTATE_HIST
 
 spark.sql("""INSERT INTO MA_EVENT_RESTATE_HIST SELECT LOAD_DT AS LOAD_DT,
 MA_EVENT_ID AS MA_EVENT_ID,

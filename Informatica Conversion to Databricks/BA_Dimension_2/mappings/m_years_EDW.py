@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Years_0
 
+# DBTITLE 1, Years_0
 
 df_0=spark.sql("""
     SELECT
@@ -24,8 +24,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Years_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Years_1
 
+# DBTITLE 1, SQ_Shortcut_to_Years_1
 
 df_1=spark.sql("""
     SELECT
@@ -38,7 +38,7 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_Years_1")
 
 # COMMAND ----------
-# DBTITLE 1, YEARS
 
+# DBTITLE 1, YEARS
 
 spark.sql("""INSERT INTO YEARS SELECT FISCAL_YR AS FISCAL_YR FROM SQ_Shortcut_to_Years_1""")

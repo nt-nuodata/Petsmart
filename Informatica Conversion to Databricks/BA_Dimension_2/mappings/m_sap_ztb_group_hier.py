@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_GROUP_HIER_0
 
+# DBTITLE 1, ZTB_GROUP_HIER_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_GROUP_HIER_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ZTB_GROUP_HIER_1
 
+# DBTITLE 1, SQ_Shortcut_to_ZTB_GROUP_HIER_1
 
 df_1=spark.sql("""
     SELECT
@@ -51,8 +51,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_ZTB_GROUP_HIER_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Department_2
 
+# DBTITLE 1, EXP_Department_2
 
 df_2=spark.sql("""
     SELECT
@@ -71,8 +71,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_Department_2")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_MANDT_3
 
+# DBTITLE 1, FIL_MANDT_3
 
 df_3=spark.sql("""
     SELECT
@@ -93,8 +93,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("FIL_MANDT_3")
 
 # COMMAND ----------
-# DBTITLE 1, MERCHDEPT_ORG_4
 
+# DBTITLE 1, MERCHDEPT_ORG_4
 
 df_4=spark.sql("""
     SELECT
@@ -132,8 +132,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("MERCHDEPT_ORG_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MERCHDEPT_ORG_5
 
+# DBTITLE 1, SQ_Shortcut_to_MERCHDEPT_ORG_5
 
 df_5=spark.sql("""
     SELECT
@@ -169,8 +169,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_to_MERCHDEPT_ORG_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Id_6
 
+# DBTITLE 1, EXP_Id_6
 
 df_6=spark.sql("""
     SELECT
@@ -188,8 +188,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_Id_6")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_Department_7
 
+# DBTITLE 1, JNR_Department_7
 
 df_7=spark.sql("""
     SELECT
@@ -218,8 +218,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("JNR_Department_7")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Strategy_8
 
+# DBTITLE 1, EXP_Strategy_8
 
 df_8=spark.sql("""
     SELECT
@@ -286,8 +286,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("EXP_Strategy_8")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_Strategy_9
 
+# DBTITLE 1, FIL_Strategy_9
 
 df_9=spark.sql("""
     SELECT
@@ -309,8 +309,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("FIL_Strategy_9")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_Strategy_10
 
+# DBTITLE 1, UPD_Strategy_10
 
 df_10=spark.sql("""
     SELECT
@@ -330,8 +330,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("UPD_Strategy_10")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_GROUP_HIER
 
+# DBTITLE 1, ZTB_GROUP_HIER
 
 spark.sql("""INSERT INTO ZTB_GROUP_HIER SELECT MANDT AS MANDT,
 DEPARTMENT AS DEPARTMENT,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, T024_0
 
+# DBTITLE 1, T024_0
 
 df_0=spark.sql("""
     SELECT
@@ -30,8 +30,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("T024_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_T024_1
 
+# DBTITLE 1, SQ_Shortcut_to_T024_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_T024_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_PURCH_GROUP_ID_2
 
+# DBTITLE 1, FIL_PURCH_GROUP_ID_2
 
 df_2=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_PURCH_GROUP_ID_2")
 
 # COMMAND ----------
-# DBTITLE 1, PURCH_GROUP
 
+# DBTITLE 1, PURCH_GROUP
 
 spark.sql("""INSERT INTO PURCH_GROUP SELECT EKGRP AS PURCH_GROUP_ID,
 EKNAM AS PURCH_GROUP_NAME FROM FIL_PURCH_GROUP_ID_2""")

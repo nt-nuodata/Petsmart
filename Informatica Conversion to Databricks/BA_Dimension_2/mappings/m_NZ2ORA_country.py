@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, COUNTRY_0
 
+# DBTITLE 1, COUNTRY_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("COUNTRY_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_COUNTRY_1
 
+# DBTITLE 1, SQ_Shortcut_to_COUNTRY_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_COUNTRY_1")
 
 # COMMAND ----------
-# DBTITLE 1, COUNTRY
 
+# DBTITLE 1, COUNTRY
 
 spark.sql("""INSERT INTO COUNTRY SELECT COUNTRY_CD AS COUNTRY_CD,
 COUNTRY_NAME AS COUNTRY_NAME FROM SQ_Shortcut_to_COUNTRY_1""")

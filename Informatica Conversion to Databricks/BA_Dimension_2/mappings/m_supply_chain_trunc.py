@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SUPPLY_CHAIN_0
 
+# DBTITLE 1, SUPPLY_CHAIN_0
 
 df_0=spark.sql("""
     SELECT
@@ -29,8 +29,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SUPPLY_CHAIN_0")
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS_1
 
+# DBTITLE 1, WEEKS_1
 
 df_1=spark.sql("""
     SELECT
@@ -64,8 +64,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("WEEKS_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_Dummy_Source_2
 
+# DBTITLE 1, ASQ_Shortcut_To_Dummy_Source_2
 
 df_2=spark.sql("""
     SELECT
@@ -74,8 +74,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Shortcut_To_Dummy_Source_2")
 
 # COMMAND ----------
-# DBTITLE 1, FLT_TRUNC_PROD_TABLE_3
 
+# DBTITLE 1, FLT_TRUNC_PROD_TABLE_3
 
 df_3=spark.sql("""
     SELECT
@@ -89,14 +89,14 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("FLT_TRUNC_PROD_TABLE_3")
 
 # COMMAND ----------
-# DBTITLE 1, DUMMY_TARGET
 
+# DBTITLE 1, DUMMY_TARGET
 
 spark.sql("""INSERT INTO DUMMY_TARGET SELECT TABLE_NAME AS COMMENT FROM ASQ_Shortcut_To_Dummy_Source_2""")
 
 # COMMAND ----------
-# DBTITLE 1, SUPPLY_CHAIN
 
+# DBTITLE 1, SUPPLY_CHAIN
 
 spark.sql("""INSERT INTO SUPPLY_CHAIN SELECT TABLE_NAME AS PRODUCT_ID,
 LOCATION_ID AS LOCATION_ID,

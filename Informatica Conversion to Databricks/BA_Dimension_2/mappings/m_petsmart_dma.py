@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, LOYALTY_PRE_0
 
+# DBTITLE 1, LOYALTY_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -34,8 +34,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("LOYALTY_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_LOYALTY_PRE_Insert_1
 
+# DBTITLE 1, ASQ_Shortcut_To_LOYALTY_PRE_Insert_1
 
 df_1=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_To_LOYALTY_PRE_Insert_1")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_INSERT_2
 
+# DBTITLE 1, UPD_INSERT_2
 
 df_2=spark.sql("""
     SELECT
@@ -75,8 +75,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("UPD_INSERT_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_LOYALTY_PRE_Update_3
 
+# DBTITLE 1, ASQ_Shortcut_To_LOYALTY_PRE_Update_3
 
 df_3=spark.sql("""
     SELECT
@@ -92,8 +92,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_Shortcut_To_LOYALTY_PRE_Update_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_UPDATE_EXISTING_4
 
+# DBTITLE 1, UPD_UPDATE_EXISTING_4
 
 df_4=spark.sql("""
     SELECT
@@ -106,15 +106,15 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPD_UPDATE_EXISTING_4")
 
 # COMMAND ----------
-# DBTITLE 1, PETSMART_DMA
 
+# DBTITLE 1, PETSMART_DMA
 
 spark.sql("""INSERT INTO PETSMART_DMA SELECT PETSMART_DMA_CD AS PETSMART_DMA_CD,
 PETSMART_DMA_DESC AS PETSMART_DMA_DESC FROM UPD_INSERT_2""")
 
 # COMMAND ----------
-# DBTITLE 1, PETSMART_DMA
 
+# DBTITLE 1, PETSMART_DMA
 
 spark.sql("""INSERT INTO PETSMART_DMA SELECT PETSMART_DMA_CD AS PETSMART_DMA_CD,
 PETSMART_DMA_DESC AS PETSMART_DMA_DESC FROM UPD_UPDATE_EXISTING_4""")

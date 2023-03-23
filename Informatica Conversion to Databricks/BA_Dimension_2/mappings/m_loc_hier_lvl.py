@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DISTRICT_0
 
+# DBTITLE 1, DISTRICT_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DISTRICT_0")
 
 # COMMAND ----------
-# DBTITLE 1, REGION_1
 
+# DBTITLE 1, REGION_1
 
 df_1=spark.sql("""
     SELECT
@@ -42,8 +42,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("REGION_1")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_2
 
+# DBTITLE 1, SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -155,16 +155,16 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_District_Join_Region_Join_Site_Profile_3
 
+# DBTITLE 1, ASQ_District_Join_Region_Join_Site_Profile_3
 
 df_3=spark.sql("""SELECT 1     AS LOC_HIER_LVL     ,     'Total'    AS LOC_HIER_DESC     ,     'Company'  AS LOC_HIER_ELEMENT     ,     DISTRICT_ID FROM DISTRICT UNION ALL SELECT 2       AS LOC_HIER_LVL     ,     'Country'     AS LOC_HIER_DESC     ,     TRIM(COUNTRY_CD)  AS LOC_HIER_ELEMENT     ,     DISTRICT_ID FROM SITE_PROFILE GROUP BY DISTRICT_ID,              COUNTRY_CD UNION ALL SELECT 3             AS LOC_HIER_LVL     ,     'Region'       AS LOC_HIER_DESC     ,     TRIM(R.REGION_DESC)  AS LOC_HIER_ELEMENT     ,     S.DISTRICT_ID FROM SITE_PROFILE S       ,     REGION R WHERE S.REGION_ID = R.REGION_ID GROUP BY R.REGION_DESC,      S.DISTRICT_ID UNION ALL SELECT 4             AS LOC_HIER_LVL     ,     'District'       AS LOC_HIER_DESC     ,     TRIM(D.DISTRICT_DESC)  AS LOC_HIER_ELEMENT     ,     S.DISTRICT_ID FROM SITE_PROFILE S,            DISTRICT D WHERE S.DISTRICT_ID = D.DISTRICT_ID GROUP BY S.DISTRICT_ID,      D.DISTRICT_DESC """)
 
 df_3.createOrReplaceTempView("ASQ_District_Join_Region_Join_Site_Profile_3")
 
 # COMMAND ----------
-# DBTITLE 1, LOC_HIER_LVL
 
+# DBTITLE 1, LOC_HIER_LVL
 
 spark.sql("""INSERT INTO LOC_HIER_LVL SELECT LOC_HIER_LVL AS LOC_HIER_LVL,
 LOC_HIER_DESC AS LOC_HIER_DESC,

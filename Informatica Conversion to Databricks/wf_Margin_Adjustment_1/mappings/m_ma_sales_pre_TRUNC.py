@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_0
 
+# DBTITLE 1, DAYS_0
 
 df_0=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DAYS_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_EM_EVENT_DETAIL_1
 
+# DBTITLE 1, ASQ_EM_EVENT_DETAIL_1
 
 df_1=spark.sql("""
     SELECT
@@ -82,8 +82,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_EM_EVENT_DETAIL_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_PASS_NO_ROW_2
 
+# DBTITLE 1, FIL_PASS_NO_ROW_2
 
 df_2=spark.sql("""
     SELECT
@@ -97,8 +97,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_PASS_NO_ROW_2")
 
 # COMMAND ----------
-# DBTITLE 1, MA_SALES_PRE
 
+# DBTITLE 1, MA_SALES_PRE
 
 spark.sql("""INSERT INTO MA_SALES_PRE SELECT DAY_DT AS DAY_DT,
 LOCATION_ID AS LOCATION_ID,

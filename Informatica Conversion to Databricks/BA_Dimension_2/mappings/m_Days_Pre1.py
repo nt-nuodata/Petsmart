@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Days_Pre1_0
 
+# DBTITLE 1, Days_Pre1_0
 
 df_0=spark.sql("""
     SELECT
@@ -24,8 +24,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Days_Pre1_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Days_Pre1_1
 
+# DBTITLE 1, SQ_Days_Pre1_1
 
 df_1=spark.sql("""DECLARE @StartDateTime DATETIME
 DECLARE @EndDateTime DATETIME
@@ -48,7 +48,7 @@ OPTION (MAXRECURSION 0)""")
 df_1.createOrReplaceTempView("SQ_Days_Pre1_1")
 
 # COMMAND ----------
-# DBTITLE 1, Days_Pre1
 
+# DBTITLE 1, Days_Pre1
 
 spark.sql("""INSERT INTO Days_Pre1 SELECT DayDt AS DayDt FROM SQ_Days_Pre1_1""")

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATTRIBUTE_0
 
+# DBTITLE 1, SAP_ATTRIBUTE_0
 
 df_0=spark.sql("""
     SELECT
@@ -30,8 +30,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SAP_ATTRIBUTE_0")
 
 # COMMAND ----------
-# DBTITLE 1, DM_DEPT_SEGMENTS_1
 
+# DBTITLE 1, DM_DEPT_SEGMENTS_1
 
 df_1=spark.sql("""
     SELECT
@@ -47,8 +47,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("DM_DEPT_SEGMENTS_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_CONTAINER_2
 
+# DBTITLE 1, SKU_CONTAINER_2
 
 df_2=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SKU_CONTAINER_2")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATT_VALUE_3
 
+# DBTITLE 1, SAP_ATT_VALUE_3
 
 df_3=spark.sql("""
     SELECT
@@ -78,8 +78,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SAP_ATT_VALUE_3")
 
 # COMMAND ----------
-# DBTITLE 1, OPT_PRODUCT_RELATIONSHIP_PRE_4
 
+# DBTITLE 1, OPT_PRODUCT_RELATIONSHIP_PRE_4
 
 df_4=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("OPT_PRODUCT_RELATIONSHIP_PRE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_FLAVOR_5
 
+# DBTITLE 1, SKU_FLAVOR_5
 
 df_5=spark.sql("""
     SELECT
@@ -121,8 +121,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SKU_FLAVOR_5")
 
 # COMMAND ----------
-# DBTITLE 1, BRAND_CLASSIFICATION_6
 
+# DBTITLE 1, BRAND_CLASSIFICATION_6
 
 df_6=spark.sql("""
     SELECT
@@ -137,8 +137,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("BRAND_CLASSIFICATION_6")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_T6WP1T_PRE_7
 
+# DBTITLE 1, SAP_T6WP1T_PRE_7
 
 df_7=spark.sql("""
     SELECT
@@ -151,8 +151,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("SAP_T6WP1T_PRE_7")
 
 # COMMAND ----------
-# DBTITLE 1, GL_CATEGORY_8
 
+# DBTITLE 1, GL_CATEGORY_8
 
 df_8=spark.sql("""
     SELECT
@@ -165,8 +165,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("GL_CATEGORY_8")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_HAZMAT_9
 
+# DBTITLE 1, SKU_HAZMAT_9
 
 df_9=spark.sql("""
     SELECT
@@ -183,8 +183,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("SKU_HAZMAT_9")
 
 # COMMAND ----------
-# DBTITLE 1, OWNBRAND_10
 
+# DBTITLE 1, OWNBRAND_10
 
 df_10=spark.sql("""
     SELECT
@@ -197,8 +197,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("OWNBRAND_10")
 
 # COMMAND ----------
-# DBTITLE 1, ZDISCO_MKDN_SCHED_11
 
+# DBTITLE 1, ZDISCO_MKDN_SCHED_11
 
 df_11=spark.sql("""
     SELECT
@@ -211,8 +211,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("ZDISCO_MKDN_SCHED_11")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ZTH_WEB_WIP_PRE_12
 
+# DBTITLE 1, SAP_ZTH_WEB_WIP_PRE_12
 
 df_12=spark.sql("""
     SELECT
@@ -325,8 +325,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("SAP_ZTH_WEB_WIP_PRE_12")
 
 # COMMAND ----------
-# DBTITLE 1, ZDISCO_SCHED_TYPE_13
 
+# DBTITLE 1, ZDISCO_SCHED_TYPE_13
 
 df_13=spark.sql("""
     SELECT
@@ -340,8 +340,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("ZDISCO_SCHED_TYPE_13")
 
 # COMMAND ----------
-# DBTITLE 1, SIGN_TYPE_14
 
+# DBTITLE 1, SIGN_TYPE_14
 
 df_14=spark.sql("""
     SELECT
@@ -354,8 +354,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("SIGN_TYPE_14")
 
 # COMMAND ----------
-# DBTITLE 1, IMPORT_15
 
+# DBTITLE 1, IMPORT_15
 
 df_15=spark.sql("""
     SELECT
@@ -368,8 +368,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("IMPORT_15")
 
 # COMMAND ----------
-# DBTITLE 1, ARTMAS_PRE_16
 
+# DBTITLE 1, ARTMAS_PRE_16
 
 df_16=spark.sql("""
     SELECT
@@ -445,8 +445,8 @@ df_16=spark.sql("""
 df_16.createOrReplaceTempView("ARTMAS_PRE_16")
 
 # COMMAND ----------
-# DBTITLE 1, MERCHCAT_ORG_17
 
+# DBTITLE 1, MERCHCAT_ORG_17
 
 df_17=spark.sql("""
     SELECT
@@ -468,8 +468,8 @@ df_17=spark.sql("""
 df_17.createOrReplaceTempView("MERCHCAT_ORG_17")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ZTH_WEB_RECORD_PRE_18
 
+# DBTITLE 1, SAP_ZTH_WEB_RECORD_PRE_18
 
 df_18=spark.sql("""
     SELECT
@@ -532,8 +532,8 @@ df_18=spark.sql("""
 df_18.createOrReplaceTempView("SAP_ZTH_WEB_RECORD_PRE_18")
 
 # COMMAND ----------
-# DBTITLE 1, Brand_19
 
+# DBTITLE 1, Brand_19
 
 df_19=spark.sql("""
     SELECT
@@ -550,8 +550,8 @@ df_19=spark.sql("""
 df_19.createOrReplaceTempView("Brand_19")
 
 # COMMAND ----------
-# DBTITLE 1, MERCHDEPT_ORG_20
 
+# DBTITLE 1, MERCHDEPT_ORG_20
 
 df_20=spark.sql("""
     SELECT
@@ -589,8 +589,8 @@ df_20=spark.sql("""
 df_20.createOrReplaceTempView("MERCHDEPT_ORG_20")
 
 # COMMAND ----------
-# DBTITLE 1, OPT_ASSOCIATED_PRODUCT_21
 
+# DBTITLE 1, OPT_ASSOCIATED_PRODUCT_21
 
 df_21=spark.sql("""
     SELECT
@@ -609,8 +609,8 @@ df_21=spark.sql("""
 df_21.createOrReplaceTempView("OPT_ASSOCIATED_PRODUCT_21")
 
 # COMMAND ----------
-# DBTITLE 1, VALUATION_CLASS_22
 
+# DBTITLE 1, VALUATION_CLASS_22
 
 df_22=spark.sql("""
     SELECT
@@ -623,8 +623,8 @@ df_22=spark.sql("""
 df_22.createOrReplaceTempView("VALUATION_CLASS_22")
 
 # COMMAND ----------
-# DBTITLE 1, ARTICLE_CATEGORY_23
 
+# DBTITLE 1, ARTICLE_CATEGORY_23
 
 df_23=spark.sql("""
     SELECT
@@ -638,8 +638,8 @@ df_23=spark.sql("""
 df_23.createOrReplaceTempView("ARTICLE_CATEGORY_23")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_STATUS_24
 
+# DBTITLE 1, SKU_STATUS_24
 
 df_24=spark.sql("""
     SELECT
@@ -652,8 +652,8 @@ df_24=spark.sql("""
 df_24.createOrReplaceTempView("SKU_STATUS_24")
 
 # COMMAND ----------
-# DBTITLE 1, BUYER_25
 
+# DBTITLE 1, BUYER_25
 
 df_25=spark.sql("""
     SELECT
@@ -666,8 +666,8 @@ df_25=spark.sql("""
 df_25.createOrReplaceTempView("BUYER_25")
 
 # COMMAND ----------
-# DBTITLE 1, HTS_26
 
+# DBTITLE 1, HTS_26
 
 df_26=spark.sql("""
     SELECT
@@ -680,8 +680,8 @@ df_26=spark.sql("""
 df_26.createOrReplaceTempView("HTS_26")
 
 # COMMAND ----------
-# DBTITLE 1, COUNTRY_27
 
+# DBTITLE 1, COUNTRY_27
 
 df_27=spark.sql("""
     SELECT
@@ -694,8 +694,8 @@ df_27=spark.sql("""
 df_27.createOrReplaceTempView("COUNTRY_27")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_CLASS_28
 
+# DBTITLE 1, SAP_CLASS_28
 
 df_28=spark.sql("""
     SELECT
@@ -709,8 +709,8 @@ df_28=spark.sql("""
 df_28.createOrReplaceTempView("SAP_CLASS_28")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_CATEGORY_29
 
+# DBTITLE 1, SAP_CATEGORY_29
 
 df_29=spark.sql("""
     SELECT
@@ -727,8 +727,8 @@ df_29=spark.sql("""
 df_29.createOrReplaceTempView("SAP_CATEGORY_29")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_30
 
+# DBTITLE 1, SKU_PROFILE_30
 
 df_30=spark.sql("""
     SELECT
@@ -812,8 +812,8 @@ df_30=spark.sql("""
 df_30.createOrReplaceTempView("SKU_PROFILE_30")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_31
 
+# DBTITLE 1, VENDOR_PROFILE_31
 
 df_31=spark.sql("""
     SELECT
@@ -861,8 +861,8 @@ df_31=spark.sql("""
 df_31.createOrReplaceTempView("VENDOR_PROFILE_31")
 
 # COMMAND ----------
-# DBTITLE 1, TAX_CLASS_32
 
+# DBTITLE 1, TAX_CLASS_32
 
 df_32=spark.sql("""
     SELECT
@@ -875,8 +875,8 @@ df_32=spark.sql("""
 df_32.createOrReplaceTempView("TAX_CLASS_32")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_DIVISION_33
 
+# DBTITLE 1, SAP_DIVISION_33
 
 df_33=spark.sql("""
     SELECT
@@ -891,8 +891,8 @@ df_33=spark.sql("""
 df_33.createOrReplaceTempView("SAP_DIVISION_33")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_DEPT_34
 
+# DBTITLE 1, SAP_DEPT_34
 
 df_34=spark.sql("""
     SELECT
@@ -908,8 +908,8 @@ df_34=spark.sql("""
 df_34.createOrReplaceTempView("SAP_DEPT_34")
 
 # COMMAND ----------
-# DBTITLE 1, PURCH_GROUP_35
 
+# DBTITLE 1, PURCH_GROUP_35
 
 df_35=spark.sql("""
     SELECT
@@ -924,8 +924,8 @@ df_35=spark.sql("""
 df_35.createOrReplaceTempView("PURCH_GROUP_35")
 
 # COMMAND ----------
-# DBTITLE 1, PRIMARY_VENDOR_36
 
+# DBTITLE 1, PRIMARY_VENDOR_36
 
 df_36=spark.sql("""
     SELECT
@@ -938,8 +938,8 @@ df_36=spark.sql("""
 df_36.createOrReplaceTempView("PRIMARY_VENDOR_36")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_37
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_37
 
 df_37=spark.sql("""
     SELECT
@@ -1301,8 +1301,8 @@ df_37=spark.sql("""
 df_37.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE_37")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_RPT
 
+# DBTITLE 1, SKU_PROFILE_RPT
 
 spark.sql("""INSERT INTO SKU_PROFILE_RPT SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

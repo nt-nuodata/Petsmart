@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Payment_Terms_0
 
+# DBTITLE 1, Payment_Terms_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Payment_Terms_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Payment_Terms_1
 
+# DBTITLE 1, SQ_Shortcut_to_Payment_Terms_1
 
 df_1=spark.sql("""
     SELECT
@@ -41,8 +41,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_Payment_Terms_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKPTRANS_2
 
+# DBTITLE 1, LKPTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -60,8 +60,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKPTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_3
 
+# DBTITLE 1, EXPTRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -77,8 +77,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXPTRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_4
 
+# DBTITLE 1, UPDTRANS_4
 
 df_4=spark.sql("""
     SELECT
@@ -103,8 +103,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPDTRANS_4")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PAYMENT_TERM
 
+# DBTITLE 1, VENDOR_PAYMENT_TERM
 
 spark.sql("""INSERT INTO VENDOR_PAYMENT_TERM SELECT PaymentTermCd AS PAYMENT_TERM_CD,
 PaymentTermDesc AS PAYMENT_TERM_DESC FROM UPDTRANS_4""")

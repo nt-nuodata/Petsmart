@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DM_DEPT_SEGMENTS_0
 
+# DBTITLE 1, DM_DEPT_SEGMENTS_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DM_DEPT_SEGMENTS_0")
 
 # COMMAND ----------
-# DBTITLE 1, USER_RANKING_HIERARCHY_1
 
+# DBTITLE 1, USER_RANKING_HIERARCHY_1
 
 df_1=spark.sql("""
     SELECT
@@ -50,8 +50,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("USER_RANKING_HIERARCHY_1")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_DAY_SKU_STORE_2
 
+# DBTITLE 1, SALES_DAY_SKU_STORE_2
 
 df_2=spark.sql("""
     SELECT
@@ -91,8 +91,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SALES_DAY_SKU_STORE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_3
 
+# DBTITLE 1, SKU_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -176,8 +176,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SKU_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_USER_RANKING_HIERARCHY_4
 
+# DBTITLE 1, SQ_Shortcut_to_USER_RANKING_HIERARCHY_4
 
 df_4=spark.sql("""
     SELECT
@@ -244,8 +244,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_Shortcut_to_USER_RANKING_HIERARCHY_4")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_5
 
+# DBTITLE 1, SITE_PROFILE_5
 
 df_5=spark.sql("""
     SELECT
@@ -357,8 +357,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SITE_PROFILE_5")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_RANK
 
+# DBTITLE 1, SKU_RANK
 
 spark.sql("""INSERT INTO SKU_RANK SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

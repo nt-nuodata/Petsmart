@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, GL_MVKE_PRE_0
 
+# DBTITLE 1, GL_MVKE_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("GL_MVKE_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ARTICLE_CATEGORY_1
 
+# DBTITLE 1, ARTICLE_CATEGORY_1
 
 df_1=spark.sql("""
     SELECT
@@ -42,8 +42,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ARTICLE_CATEGORY_1")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_SEL_DISCO_PRE_2
 
+# DBTITLE 1, ZTB_SEL_DISCO_PRE_2
 
 df_2=spark.sql("""
     SELECT
@@ -64,8 +64,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ZTB_SEL_DISCO_PRE_2")
 
 # COMMAND ----------
-# DBTITLE 1, GL_C003_PRE_3
 
+# DBTITLE 1, GL_C003_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -79,8 +79,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("GL_C003_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, GL_MARA_PRE_4
 
+# DBTITLE 1, GL_MARA_PRE_4
 
 df_4=spark.sql("""
     SELECT
@@ -93,8 +93,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("GL_MARA_PRE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SHIPPER_DETAIL_5
 
+# DBTITLE 1, SHIPPER_DETAIL_5
 
 df_5=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SHIPPER_DETAIL_5")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_6
 
+# DBTITLE 1, SKU_PROFILE_6
 
 df_6=spark.sql("""
     SELECT
@@ -195,8 +195,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SKU_PROFILE_6")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_SHORTCUT_TO_SKU_PROFILE_7
 
+# DBTITLE 1, ASQ_SHORTCUT_TO_SKU_PROFILE_7
 
 df_7=spark.sql("""
     SELECT
@@ -280,8 +280,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("ASQ_SHORTCUT_TO_SKU_PROFILE_7")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_SKU_PROFILE_8
 
+# DBTITLE 1, UPD_SKU_PROFILE_8
 
 df_8=spark.sql("""
     SELECT
@@ -305,8 +305,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("UPD_SKU_PROFILE_8")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE
 
+# DBTITLE 1, SKU_PROFILE
 
 spark.sql("""INSERT INTO SKU_PROFILE SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

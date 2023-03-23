@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITE_DM_HIST_0
 
+# DBTITLE 1, SITE_DM_HIST_0
 
 df_0=spark.sql("""
     SELECT
@@ -30,8 +30,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITE_DM_HIST_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_DM_HIST_1
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_DM_HIST_1
 
 df_1=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SITE_DM_HIST_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_UPDATE_LOGIC_2
 
+# DBTITLE 1, EXP_UPDATE_LOGIC_2
 
 df_2=spark.sql("""
     SELECT
@@ -84,8 +84,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_UPDATE_LOGIC_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_UPDATE_ONLY_3
 
+# DBTITLE 1, UPDTRANS_UPDATE_ONLY_3
 
 df_3=spark.sql("""
     SELECT
@@ -103,8 +103,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPDTRANS_UPDATE_ONLY_3")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_DM_HIST
 
+# DBTITLE 1, SITE_DM_HIST
 
 spark.sql("""INSERT INTO SITE_DM_HIST SELECT NEW_LOCATION_ID1 AS LOCATION_ID,
 SITE_DM_EFF_DT AS SITE_DM_EFF_DT,

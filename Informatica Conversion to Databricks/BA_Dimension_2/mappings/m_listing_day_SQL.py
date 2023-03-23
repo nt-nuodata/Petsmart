@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, LISTING_HST_0
 
+# DBTITLE 1, LISTING_HST_0
 
 df_0=spark.sql("""
     SELECT
@@ -35,8 +35,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("LISTING_HST_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_TRANSFORM_DUMMY_SOURCE_1
 
+# DBTITLE 1, SQL_TRANSFORM_DUMMY_SOURCE_1
 
 df_1=spark.sql("""
     SELECT
@@ -50,8 +50,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQL_TRANSFORM_DUMMY_SOURCE_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_LISTING_DAY_2
 
+# DBTITLE 1, ASQ_Shortcut_to_LISTING_DAY_2
 
 df_2=spark.sql("""
     SELECT
@@ -64,8 +64,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Shortcut_to_LISTING_DAY_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_INS_and_DUPS_CHECK_3
 
+# DBTITLE 1, SQL_INS_and_DUPS_CHECK_3
 
 df_3=spark.sql("""
     SELECT
@@ -79,8 +79,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQL_INS_and_DUPS_CHECK_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_GET_SESSION_INFO_4
 
+# DBTITLE 1, EXP_GET_SESSION_INFO_4
 
 df_4=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_GET_SESSION_INFO_4")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_5
 
+# DBTITLE 1, AGG_5
 
 df_5=spark.sql("""
     SELECT
@@ -132,8 +132,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("AGG_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CREATE_INS_SQL_6
 
+# DBTITLE 1, EXP_CREATE_INS_SQL_6
 
 df_6=spark.sql("""
     SELECT
@@ -155,8 +155,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_CREATE_INS_SQL_6")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_INS_to_SQL_TRANSFORM_LOG_7
 
+# DBTITLE 1, SQL_INS_to_SQL_TRANSFORM_LOG_7
 
 df_7=spark.sql("""
     SELECT
@@ -178,8 +178,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("SQL_INS_to_SQL_TRANSFORM_LOG_7")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ABORT_SESSION_8
 
+# DBTITLE 1, EXP_ABORT_SESSION_8
 
 df_8=spark.sql("""
     SELECT
@@ -196,8 +196,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("EXP_ABORT_SESSION_8")
 
 # COMMAND ----------
-# DBTITLE 1, LISTING_DAY_9
 
+# DBTITLE 1, LISTING_DAY_9
 
 df_9=spark.sql("""
     SELECT
@@ -222,8 +222,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("LISTING_DAY_9")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_10
 
+# DBTITLE 1, SKU_PROFILE_10
 
 df_10=spark.sql("""
     SELECT
@@ -307,8 +307,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("SKU_PROFILE_10")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_11
 
+# DBTITLE 1, SITE_PROFILE_11
 
 df_11=spark.sql("""
     SELECT
@@ -420,8 +420,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("SITE_PROFILE_11")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_TRANSFORM_DUMMY_TARGET
 
+# DBTITLE 1, SQL_TRANSFORM_DUMMY_TARGET
 
 spark.sql("""INSERT INTO SQL_TRANSFORM_DUMMY_TARGET SELECT DUPLICATE_ROW_CNT AS DUPLICATE_ROW_CNT,
 SQL_TRANSFORM_ERROR AS SQL_TRANSFORM_ERROR,

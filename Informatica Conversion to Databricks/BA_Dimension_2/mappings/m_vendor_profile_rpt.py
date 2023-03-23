@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_TYPE_0
 
+# DBTITLE 1, VENDOR_TYPE_0
 
 df_0=spark.sql("""
     SELECT
@@ -26,8 +26,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("VENDOR_TYPE_0")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_RTV_TYPE_1
 
+# DBTITLE 1, VENDOR_RTV_TYPE_1
 
 df_1=spark.sql("""
     SELECT
@@ -40,8 +40,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("VENDOR_RTV_TYPE_1")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_INCO_TERM_2
 
+# DBTITLE 1, VENDOR_INCO_TERM_2
 
 df_2=spark.sql("""
     SELECT
@@ -54,8 +54,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("VENDOR_INCO_TERM_2")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PAYMENT_TERM_3
 
+# DBTITLE 1, VENDOR_PAYMENT_TERM_3
 
 df_3=spark.sql("""
     SELECT
@@ -68,8 +68,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("VENDOR_PAYMENT_TERM_3")
 
 # COMMAND ----------
-# DBTITLE 1, DM_PG_MGR_DVL_4
 
+# DBTITLE 1, DM_PG_MGR_DVL_4
 
 df_4=spark.sql("""
     SELECT
@@ -86,8 +86,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("DM_PG_MGR_DVL_4")
 
 # COMMAND ----------
-# DBTITLE 1, STATE_5
 
+# DBTITLE 1, STATE_5
 
 df_5=spark.sql("""
     SELECT
@@ -100,8 +100,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("STATE_5")
 
 # COMMAND ----------
-# DBTITLE 1, COUNTRY_6
 
+# DBTITLE 1, COUNTRY_6
 
 df_6=spark.sql("""
     SELECT
@@ -114,8 +114,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("COUNTRY_6")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_7
 
+# DBTITLE 1, VENDOR_PROFILE_7
 
 df_7=spark.sql("""
     SELECT
@@ -163,8 +163,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("VENDOR_PROFILE_7")
 
 # COMMAND ----------
-# DBTITLE 1, PURCH_GROUP_8
 
+# DBTITLE 1, PURCH_GROUP_8
 
 df_8=spark.sql("""
     SELECT
@@ -179,8 +179,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("PURCH_GROUP_8")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_VENDOR_PROFILE_9
 
+# DBTITLE 1, SQ_Shortcut_to_VENDOR_PROFILE_9
 
 df_9=spark.sql("""
     SELECT
@@ -283,8 +283,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("SQ_Shortcut_to_VENDOR_PROFILE_9")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_RPT
 
+# DBTITLE 1, VENDOR_PROFILE_RPT
 
 spark.sql("""INSERT INTO VENDOR_PROFILE_RPT SELECT VENDOR_ID AS VENDOR_ID,
 VENDOR_NAME AS VENDOR_NAME,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_LIST_HOLD_0
 
+# DBTITLE 1, ZTB_LIST_HOLD_0
 
 df_0=spark.sql("""
     SELECT
@@ -36,8 +36,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_LIST_HOLD_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ZTB_LIST_HOLD_1
 
+# DBTITLE 1, SQ_Shortcut_to_ZTB_LIST_HOLD_1
 
 df_1=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_ZTB_LIST_HOLD_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_2
 
+# DBTITLE 1, EXPTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -96,8 +96,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXPTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SKuProfile_3
 
+# DBTITLE 1, LKP_SKuProfile_3
 
 df_3=spark.sql("""
     SELECT
@@ -111,8 +111,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKP_SKuProfile_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SiteProfile_4
 
+# DBTITLE 1, LKP_SiteProfile_4
 
 df_4=spark.sql("""
     SELECT
@@ -126,8 +126,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_SiteProfile_4")
 
 # COMMAND ----------
-# DBTITLE 1, FILTRANS_5
 
+# DBTITLE 1, FILTRANS_5
 
 df_5=spark.sql("""
     SELECT
@@ -193,8 +193,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("FILTRANS_5")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_6
 
+# DBTITLE 1, SKU_PROFILE_6
 
 df_6=spark.sql("""
     SELECT
@@ -278,8 +278,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SKU_PROFILE_6")
 
 # COMMAND ----------
-# DBTITLE 1, POG_PROMO_HOLD
 
+# DBTITLE 1, POG_PROMO_HOLD
 
 spark.sql("""INSERT INTO POG_PROMO_HOLD SELECT PRODUCT_ID AS PRODUCT_ID,
 LOCATION_ID AS LOCATION_ID,

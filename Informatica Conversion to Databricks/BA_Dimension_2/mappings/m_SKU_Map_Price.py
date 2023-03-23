@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_MAP_PRICE_0
 
+# DBTITLE 1, SKU_MAP_PRICE_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_MAP_PRICE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_MAP_PRICE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_MAP_PRICE_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKU_MAP_PRICE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ZTPIM_MAP_PRE_2
 
+# DBTITLE 1, SAP_ZTPIM_MAP_PRE_2
 
 df_2=spark.sql("""
     SELECT
@@ -76,8 +76,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SAP_ZTPIM_MAP_PRE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SAP_ZTPIM_MAP_PRE_3
 
+# DBTITLE 1, SQ_Shortcut_to_SAP_ZTPIM_MAP_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -97,8 +97,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_SAP_ZTPIM_MAP_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_INT_Conversion_4
 
+# DBTITLE 1, EXP_INT_Conversion_4
 
 df_4=spark.sql("""
     SELECT
@@ -125,8 +125,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_INT_Conversion_4")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_5
 
+# DBTITLE 1, SKU_PROFILE_5
 
 df_5=spark.sql("""
     SELECT
@@ -210,8 +210,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SKU_PROFILE_5")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_6
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_6
 
 df_6=spark.sql("""
     SELECT
@@ -224,8 +224,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE_6")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SKU_PROFILE_7
 
+# DBTITLE 1, JNR_SKU_PROFILE_7
 
 df_7=spark.sql("""
     SELECT
@@ -250,8 +250,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("JNR_SKU_PROFILE_7")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SKU_Map_Price_8
 
+# DBTITLE 1, JNR_SKU_Map_Price_8
 
 df_8=spark.sql("""
     SELECT
@@ -283,8 +283,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("JNR_SKU_Map_Price_8")
 
 # COMMAND ----------
-# DBTITLE 1, FTR_No_Changed_Rec_9
 
+# DBTITLE 1, FTR_No_Changed_Rec_9
 
 df_9=spark.sql("""
     SELECT
@@ -328,8 +328,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("FTR_No_Changed_Rec_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_INS_UPD_FLAG_10
 
+# DBTITLE 1, EXP_INS_UPD_FLAG_10
 
 df_10=spark.sql("""
     SELECT
@@ -371,16 +371,16 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("EXP_INS_UPD_FLAG_10")
 
 # COMMAND ----------
+
 # DBTITLE 1, UPD_DELETE
 
 
 # COMMAND ----------
+
 # DBTITLE 1, UPD_INS_UPD
 
 
 # COMMAND ----------
+
 # DBTITLE 1, SKU_MAP_PRICE
 
-
-# COMMAND ----------
-# DBTITLE 1, SKU_MAP_PRICE

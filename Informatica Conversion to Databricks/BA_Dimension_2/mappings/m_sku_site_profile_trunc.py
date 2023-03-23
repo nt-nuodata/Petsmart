@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_SITE_PROFILE_0
 
+# DBTITLE 1, SKU_SITE_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -44,8 +44,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_SITE_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS_1
 
+# DBTITLE 1, WEEKS_1
 
 df_1=spark.sql("""
     SELECT
@@ -79,8 +79,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("WEEKS_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_DUMMY_TARGET_2
 
+# DBTITLE 1, ASQ_DUMMY_TARGET_2
 
 df_2=spark.sql("""
     SELECT
@@ -89,8 +89,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_DUMMY_TARGET_2")
 
 # COMMAND ----------
-# DBTITLE 1, FLT_Trunc_Prod_Table_3
 
+# DBTITLE 1, FLT_Trunc_Prod_Table_3
 
 df_3=spark.sql("""
     SELECT
@@ -104,8 +104,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("FLT_Trunc_Prod_Table_3")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_SITE_PROFILE
 
+# DBTITLE 1, SKU_SITE_PROFILE
 
 spark.sql("""INSERT INTO SKU_SITE_PROFILE SELECT TABLE_NAME AS PRODUCT_ID,
 LOCATION_ID AS LOCATION_ID,
@@ -130,7 +130,7 @@ LOC_NAT_PRICE_AMT AS LOC_NAT_PRICE_AMT,
 LOC_PETPERKS_PRICE_AMT AS LOC_PETPERKS_PRICE_AMT FROM FLT_Trunc_Prod_Table_3""")
 
 # COMMAND ----------
-# DBTITLE 1, DUMMY_TARGET
 
+# DBTITLE 1, DUMMY_TARGET
 
 spark.sql("""INSERT INTO DUMMY_TARGET SELECT TABLE_NAME AS COMMENT FROM ASQ_DUMMY_TARGET_2""")

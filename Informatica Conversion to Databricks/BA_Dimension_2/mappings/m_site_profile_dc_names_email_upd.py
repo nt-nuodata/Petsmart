@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_0
 
+# DBTITLE 1, SITE_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -124,8 +124,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITE_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -244,8 +244,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SITE_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Conv_DISTRICT_2
 
+# DBTITLE 1, EXP_Conv_DISTRICT_2
 
 df_2=spark.sql("""
     SELECT
@@ -259,8 +259,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_Conv_DISTRICT_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_USR_DISTRICT_NAMES_3
 
+# DBTITLE 1, LKP_USR_DISTRICT_NAMES_3
 
 df_3=spark.sql("""
     SELECT
@@ -283,8 +283,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKP_USR_DISTRICT_NAMES_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_4
 
+# DBTITLE 1, EXPTRANS_4
 
 df_4=spark.sql("""
     SELECT
@@ -302,8 +302,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXPTRANS_4")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_USR_DC_NAMES_5
 
+# DBTITLE 1, LKP_USR_DC_NAMES_5
 
 df_5=spark.sql("""
     SELECT
@@ -335,8 +335,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("LKP_USR_DC_NAMES_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXPT_Upd_logic_6
 
+# DBTITLE 1, EXPT_Upd_logic_6
 
 df_6=spark.sql("""
     SELECT
@@ -362,8 +362,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXPT_Upd_logic_6")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_DC_NAMES_EMAIL_7
 
+# DBTITLE 1, UPD_DC_NAMES_EMAIL_7
 
 df_7=spark.sql("""
     SELECT
@@ -378,8 +378,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("UPD_DC_NAMES_EMAIL_7")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

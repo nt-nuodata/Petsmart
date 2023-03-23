@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT_0
 
+# DBTITLE 1, PRODUCT_0
 
 df_0=spark.sql("""
     SELECT
@@ -96,8 +96,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PRODUCT_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_PRODUCT_1
 
+# DBTITLE 1, ASQ_PRODUCT_1
 
 df_1=spark.sql("""
     SELECT
@@ -118,8 +118,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_PRODUCT_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_NULLS_2
 
+# DBTITLE 1, FIL_NULLS_2
 
 df_2=spark.sql("""
     SELECT
@@ -143,8 +143,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_NULLS_2")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_COLUMNS_3
 
+# DBTITLE 1, AGG_COLUMNS_3
 
 df_3=spark.sql("""
     SELECT
@@ -175,8 +175,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("AGG_COLUMNS_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_GetData_4
 
+# DBTITLE 1, LKP_GetData_4
 
 df_4=spark.sql("""
     SELECT
@@ -191,8 +191,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_GetData_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DetectChanges_5
 
+# DBTITLE 1, EXP_DetectChanges_5
 
 df_5=spark.sql("""
     SELECT
@@ -210,8 +210,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_DetectChanges_5")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_ins_upd_6
 
+# DBTITLE 1, UPD_ins_upd_6
 
 df_6=spark.sql("""
     SELECT
@@ -254,8 +254,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("UPD_ins_upd_6")
 
 # COMMAND ----------
-# DBTITLE 1, MERCHCAT
 
+# DBTITLE 1, MERCHCAT
 
 spark.sql("""INSERT INTO MERCHCAT SELECT SAP_CATEGORY_ID AS SAP_CATEGORY_ID,
 SAP_CATEGORY_DESC AS SAP_CATEGORY_DESC,

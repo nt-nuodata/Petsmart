@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_0
 
+# DBTITLE 1, CURRENCY_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("CURRENCY_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_CURRENCY_1
 
+# DBTITLE 1, ASQ_Shortcut_to_CURRENCY_1
 
 df_1=spark.sql("""
     SELECT
@@ -58,8 +58,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_CURRENCY_1")
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_DAY
 
+# DBTITLE 1, CURRENCY_DAY
 
 spark.sql("""INSERT INTO CURRENCY_DAY SELECT DAY_DT AS DAY_DT,
 TABLE_NAME AS CURRENCY_ID,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTH_WEB_WIP_0
 
+# DBTITLE 1, ZTH_WEB_WIP_0
 
 df_0=spark.sql("""
     SELECT
@@ -128,8 +128,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTH_WEB_WIP_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ZTH_WEB_WIP_1
 
+# DBTITLE 1, SQ_Shortcut_to_ZTH_WEB_WIP_1
 
 df_1=spark.sql("""
     SELECT
@@ -245,8 +245,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_ZTH_WEB_WIP_1")
 
 # COMMAND ----------
-# DBTITLE 1, FILTRANS_2
 
+# DBTITLE 1, FILTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -364,8 +364,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FILTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_3
 
+# DBTITLE 1, EXPTRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -408,8 +408,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXPTRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ZTH_WEB_WIP_PRE
 
+# DBTITLE 1, SAP_ZTH_WEB_WIP_PRE
 
 spark.sql("""INSERT INTO SAP_ZTH_WEB_WIP_PRE SELECT RECORD_ID AS RECORD_ID,
 MATKL AS MATKL,

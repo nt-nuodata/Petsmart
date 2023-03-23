@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_TXS_ATTR_TYPE_PRE_0
 
+# DBTITLE 1, SKU_TXS_ATTR_TYPE_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -30,8 +30,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_TXS_ATTR_TYPE_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_TXS_ATTR_TYPE_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_TXS_ATTR_TYPE_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -49,8 +49,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKU_TXS_ATTR_TYPE_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_TXS_ATTR_TYPE_2
 
+# DBTITLE 1, SKU_TXS_ATTR_TYPE_2
 
 df_2=spark.sql("""
     SELECT
@@ -68,8 +68,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SKU_TXS_ATTR_TYPE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_TXS_ATTR_TYPE_3
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_TXS_ATTR_TYPE_3
 
 df_3=spark.sql("""
     SELECT
@@ -86,8 +86,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_SKU_TXS_ATTR_TYPE_3")
 
 # COMMAND ----------
-# DBTITLE 1, Jnr_SKU_TXN_Attr_Type_4
 
+# DBTITLE 1, Jnr_SKU_TXN_Attr_Type_4
 
 df_4=spark.sql("""
     SELECT
@@ -113,8 +113,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("Jnr_SKU_TXN_Attr_Type_4")
 
 # COMMAND ----------
-# DBTITLE 1, Fil_SKU_TXS_Attr_Type_5
 
+# DBTITLE 1, Fil_SKU_TXS_Attr_Type_5
 
 df_5=spark.sql("""
     SELECT
@@ -157,8 +157,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("Fil_SKU_TXS_Attr_Type_5")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_SKU_TXN_Attr_Type_6
 
+# DBTITLE 1, Exp_SKU_TXN_Attr_Type_6
 
 df_6=spark.sql("""
     SELECT
@@ -187,8 +187,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("Exp_SKU_TXN_Attr_Type_6")
 
 # COMMAND ----------
-# DBTITLE 1, Ups_SKU_TXN_Attr_Type_7
 
+# DBTITLE 1, Ups_SKU_TXN_Attr_Type_7
 
 df_7=spark.sql("""
     SELECT
@@ -207,8 +207,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("Ups_SKU_TXN_Attr_Type_7")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_TXS_ATTR_TYPE
 
+# DBTITLE 1, SKU_TXS_ATTR_TYPE
 
 spark.sql("""INSERT INTO SKU_TXS_ATTR_TYPE SELECT SKU_TXS_ATTR_TYPE_ID AS SKU_TXS_ATTR_TYPE_ID,
 SKU_TXS_ATTR_TYPE_DESC AS SKU_TXS_ATTR_TYPE_DESC,

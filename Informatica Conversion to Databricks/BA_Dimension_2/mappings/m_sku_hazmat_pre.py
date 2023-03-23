@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_HAZMAT_FLAT_0
 
+# DBTITLE 1, SKU_HAZMAT_FLAT_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_HAZMAT_FLAT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_HAZMAT_FLAT_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_HAZMAT_FLAT_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKU_HAZMAT_FLAT_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_HAZMAT_PRE
 
+# DBTITLE 1, SKU_HAZMAT_PRE
 
 spark.sql("""INSERT INTO SKU_HAZMAT_PRE SELECT RTV_DEPT_CD AS RTV_DEPT_CD,
 RTV_DESC AS RTV_DESC,

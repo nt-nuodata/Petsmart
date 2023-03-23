@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STORE_AREA_PRE_0
 
+# DBTITLE 1, STORE_AREA_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -60,8 +60,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STORE_AREA_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, LOCATION_1
 
+# DBTITLE 1, LOCATION_1
 
 df_1=spark.sql("""
     SELECT
@@ -113,8 +113,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("LOCATION_1")
 
 # COMMAND ----------
-# DBTITLE 1, LOCATION_AREA_2
 
+# DBTITLE 1, LOCATION_AREA_2
 
 df_2=spark.sql("""
     SELECT
@@ -130,8 +130,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LOCATION_AREA_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_LOCATION_AREA_3
 
+# DBTITLE 1, ASQ_LOCATION_AREA_3
 
 df_3=spark.sql("""
     SELECT
@@ -156,8 +156,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_LOCATION_AREA_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_STORE_AREA_PRE_DELETE_4
 
+# DBTITLE 1, EXP_STORE_AREA_PRE_DELETE_4
 
 df_4=spark.sql("""
     SELECT
@@ -175,8 +175,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_STORE_AREA_PRE_DELETE_4")
 
 # COMMAND ----------
-# DBTITLE 1, LOCATION_AREA
 
+# DBTITLE 1, LOCATION_AREA
 
 spark.sql("""INSERT INTO LOCATION_AREA SELECT LOCATION_ID AS LOCATION_ID,
 AREA_ID AS AREA_ID,

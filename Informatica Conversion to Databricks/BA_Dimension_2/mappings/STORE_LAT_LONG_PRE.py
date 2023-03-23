@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Address_0
 
+# DBTITLE 1, Address_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Address_0")
 
 # COMMAND ----------
-# DBTITLE 1, Store_1
 
+# DBTITLE 1, Store_1
 
 df_1=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("Store_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Address_2
 
+# DBTITLE 1, SQ_Shortcut_to_Address_2
 
 df_2=spark.sql("""
     SELECT
@@ -82,8 +82,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SQ_Shortcut_to_Address_2")
 
 # COMMAND ----------
-# DBTITLE 1, STORE_LAT_LONG_PRE
 
+# DBTITLE 1, STORE_LAT_LONG_PRE
 
 spark.sql("""INSERT INTO STORE_LAT_LONG_PRE SELECT StoreNumber AS STORE_NBR,
 Latitude AS LAT,

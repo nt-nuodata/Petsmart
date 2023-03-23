@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, T005F_0
 
+# DBTITLE 1, T005F_0
 
 df_0=spark.sql("""
     SELECT
@@ -29,8 +29,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("T005F_0")
 
 # COMMAND ----------
-# DBTITLE 1, T001W_1
 
+# DBTITLE 1, T001W_1
 
 df_1=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("T001W_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_T001W_2
 
+# DBTITLE 1, SQ_Shortcut_to_T001W_2
 
 df_2=spark.sql("""
     SELECT
@@ -188,8 +188,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SQ_Shortcut_to_T001W_2")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_T001W_SITE_PRE
 
+# DBTITLE 1, SAP_T001W_SITE_PRE
 
 spark.sql("""INSERT INTO SAP_T001W_SITE_PRE SELECT MANDT AS MANDT,
 WERKS AS WERKS,

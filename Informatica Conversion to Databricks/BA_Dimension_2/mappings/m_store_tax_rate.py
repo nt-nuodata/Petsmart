@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STORE_TAX_RATE_FLAT_0
 
+# DBTITLE 1, STORE_TAX_RATE_FLAT_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STORE_TAX_RATE_FLAT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_STORE_TAX_RATE_FLAT_1
 
+# DBTITLE 1, SQ_Shortcut_to_STORE_TAX_RATE_FLAT_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_STORE_TAX_RATE_FLAT_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_PetsmartFacility_2
 
+# DBTITLE 1, LKP_PetsmartFacility_2
 
 df_2=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKP_PetsmartFacility_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_FacilityAddress_3
 
+# DBTITLE 1, LKP_FacilityAddress_3
 
 df_3=spark.sql("""
     SELECT
@@ -79,8 +79,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKP_FacilityAddress_3")
 
 # COMMAND ----------
-# DBTITLE 1, FLT_FacilityGID_Not_Null_4
 
+# DBTITLE 1, FLT_FacilityGID_Not_Null_4
 
 df_4=spark.sql("""
     SELECT
@@ -115,8 +115,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("FLT_FacilityGID_Not_Null_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_StoreRetail_5
 
+# DBTITLE 1, EXP_StoreRetail_5
 
 df_5=spark.sql("""
     SELECT
@@ -142,8 +142,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_StoreRetail_5")
 
 # COMMAND ----------
-# DBTITLE 1, LKPTRANS_6
 
+# DBTITLE 1, LKPTRANS_6
 
 df_6=spark.sql("""
     SELECT
@@ -161,8 +161,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("LKPTRANS_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_7
 
+# DBTITLE 1, EXPTRANS_7
 
 df_7=spark.sql("""
     SELECT
@@ -192,8 +192,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("EXPTRANS_7")
 
 # COMMAND ----------
-# DBTITLE 1, STORE_TAX_RATE
 
+# DBTITLE 1, STORE_TAX_RATE
 
 spark.sql("""INSERT INTO STORE_TAX_RATE SELECT SITE_NBR AS SITE_NBR,
 COUNTRY_CD AS COUNTRY_CD,
@@ -205,8 +205,8 @@ PST AS PST,
 GST AS GST FROM EXPTRANS_7""")
 
 # COMMAND ----------
-# DBTITLE 1, StoreRetail
 
+# DBTITLE 1, StoreRetail
 
 spark.sql("""INSERT INTO StoreRetail SELECT FacilityGid AS FacilityGid,
 CityTaxRate AS CityTaxRate,

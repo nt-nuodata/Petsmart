@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS_0
 
+# DBTITLE 1, WEEKS_0
 
 df_0=spark.sql("""
     SELECT
@@ -46,8 +46,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("WEEKS_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_WEEKS_1
 
+# DBTITLE 1, ASQ_Shortcut_To_WEEKS_1
 
 df_1=spark.sql("""
     SELECT
@@ -731,8 +731,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_To_WEEKS_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DATE_TYPE_ID_2
 
+# DBTITLE 1, EXP_DATE_TYPE_ID_2
 
 df_2=spark.sql("""
     SELECT
@@ -746,8 +746,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_DATE_TYPE_ID_2")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_3
 
+# DBTITLE 1, DAYS_3
 
 df_3=spark.sql("""
     SELECT
@@ -805,8 +805,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("DAYS_3")
 
 # COMMAND ----------
-# DBTITLE 1, DATE_TYPE_WEEK951
 
+# DBTITLE 1, DATE_TYPE_WEEK951
 
 spark.sql("""INSERT INTO DATE_TYPE_WEEK951 SELECT DATE_TYPE_ID AS DATE_TYPE_ID,
 WEEK_DT AS WEEK_DT FROM EXP_DATE_TYPE_ID_2""")

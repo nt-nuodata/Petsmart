@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, POG_PROMO_HST_0
 
+# DBTITLE 1, POG_PROMO_HST_0
 
 df_0=spark.sql("""
     SELECT
@@ -35,8 +35,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("POG_PROMO_HST_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_POG_PROMO_HST_1
 
+# DBTITLE 1, ASQ_Shortcut_to_POG_PROMO_HST_1
 
 df_1=spark.sql("""
     SELECT
@@ -60,8 +60,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_POG_PROMO_HST_1")
 
 # COMMAND ----------
-# DBTITLE 1, POG_PROMO_WK
 
+# DBTITLE 1, POG_PROMO_WK
 
 spark.sql("""INSERT INTO POG_PROMO_WK SELECT WEEK_DT AS WEEK_DT,
 PRODUCT_ID AS PRODUCT_ID,

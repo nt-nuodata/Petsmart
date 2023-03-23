@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITEGROUP_0
 
+# DBTITLE 1, SITEGROUP_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITEGROUP_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SITEGROUP_1
 
+# DBTITLE 1, SQ_Shortcut_To_SITEGROUP_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_SITEGROUP_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_TRIM_DESC_2
 
+# DBTITLE 1, EXP_TRIM_DESC_2
 
 df_2=spark.sql("""
     SELECT
@@ -59,8 +59,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_TRIM_DESC_2")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_GROUP_PRE
 
+# DBTITLE 1, SITE_GROUP_PRE
 
 spark.sql("""INSERT INTO SITE_GROUP_PRE SELECT STORE_NBR AS STORE_NBR,
 SITE_GROUP_CD_OUT AS SITE_GROUP_CD,

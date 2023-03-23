@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MARA_0
 
+# DBTITLE 1, MARA_0
 
 df_0=spark.sql("""SELECT MANDT AS MANDT,
 MATNR AS MATNR,
@@ -258,8 +258,8 @@ monotonically_increasing_id() AS Monotonically_Increasing_Id FROM MARA""")
 df_0.createOrReplaceTempView("MARA_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MARA_1
 
+# DBTITLE 1, SQ_Shortcut_to_MARA_1
 
 df_1=spark.sql("""
     SELECT
@@ -274,8 +274,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_MARA_1")
 
 # COMMAND ----------
-# DBTITLE 1, GL_MARA_PRE
 
+# DBTITLE 1, GL_MARA_PRE
 
 spark.sql("""INSERT INTO GL_MARA_PRE SELECT SKU_NBR AS SKU_NBR,
 ARTICLE_CATEGORY_CD AS ARTICLE_CATEGORY_CD FROM SQ_Shortcut_to_MARA_1""")

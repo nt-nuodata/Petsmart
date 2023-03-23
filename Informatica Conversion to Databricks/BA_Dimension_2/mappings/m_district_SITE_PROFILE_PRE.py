@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_PRE_0
 
+# DBTITLE 1, SITE_PROFILE_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -66,8 +66,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITE_PROFILE_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_SHORTCUT_TO_SITE_PROFILE_PRE_1
 
+# DBTITLE 1, ASQ_SHORTCUT_TO_SITE_PROFILE_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -261,8 +261,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_SHORTCUT_TO_SITE_PROFILE_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_2
 
+# DBTITLE 1, EXPTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -284,8 +284,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXPTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, DISTRICT
 
+# DBTITLE 1, DISTRICT
 
 spark.sql("""INSERT INTO DISTRICT SELECT DISTRICT_ID AS DISTRICT_ID,
 DISTRICT_DESC AS DISTRICT_DESC,

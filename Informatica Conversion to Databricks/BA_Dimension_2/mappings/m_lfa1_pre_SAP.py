@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, LFA1_0
 
+# DBTITLE 1, LFA1_0
 
 df_0=spark.sql("""
     SELECT
@@ -123,8 +123,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("LFA1_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_LFA1_1
 
+# DBTITLE 1, SQ_LFA1_1
 
 df_1=spark.sql("""
     SELECT
@@ -146,8 +146,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_LFA1_1")
 
 # COMMAND ----------
-# DBTITLE 1, LFA1_PRE
 
+# DBTITLE 1, LFA1_PRE
 
 spark.sql("""INSERT INTO LFA1_PRE SELECT LIFNR AS LIFNR,
 LAND1 AS LAND1,

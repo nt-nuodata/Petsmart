@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_HIST_0
 
+# DBTITLE 1, SKU_PROFILE_HIST_0
 
 df_0=spark.sql("""
     SELECT
@@ -36,8 +36,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_PROFILE_HIST_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_PROFILE_HIST_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_PROFILE_HIST_1
 
 df_1=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKU_PROFILE_HIST_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_2
 
+# DBTITLE 1, SKU_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -148,8 +148,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SKU_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_3
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -233,8 +233,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, JNRTRANS_4
 
+# DBTITLE 1, JNRTRANS_4
 
 df_4=spark.sql("""
     SELECT
@@ -268,8 +268,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("JNRTRANS_4")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_INSERT_New_Record_5
 
+# DBTITLE 1, Exp_INSERT_New_Record_5
 
 df_5=spark.sql("""SELECT SYSDATE AS REC_START_DT,
 PRODUCT_ID AS PRODUCT_ID,
@@ -290,8 +290,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_5.createOrReplaceTempView("Exp_INSERT_New_Record_5")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_INSERT_Open_New_record_6
 
+# DBTITLE 1, Exp_INSERT_Open_New_record_6
 
 df_6=spark.sql("""SELECT SYSDATE AS REC_START_DT,
 PRODUCT_ID4 AS PRODUCT_ID,
@@ -312,8 +312,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_6.createOrReplaceTempView("Exp_INSERT_Open_New_record_6")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_Update_Close_Record_7
 
+# DBTITLE 1, Exp_Update_Close_Record_7
 
 df_7=spark.sql("""SELECT REC_START_DT AS REC_START_DT,
 PRODUCT_ID AS PRODUCT_ID,
@@ -334,8 +334,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_7.createOrReplaceTempView("Exp_Update_Close_Record_7")
 
 # COMMAND ----------
-# DBTITLE 1, Union_8
 
+# DBTITLE 1, Union_8
 
 df_8=spark.sql("""SELECT BRAND_CD AS BRAND_CD,
 BRAND_CD_IND AS BRAND_CD_IND,
@@ -384,8 +384,8 @@ UPDATE_DT AS UPDATE_DT FROM Exp_INSERT_New_Record_5""")
 df_8.createOrReplaceTempView("Union_8")
 
 # COMMAND ----------
-# DBTITLE 1, Ups_SKU_PROFILE_HIST_9
 
+# DBTITLE 1, Ups_SKU_PROFILE_HIST_9
 
 df_9=spark.sql("""
     SELECT
@@ -410,8 +410,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("Ups_SKU_PROFILE_HIST_9")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_HIST
 
+# DBTITLE 1, SKU_PROFILE_HIST
 
 spark.sql("""INSERT INTO SKU_PROFILE_HIST SELECT REC_START_DT AS REC_START_DT,
 PRODUCT_ID AS PRODUCT_ID,

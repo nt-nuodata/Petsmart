@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_BRAND_PRE_0
 
+# DBTITLE 1, SKU_BRAND_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -26,8 +26,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_BRAND_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_1
 
+# DBTITLE 1, SKU_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -111,8 +111,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SKU_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_SKU_PROFILE_BRAND_2
 
+# DBTITLE 1, SQ_SKU_PROFILE_BRAND_2
 
 df_2=spark.sql("""SELECT SKU_PROFILE.UNIT_DENOMINATOR AS UNIT_DENOMINATOR,
 SKU_PROFILE.BP_SIZE_ID AS BP_SIZE_ID,
@@ -194,8 +194,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM SKU_BRAND_PRE.SK
 df_2.createOrReplaceTempView("SQ_SKU_PROFILE_BRAND_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SKU_BRAND_3
 
+# DBTITLE 1, EXP_SKU_BRAND_3
 
 df_3=spark.sql("""
     SELECT
@@ -210,8 +210,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_SKU_BRAND_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPS_SKU_PROFILE_4
 
+# DBTITLE 1, UPS_SKU_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -226,8 +226,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPS_SKU_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE
 
+# DBTITLE 1, SKU_PROFILE
 
 spark.sql("""INSERT INTO SKU_PROFILE SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

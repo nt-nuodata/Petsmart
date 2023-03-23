@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_0
 
+# DBTITLE 1, SKU_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -96,8 +96,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Sku_Profile_1
 
+# DBTITLE 1, SQ_Sku_Profile_1
 
 df_1=spark.sql("""
     SELECT
@@ -181,8 +181,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Sku_Profile_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKp_Status_2
 
+# DBTITLE 1, LKp_Status_2
 
 df_2=spark.sql("""
     SELECT
@@ -197,8 +197,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKp_Status_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKp_SAP_Division_3
 
+# DBTITLE 1, LKp_SAP_Division_3
 
 df_3=spark.sql("""
     SELECT
@@ -213,8 +213,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKp_SAP_Division_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKp_SAP_Department_4
 
+# DBTITLE 1, LKp_SAP_Department_4
 
 df_4=spark.sql("""
     SELECT
@@ -229,8 +229,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKp_SAP_Department_4")
 
 # COMMAND ----------
-# DBTITLE 1, LKp_SAP_Class_5
 
+# DBTITLE 1, LKp_SAP_Class_5
 
 df_5=spark.sql("""
     SELECT
@@ -245,8 +245,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("LKp_SAP_Class_5")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_Primary_vendor_6
 
+# DBTITLE 1, Lkp_Primary_vendor_6
 
 df_6=spark.sql("""
     SELECT
@@ -261,8 +261,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("Lkp_Primary_vendor_6")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_Sku_Uom_7
 
+# DBTITLE 1, Lkp_Sku_Uom_7
 
 df_7=spark.sql("""
     SELECT
@@ -280,8 +280,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("Lkp_Sku_Uom_7")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_SAP_Category_8
 
+# DBTITLE 1, Lkp_SAP_Category_8
 
 df_8=spark.sql("""
     SELECT
@@ -296,8 +296,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("Lkp_SAP_Category_8")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_Purch_Group_9
 
+# DBTITLE 1, Lkp_Purch_Group_9
 
 df_9=spark.sql("""
     SELECT
@@ -313,8 +313,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("Lkp_Purch_Group_9")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_HTS_10
 
+# DBTITLE 1, Lkp_HTS_10
 
 df_10=spark.sql("""
     SELECT
@@ -329,8 +329,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("Lkp_HTS_10")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_Country_11
 
+# DBTITLE 1, Lkp_Country_11
 
 df_11=spark.sql("""
     SELECT
@@ -345,8 +345,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("Lkp_Country_11")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_Buyer_12
 
+# DBTITLE 1, Lkp_Buyer_12
 
 df_12=spark.sql("""
     SELECT
@@ -361,8 +361,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("Lkp_Buyer_12")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_Brand_13
 
+# DBTITLE 1, LKP_Brand_13
 
 df_13=spark.sql("""
     SELECT
@@ -377,8 +377,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("LKP_Brand_13")
 
 # COMMAND ----------
-# DBTITLE 1, Exp_PRODUCT_14
 
+# DBTITLE 1, Exp_PRODUCT_14
 
 df_14=spark.sql("""
     SELECT
@@ -481,8 +481,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("Exp_PRODUCT_14")
 
 # COMMAND ----------
-# DBTITLE 1, UPS_Product_15
 
+# DBTITLE 1, UPS_Product_15
 
 df_15=spark.sql("""
     SELECT
@@ -546,8 +546,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("UPS_Product_15")
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT
 
+# DBTITLE 1, PRODUCT
 
 spark.sql("""INSERT INTO PRODUCT SELECT PRODUCT_ID AS PRODUCT_ID,
 ALT_DESC AS ALT_DESC,

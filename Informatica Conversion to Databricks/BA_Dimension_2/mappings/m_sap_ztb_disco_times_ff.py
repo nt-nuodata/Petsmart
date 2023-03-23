@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_DISCO_TIMES_0
 
+# DBTITLE 1, ZTB_DISCO_TIMES_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,6 +25,3 @@ df_0=spark.sql("""
         ZTB_DISCO_TIMES""")
 
 df_0.createOrReplaceTempView("ZTB_DISCO_TIMES_0")
-
-# COMMAND ----------
-# DBTITLE 1, FF_ZTB_DISCO_TIMES

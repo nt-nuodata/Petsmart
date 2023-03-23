@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_ART_LOC_SITE_0
 
+# DBTITLE 1, ZTB_ART_LOC_SITE_0
 
 df_0=spark.sql("""
     SELECT
@@ -38,8 +38,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_ART_LOC_SITE_0")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Load_Tstmp_1
 
+# DBTITLE 1, EXP_Load_Tstmp_1
 
 df_1=spark.sql("""SELECT ARTICLE AS ARTICLE,
 SITE AS SITE,
@@ -61,8 +61,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_1.createOrReplaceTempView("EXP_Load_Tstmp_1")
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_ART_LOC_SITE_PRE
 
+# DBTITLE 1, ZTB_ART_LOC_SITE_PRE
 
 spark.sql("""INSERT INTO ZTB_ART_LOC_SITE_PRE SELECT ARTICLE AS ARTICLE,
 SITE AS SITE,

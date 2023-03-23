@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, USR_STORE_ATTRIBUTES_PRE_0
 
+# DBTITLE 1, USR_STORE_ATTRIBUTES_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -46,8 +46,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("USR_STORE_ATTRIBUTES_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_USR_STORE_ATTRIBUTES_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_to_USR_STORE_ATTRIBUTES_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -81,8 +81,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_USR_STORE_ATTRIBUTES_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ADDING_FILLER_ZEROS_2
 
+# DBTITLE 1, EXP_ADDING_FILLER_ZEROS_2
 
 df_2=spark.sql("""
     SELECT
@@ -118,8 +118,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_ADDING_FILLER_ZEROS_2")
 
 # COMMAND ----------
-# DBTITLE 1, USR_STORE_ATTRIBUTES_3
 
+# DBTITLE 1, USR_STORE_ATTRIBUTES_3
 
 df_3=spark.sql("""
     SELECT
@@ -146,8 +146,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("USR_STORE_ATTRIBUTES_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_USR_STORE_ATTRIBUTES_4
 
+# DBTITLE 1, SQ_Shortcut_to_USR_STORE_ATTRIBUTES_4
 
 df_4=spark.sql("""
     SELECT
@@ -184,8 +184,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_Shortcut_to_USR_STORE_ATTRIBUTES_4")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_UPD_STRATEGY_5
 
+# DBTITLE 1, JNR_UPD_STRATEGY_5
 
 df_5=spark.sql("""
     SELECT
@@ -249,8 +249,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("JNR_UPD_STRATEGY_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_UPD_STRATEGY_6
 
+# DBTITLE 1, EXP_UPD_STRATEGY_6
 
 df_6=spark.sql("""
     SELECT
@@ -298,8 +298,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_UPD_STRATEGY_6")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_NO_CHANGES_7
 
+# DBTITLE 1, FIL_NO_CHANGES_7
 
 df_7=spark.sql("""
     SELECT
@@ -339,8 +339,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("FIL_NO_CHANGES_7")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_STRATEGY_8
 
+# DBTITLE 1, UPD_STRATEGY_8
 
 df_8=spark.sql("""
     SELECT
@@ -378,8 +378,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("UPD_STRATEGY_8")
 
 # COMMAND ----------
-# DBTITLE 1, USR_STORE_ATTRIBUTES
 
+# DBTITLE 1, USR_STORE_ATTRIBUTES
 
 spark.sql("""INSERT INTO USR_STORE_ATTRIBUTES SELECT LOCATION_ID AS LOCATION_ID,
 STORE_NBR AS STORE_NBR,

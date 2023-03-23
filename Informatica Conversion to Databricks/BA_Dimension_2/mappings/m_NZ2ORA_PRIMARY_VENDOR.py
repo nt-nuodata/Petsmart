@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PRIMARY_VENDOR_0
 
+# DBTITLE 1, PRIMARY_VENDOR_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PRIMARY_VENDOR_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_PRIMARY_VENDOR_1
 
+# DBTITLE 1, SQ_Shortcut_To_PRIMARY_VENDOR_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_PRIMARY_VENDOR_1")
 
 # COMMAND ----------
-# DBTITLE 1, PRIMARY_VENDOR
 
+# DBTITLE 1, PRIMARY_VENDOR
 
 spark.sql("""INSERT INTO PRIMARY_VENDOR SELECT PRIMARY_VENDOR_ID AS PRIMARY_VENDOR_ID,
 PRIMARY_VENDOR_NAME AS PRIMARY_VENDOR_NAME FROM SQ_Shortcut_To_PRIMARY_VENDOR_1""")

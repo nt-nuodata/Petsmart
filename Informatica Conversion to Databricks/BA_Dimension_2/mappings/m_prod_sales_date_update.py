@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STX_UPC_PRE_0
 
+# DBTITLE 1, STX_UPC_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -60,8 +60,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STX_UPC_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, UPC_1
 
+# DBTITLE 1, UPC_1
 
 df_1=spark.sql("""
     SELECT
@@ -79,8 +79,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("UPC_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Join_STX_UPC_PRE_And_Upc_2
 
+# DBTITLE 1, ASQ_Join_STX_UPC_PRE_And_Upc_2
 
 df_2=spark.sql("""
     SELECT
@@ -98,8 +98,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Join_STX_UPC_PRE_And_Upc_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_PRODUCT_SALES_DATE_3
 
+# DBTITLE 1, LKP_PRODUCT_SALES_DATE_3
 
 df_3=spark.sql("""
     SELECT
@@ -117,8 +117,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKP_PRODUCT_SALES_DATE_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CHECK_SALES_DATE_4
 
+# DBTITLE 1, EXP_CHECK_SALES_DATE_4
 
 df_4=spark.sql("""
     SELECT
@@ -139,8 +139,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_CHECK_SALES_DATE_4")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_UPDATE_PRODUCT_SALES_DATE_5
 
+# DBTITLE 1, UPD_UPDATE_PRODUCT_SALES_DATE_5
 
 df_5=spark.sql("""
     SELECT
@@ -154,8 +154,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("UPD_UPDATE_PRODUCT_SALES_DATE_5")
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT
 
+# DBTITLE 1, PRODUCT
 
 spark.sql("""INSERT INTO PRODUCT SELECT PRODUCT_ID AS PRODUCT_ID,
 ALT_DESC AS ALT_DESC,

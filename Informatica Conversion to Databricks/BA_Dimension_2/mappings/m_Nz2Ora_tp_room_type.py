@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, TP_ROOM_TYPE_0
 
+# DBTITLE 1, TP_ROOM_TYPE_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("TP_ROOM_TYPE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_TP_ROOM_TYPE_1
 
+# DBTITLE 1, SQ_Shortcut_to_TP_ROOM_TYPE_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_TP_ROOM_TYPE_1")
 
 # COMMAND ----------
-# DBTITLE 1, TP_ROOM_TYPE
 
+# DBTITLE 1, TP_ROOM_TYPE
 
 spark.sql("""INSERT INTO TP_ROOM_TYPE SELECT ROOM_TYPE_ID AS ROOM_TYPE_ID,
 ROOM_TYPE_DESC AS ROOM_TYPE_DESC,

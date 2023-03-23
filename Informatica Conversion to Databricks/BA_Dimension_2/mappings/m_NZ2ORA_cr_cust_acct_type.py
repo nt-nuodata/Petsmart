@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, CR_CUST_ACCT_TYPE_0
 
+# DBTITLE 1, CR_CUST_ACCT_TYPE_0
 
 df_0=spark.sql("""
     SELECT
@@ -29,8 +29,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("CR_CUST_ACCT_TYPE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_CR_CUST_ACCT_TYPE_1
 
+# DBTITLE 1, SQ_Shortcut_to_CR_CUST_ACCT_TYPE_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_CR_CUST_ACCT_TYPE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Transform_2
 
+# DBTITLE 1, EXP_Transform_2
 
 df_2=spark.sql("""
     SELECT
@@ -67,8 +67,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_Transform_2")
 
 # COMMAND ----------
-# DBTITLE 1, CR_CUST_ACCT_TYPE
 
+# DBTITLE 1, CR_CUST_ACCT_TYPE
 
 spark.sql("""INSERT INTO CR_CUST_ACCT_TYPE SELECT CUST_ACCT_TYPE_CD AS CUST_ACCT_TYPE_CD,
 CUST_ACCT_TYPE_DESC AS CUST_ACCT_TYPE_DESC,

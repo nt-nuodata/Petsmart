@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MERCHCAT_ORG_0
 
+# DBTITLE 1, MERCHCAT_ORG_0
 
 df_0=spark.sql("""
     SELECT
@@ -34,8 +34,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MERCHCAT_ORG_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MERCHCAT_ORG_1
 
+# DBTITLE 1, SQ_Shortcut_to_MERCHCAT_ORG_1
 
 df_1=spark.sql("""
     SELECT
@@ -57,8 +57,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_MERCHCAT_ORG_1")
 
 # COMMAND ----------
-# DBTITLE 1, MerchCategory_2
 
+# DBTITLE 1, MerchCategory_2
 
 df_2=spark.sql("""
     SELECT
@@ -77,8 +77,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("MerchCategory_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MerchCategory_3
 
+# DBTITLE 1, SQ_Shortcut_to_MerchCategory_3
 
 df_3=spark.sql("""
     SELECT
@@ -97,8 +97,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_MerchCategory_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_MerchClass_4
 
+# DBTITLE 1, LKP_MerchClass_4
 
 df_4=spark.sql("""
     SELECT
@@ -116,8 +116,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_MerchClass_4")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_MerchDept_5
 
+# DBTITLE 1, LKP_MerchDept_5
 
 df_5=spark.sql("""
     SELECT
@@ -134,8 +134,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("LKP_MerchDept_5")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_GLCategory_6
 
+# DBTITLE 1, LKP_GLCategory_6
 
 df_6=spark.sql("""
     SELECT
@@ -152,8 +152,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("LKP_GLCategory_6")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_CategoryAnalyst_7
 
+# DBTITLE 1, LKP_CategoryAnalyst_7
 
 df_7=spark.sql("""
     SELECT
@@ -171,8 +171,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("LKP_CategoryAnalyst_7")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_ReplenishmentManager_8
 
+# DBTITLE 1, LKP_ReplenishmentManager_8
 
 df_8=spark.sql("""
     SELECT
@@ -189,8 +189,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("LKP_ReplenishmentManager_8")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ConvertIDs_9
 
+# DBTITLE 1, EXP_ConvertIDs_9
 
 df_9=spark.sql("""
     SELECT
@@ -244,8 +244,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("EXP_ConvertIDs_9")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_GetUpdates_10
 
+# DBTITLE 1, JNR_GetUpdates_10
 
 df_10=spark.sql("""
     SELECT
@@ -278,8 +278,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("JNR_GetUpdates_10")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CheckUpdates_11
 
+# DBTITLE 1, EXP_CheckUpdates_11
 
 df_11=spark.sql("""
     SELECT
@@ -333,8 +333,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("EXP_CheckUpdates_11")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_RemoveRejects_12
 
+# DBTITLE 1, FIL_RemoveRejects_12
 
 df_12=spark.sql("""
     SELECT
@@ -359,8 +359,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("FIL_RemoveRejects_12")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_13
 
+# DBTITLE 1, UPDTRANS_13
 
 df_13=spark.sql("""
     SELECT
@@ -383,8 +383,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("UPDTRANS_13")
 
 # COMMAND ----------
-# DBTITLE 1, MERCHCAT_ORG
 
+# DBTITLE 1, MERCHCAT_ORG
 
 spark.sql("""INSERT INTO MERCHCAT_ORG SELECT SAP_Category_ID AS SAP_CATEGORY_ID,
 SAP_Class_ID AS SAP_CLASS_ID,

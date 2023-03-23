@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_HAZMAT_PRE_0
 
+# DBTITLE 1, SKU_HAZMAT_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_HAZMAT_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_SKU_HAZMAT_PRE_1
 
+# DBTITLE 1, ASQ_Shortcut_to_SKU_HAZMAT_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_SKU_HAZMAT_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, lkp_SKU_HAZMAT_2
 
+# DBTITLE 1, lkp_SKU_HAZMAT_2
 
 df_2=spark.sql("""
     SELECT
@@ -59,8 +59,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("lkp_SKU_HAZMAT_2")
 
 # COMMAND ----------
-# DBTITLE 1, exp_SKU_HAZMAT_3
 
+# DBTITLE 1, exp_SKU_HAZMAT_3
 
 df_3=spark.sql("""
     SELECT
@@ -91,8 +91,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("exp_SKU_HAZMAT_3")
 
 # COMMAND ----------
-# DBTITLE 1, upd_SKU_HAZMAT_ins_upd_4
 
+# DBTITLE 1, upd_SKU_HAZMAT_ins_upd_4
 
 df_4=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("upd_SKU_HAZMAT_ins_upd_4")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_HAZMAT
 
+# DBTITLE 1, SKU_HAZMAT
 
 spark.sql("""INSERT INTO SKU_HAZMAT SELECT RTV_DEPT_CD AS RTV_DEPT_CD,
 RTV_DESC AS RTV_DESC,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ArtAttribute_0
 
+# DBTITLE 1, ArtAttribute_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ArtAttribute_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ArtAttribute_1
 
+# DBTITLE 1, SQ_Shortcut_to_ArtAttribute_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_ArtAttribute_1")
 
 # COMMAND ----------
-# DBTITLE 1, Brand_2
 
+# DBTITLE 1, Brand_2
 
 df_2=spark.sql("""
     SELECT
@@ -73,8 +73,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("Brand_2")
 
 # COMMAND ----------
-# DBTITLE 1, ArtMas_3
 
+# DBTITLE 1, ArtMas_3
 
 df_3=spark.sql("""
     SELECT
@@ -151,8 +151,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ArtMas_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_ArtMast_Brand_4
 
+# DBTITLE 1, SQ_ArtMast_Brand_4
 
 df_4=spark.sql("""SELECT ArtMas.BrandCd AS BrandCd,
 ArtMas.ArticleNbr AS ArticleNbr,
@@ -163,8 +163,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM ArtMas.BrandCd =
 df_4.createOrReplaceTempView("SQ_ArtMast_Brand_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS1_5
 
+# DBTITLE 1, EXPTRANS1_5
 
 df_5=spark.sql("""
     SELECT
@@ -181,8 +181,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXPTRANS1_5")
 
 # COMMAND ----------
-# DBTITLE 1, JNRTRANS_6
 
+# DBTITLE 1, JNRTRANS_6
 
 df_6=spark.sql("""
     SELECT
@@ -201,8 +201,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("JNRTRANS_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_7
 
+# DBTITLE 1, EXPTRANS_7
 
 df_7=spark.sql("""
     SELECT
@@ -218,8 +218,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("EXPTRANS_7")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_BRAND_PRE
 
+# DBTITLE 1, SKU_BRAND_PRE
 
 spark.sql("""INSERT INTO SKU_BRAND_PRE SELECT SKU_NBR AS SKU_NBR,
 BRAND_CD AS BRAND_CD,

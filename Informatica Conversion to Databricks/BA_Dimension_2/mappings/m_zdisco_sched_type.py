@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_DISCO_TIMES_0
 
+# DBTITLE 1, ZTB_DISCO_TIMES_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_DISCO_TIMES_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_ZTB_DISCO_TIMES_1
 
+# DBTITLE 1, SQ_Shortcut_to_ZTB_DISCO_TIMES_1
 
 df_1=spark.sql("""
     SELECT
@@ -41,8 +41,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_ZTB_DISCO_TIMES_1")
 
 # COMMAND ----------
-# DBTITLE 1, ZDISCO_SCHED_TYPE
 
+# DBTITLE 1, ZDISCO_SCHED_TYPE
 
 spark.sql("""INSERT INTO ZDISCO_SCHED_TYPE SELECT SCHED_TYPE AS ZDISCO_SCHED_TYPE_ID,
 SCHED_CODE AS ZDISCO_SCHED_TYPE_CD,

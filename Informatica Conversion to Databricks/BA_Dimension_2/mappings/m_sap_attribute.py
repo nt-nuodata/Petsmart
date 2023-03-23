@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATTRIBUTE_PRE_0
 
+# DBTITLE 1, SAP_ATTRIBUTE_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SAP_ATTRIBUTE_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATTRIBUTE_1
 
+# DBTITLE 1, SAP_ATTRIBUTE_1
 
 df_1=spark.sql("""
     SELECT
@@ -47,8 +47,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SAP_ATTRIBUTE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_2
 
+# DBTITLE 1, SKU_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -132,8 +132,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SKU_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_SAP_ATTRIBUTE_PRE_3
 
+# DBTITLE 1, ASQ_Shortcut_to_SAP_ATTRIBUTE_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -168,8 +168,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_Shortcut_to_SAP_ATTRIBUTE_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_4
 
+# DBTITLE 1, UPDTRANS_4
 
 df_4=spark.sql("""
     SELECT
@@ -188,8 +188,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPDTRANS_4")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATTRIBUTE
 
+# DBTITLE 1, SAP_ATTRIBUTE
 
 spark.sql("""INSERT INTO SAP_ATTRIBUTE SELECT PRODUCT_ID AS PRODUCT_ID,
 SAP_ATT_TYPE_ID AS SAP_ATT_TYPE_ID,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_DAY_SKU_STORE_0
 
+# DBTITLE 1, SALES_DAY_SKU_STORE_0
 
 df_0=spark.sql("""
     SELECT
@@ -52,8 +52,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_DAY_SKU_STORE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_1
 
+# DBTITLE 1, SITE_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -165,8 +165,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SITE_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_SALES_DAY_STORE_2
 
+# DBTITLE 1, ASQ_Shortcut_To_SALES_DAY_STORE_2
 
 df_2=spark.sql("""
     SELECT
@@ -193,8 +193,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Shortcut_To_SALES_DAY_STORE_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_FLAG_VALUE_LOGIC_3
 
+# DBTITLE 1, EXP_FLAG_VALUE_LOGIC_3
 
 df_3=spark.sql("""
     SELECT
@@ -210,8 +210,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_FLAG_VALUE_LOGIC_3")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_RPT
 
+# DBTITLE 1, SITE_PROFILE_RPT
 
 spark.sql("""INSERT INTO SITE_PROFILE_RPT SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,
@@ -352,8 +352,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM EXP_FLAG_VALUE_LOGIC_3""")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

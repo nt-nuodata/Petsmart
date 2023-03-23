@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_DAY_SKU_STORE_0
 
+# DBTITLE 1, SALES_DAY_SKU_STORE_0
 
 df_0=spark.sql("""
     SELECT
@@ -52,8 +52,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_DAY_SKU_STORE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_SALES_WEEK_CAT_STORE_1
 
+# DBTITLE 1, ASQ_Shortcut_to_SALES_WEEK_CAT_STORE_1
 
 df_1=spark.sql("""SELECT sdss.location_id,
        CASE WHEN ((((((  SUM (sdss.sales_amt)
@@ -86,8 +86,8 @@ SELECT location_id, 0
 df_1.createOrReplaceTempView("ASQ_Shortcut_to_SALES_WEEK_CAT_STORE_1")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_SITE_PROFILE_2
 
+# DBTITLE 1, UPD_SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -100,8 +100,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("UPD_SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_3
 
+# DBTITLE 1, SKU_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -185,8 +185,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SKU_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_4
 
+# DBTITLE 1, SITE_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -298,8 +298,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SITE_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

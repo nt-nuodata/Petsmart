@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT_KEY_PRE_0
 
+# DBTITLE 1, PRODUCT_KEY_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PRODUCT_KEY_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT_HISTORY_1
 
+# DBTITLE 1, PRODUCT_HISTORY_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("PRODUCT_HISTORY_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_PRODUCT_HISTORY_JOIN_PRODUCT_2
 
+# DBTITLE 1, ASQ_PRODUCT_HISTORY_JOIN_PRODUCT_2
 
 df_2=spark.sql("""
     SELECT
@@ -87,8 +87,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_PRODUCT_HISTORY_JOIN_PRODUCT_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_ENDDT_OLD_3
 
+# DBTITLE 1, UPD_ENDDT_OLD_3
 
 df_3=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPD_ENDDT_OLD_3")
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT_HISTORY
 
+# DBTITLE 1, PRODUCT_HISTORY
 
 spark.sql("""INSERT INTO PRODUCT_HISTORY SELECT PRODUCT_ID AS PRODUCT_ID,
 PROD_HIST_EFF_DT AS PROD_HIST_EFF_DT,

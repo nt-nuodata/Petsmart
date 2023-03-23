@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SOURCE_VENDOR_PRE_0
 
+# DBTITLE 1, SOURCE_VENDOR_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SOURCE_VENDOR_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_SITE_PROFILE_1
 
+# DBTITLE 1, SKU_SITE_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -64,8 +64,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SKU_SITE_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, QUERY_ARGUMENTS_2
 
+# DBTITLE 1, QUERY_ARGUMENTS_2
 
 df_2=spark.sql("""
     SELECT
@@ -84,8 +84,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("QUERY_ARGUMENTS_2")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_LOAD_SKU_STORE_PRICE_COSTS_PRE_3
 
+# DBTITLE 1, ASQ_LOAD_SKU_STORE_PRICE_COSTS_PRE_3
 
 df_3=spark.sql("""
     SELECT
@@ -94,16 +94,16 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("ASQ_LOAD_SKU_STORE_PRICE_COSTS_PRE_3")
 
 # COMMAND ----------
-# DBTITLE 1, Shortcut_to_mplt_GENERIC_SQL_16
 
+# DBTITLE 1, Shortcut_to_mplt_GENERIC_SQL_16
 
 df_4=spark.sql("""SELECT JOB_NAME AS MAP_NAME FROM ASQ_LOAD_SKU_STORE_PRICE_COSTS_PRE_3""")
 
 df_4.createOrReplaceTempView("Shortcut_to_mplt_GENERIC_SQL_Input")
 
 # COMMAND ----------
-# DBTITLE 1, INP_MPLT_GENERIC_SQL
 
+# DBTITLE 1, INP_MPLT_GENERIC_SQL
 
 df_5=spark.sql("""SELECT MAP_NAME,
 Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM Shortcut_to_mplt_GENERIC_SQL_Input""")
@@ -111,8 +111,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM Shortcut_to_mplt
 df_5.createOrReplaceTempView("INP_MPLT_GENERIC_SQL_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_START_TIME_6
 
+# DBTITLE 1, EXP_START_TIME_6
 
 df_6=spark.sql("""
     SELECT
@@ -126,8 +126,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_START_TIME_6")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_QUERY_LOG_INSERT_7
 
+# DBTITLE 1, SQL_QUERY_LOG_INSERT_7
 
 df_7=spark.sql("""
     SELECT
@@ -141,8 +141,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("SQL_QUERY_LOG_INSERT_7")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ONE_ROW_FILTER_8
 
+# DBTITLE 1, EXP_ONE_ROW_FILTER_8
 
 df_8=spark.sql("""
     SELECT
@@ -156,8 +156,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("EXP_ONE_ROW_FILTER_8")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_ONE_ROW_9
 
+# DBTITLE 1, FIL_ONE_ROW_9
 
 df_9=spark.sql("""
     SELECT
@@ -173,8 +173,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("FIL_ONE_ROW_9")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_QUERY_ARG_DATA_FETCH_10
 
+# DBTITLE 1, SQL_QUERY_ARG_DATA_FETCH_10
 
 df_10=spark.sql("""
     SELECT
@@ -187,8 +187,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("SQL_QUERY_ARG_DATA_FETCH_10")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_TXT_CONCAT_11
 
+# DBTITLE 1, EXP_TXT_CONCAT_11
 
 df_11=spark.sql("""
     SELECT
@@ -209,8 +209,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("EXP_TXT_CONCAT_11")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_RUN_SQL_FROM_QUERY_ARG_12
 
+# DBTITLE 1, SQL_RUN_SQL_FROM_QUERY_ARG_12
 
 df_12=spark.sql("""
     SELECT
@@ -225,8 +225,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("SQL_RUN_SQL_FROM_QUERY_ARG_12")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_ERROR_MSG_13
 
+# DBTITLE 1, EXP_ERROR_MSG_13
 
 df_13=spark.sql("""
     SELECT
@@ -242,8 +242,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("EXP_ERROR_MSG_13")
 
 # COMMAND ----------
-# DBTITLE 1, SQL_QUERY_LOG_UPDATE_14
 
+# DBTITLE 1, SQL_QUERY_LOG_UPDATE_14
 
 df_14=spark.sql("""SELECT Monotonically_Increasing_Id AS Monotonically_Increasing_Id,
 out_SQL_Error AS out_SQL_Error FROM EXP_ERROR_MSG_13 UNION ALL SELECT MAP_NAME_output AS MAP_NAME_output,
@@ -254,8 +254,8 @@ SESS_START_TIME_output AS SESS_START_TIME_output FROM SQL_RUN_SQL_FROM_QUERY_ARG
 df_14.createOrReplaceTempView("SQL_QUERY_LOG_UPDATE_14")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_OUTPUT_15
 
+# DBTITLE 1, EXP_OUTPUT_15
 
 df_15=spark.sql("""
     SELECT
@@ -274,8 +274,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("EXP_OUTPUT_15")
 
 # COMMAND ----------
-# DBTITLE 1, OUT_MPLT_GENERIC_SQL
 
+# DBTITLE 1, OUT_MPLT_GENERIC_SQL
 
 df_16=spark.sql("""SELECT MAP_NAME AS MAP_NAME1,
 MPLT_STATUS AS MPLT_STATUS,
@@ -286,8 +286,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM EXP_OUTPUT_15"""
 df_16.createOrReplaceTempView("Shortcut_to_mplt_GENERIC_SQL_16")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_VENDOR_DAY_18
 
+# DBTITLE 1, SKU_VENDOR_DAY_18
 
 df_18=spark.sql("""
     SELECT
@@ -311,8 +311,8 @@ df_18=spark.sql("""
 df_18.createOrReplaceTempView("SKU_VENDOR_DAY_18")
 
 # COMMAND ----------
-# DBTITLE 1, SUPPLY_CHAIN_19
 
+# DBTITLE 1, SUPPLY_CHAIN_19
 
 df_19=spark.sql("""
     SELECT
@@ -329,8 +329,8 @@ df_19=spark.sql("""
 df_19.createOrReplaceTempView("SUPPLY_CHAIN_19")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_20
 
+# DBTITLE 1, SKU_PROFILE_20
 
 df_20=spark.sql("""
     SELECT
@@ -414,8 +414,8 @@ df_20=spark.sql("""
 df_20.createOrReplaceTempView("SKU_PROFILE_20")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_STORE_VENDOR_DAY_21
 
+# DBTITLE 1, SKU_STORE_VENDOR_DAY_21
 
 df_21=spark.sql("""
     SELECT
@@ -435,8 +435,8 @@ df_21=spark.sql("""
 df_21.createOrReplaceTempView("SKU_STORE_VENDOR_DAY_21")
 
 # COMMAND ----------
-# DBTITLE 1, QUERY_LOG_TXT
 
+# DBTITLE 1, QUERY_LOG_TXT
 
 spark.sql("""INSERT INTO QUERY_LOG_TXT SELECT MAP_NAME1 AS JOB_NAME,
 JOB_START_DATE AS QUERY_START_TSTMP,

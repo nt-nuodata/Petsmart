@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, NATIONAL_COST_FLAT_0
 
+# DBTITLE 1, NATIONAL_COST_FLAT_0
 
 df_0=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("NATIONAL_COST_FLAT_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_NATIONAL_COST_FLAT_1
 
+# DBTITLE 1, SQ_Shortcut_To_NATIONAL_COST_FLAT_1
 
 df_1=spark.sql("""
     SELECT
@@ -67,8 +67,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_NATIONAL_COST_FLAT_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_COMMON_DATE_TRANS_2
 
+# DBTITLE 1, EXP_COMMON_DATE_TRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -106,8 +106,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_COMMON_DATE_TRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_COMMON_VENDOR_TRANS_3
 
+# DBTITLE 1, EXP_COMMON_VENDOR_TRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -125,8 +125,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_COMMON_VENDOR_TRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_Invalid_Records_4
 
+# DBTITLE 1, FIL_Invalid_Records_4
 
 df_4=spark.sql("""
     SELECT
@@ -237,8 +237,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("FIL_Invalid_Records_4")
 
 # COMMAND ----------
-# DBTITLE 1, NATIONAL_COST_PRE
 
+# DBTITLE 1, NATIONAL_COST_PRE
 
 spark.sql("""INSERT INTO NATIONAL_COST_PRE SELECT SKU_NBR AS SKU_NBR,
 VENDOR_ID AS VENDOR_ID,

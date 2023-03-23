@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MARA_0
 
+# DBTITLE 1, MARA_0
 
 df_0=spark.sql("""SELECT MANDT AS MANDT,
 MATNR AS MATNR,
@@ -256,6 +256,3 @@ ZZMETR_CTUNIT AS ZZMETR_CTUNIT,
 monotonically_increasing_id() AS Monotonically_Increasing_Id FROM MARA""")
 
 df_0.createOrReplaceTempView("MARA_0")
-
-# COMMAND ----------
-# DBTITLE 1, MARA_ff

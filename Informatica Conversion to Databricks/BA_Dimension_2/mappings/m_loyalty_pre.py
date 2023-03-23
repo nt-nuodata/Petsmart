@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, LOYALTY_0
 
+# DBTITLE 1, LOYALTY_0
 
 df_0=spark.sql("""
     SELECT
@@ -33,8 +33,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("LOYALTY_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_LOYALTY_1
 
+# DBTITLE 1, SQ_Shortcut_To_LOYALTY_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_LOYALTY_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_NULL_2
 
+# DBTITLE 1, EXP_NULL_2
 
 df_2=spark.sql("""
     SELECT
@@ -97,8 +97,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_NULL_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DATE_FORMATTING_3
 
+# DBTITLE 1, EXP_DATE_FORMATTING_3
 
 df_3=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_DATE_FORMATTING_3")
 
 # COMMAND ----------
-# DBTITLE 1, FLT_NULLS_4
 
+# DBTITLE 1, FLT_NULLS_4
 
 df_4=spark.sql("""
     SELECT
@@ -180,8 +180,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("FLT_NULLS_4")
 
 # COMMAND ----------
-# DBTITLE 1, LOYALTY_PRE
 
+# DBTITLE 1, LOYALTY_PRE
 
 spark.sql("""INSERT INTO LOYALTY_PRE SELECT STORE_NBR AS STORE_NBR,
 STORE_DESC AS STORE_DESC,

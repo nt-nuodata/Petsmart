@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, BrandManager_0
 
+# DBTITLE 1, BrandManager_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("BrandManager_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_BrandManager_1
 
+# DBTITLE 1, SQ_Shortcut_to_BrandManager_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_BrandManager_1")
 
 # COMMAND ----------
-# DBTITLE 1, PB_MANAGER_PRE
 
+# DBTITLE 1, PB_MANAGER_PRE
 
 spark.sql("""INSERT INTO PB_MANAGER_PRE SELECT BrandManagerId AS PB_MANAGER_ID,
 BrandManagerName AS PB_MANAGER_NAME,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_0
 
+# DBTITLE 1, SITE_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -124,8 +124,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITE_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -140,8 +140,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SITE_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DATES_FORMAT_2
 
+# DBTITLE 1, EXP_DATES_FORMAT_2
 
 df_2=spark.sql("""
     SELECT
@@ -154,8 +154,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_DATES_FORMAT_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKPT_NZ_SITE_DM_HIST_3
 
+# DBTITLE 1, LKPT_NZ_SITE_DM_HIST_3
 
 df_3=spark.sql("""
     SELECT
@@ -178,8 +178,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKPT_NZ_SITE_DM_HIST_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_STRATEGY_DATES_4
 
+# DBTITLE 1, EXP_STRATEGY_DATES_4
 
 df_4=spark.sql("""
     SELECT
@@ -206,8 +206,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_STRATEGY_DATES_4")
 
 # COMMAND ----------
-# DBTITLE 1, FILT_EXISTING_RECORDS_5
 
+# DBTITLE 1, FILT_EXISTING_RECORDS_5
 
 df_5=spark.sql("""
     SELECT
@@ -228,8 +228,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("FILT_EXISTING_RECORDS_5")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_INSERT_REJECT_6
 
+# DBTITLE 1, UPDTRANS_INSERT_REJECT_6
 
 df_6=spark.sql("""
     SELECT
@@ -248,8 +248,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("UPDTRANS_INSERT_REJECT_6")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_DM_HIST
 
+# DBTITLE 1, SITE_DM_HIST
 
 spark.sql("""INSERT INTO SITE_DM_HIST SELECT NEW_LOCATION_ID1 AS LOCATION_ID,
 SITE_DM_EFF_DT AS SITE_DM_EFF_DT,

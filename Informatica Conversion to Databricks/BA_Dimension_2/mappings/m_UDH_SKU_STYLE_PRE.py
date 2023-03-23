@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, UDH_SKU_STYLE_0
 
+# DBTITLE 1, UDH_SKU_STYLE_0
 
 df_0=spark.sql("""
     SELECT
@@ -26,8 +26,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("UDH_SKU_STYLE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_UDH_SKU_STYLE_1
 
+# DBTITLE 1, SQ_Shortcut_to_UDH_SKU_STYLE_1
 
 df_1=spark.sql("""
     SELECT
@@ -40,8 +40,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_UDH_SKU_STYLE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_UDH_SKU_STYLE1_2
 
+# DBTITLE 1, SQ_Shortcut_to_UDH_SKU_STYLE1_2
 
 df_2=spark.sql("""
     SELECT
@@ -54,8 +54,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SQ_Shortcut_to_UDH_SKU_STYLE1_2")
 
 # COMMAND ----------
-# DBTITLE 1, Group_By_Style_Id_3
 
+# DBTITLE 1, Group_By_Style_Id_3
 
 df_3=spark.sql("""
     SELECT
@@ -69,8 +69,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("Group_By_Style_Id_3")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_4
 
+# DBTITLE 1, SKU_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -154,8 +154,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SKU_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_5
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE_5
 
 df_5=spark.sql("""
     SELECT
@@ -169,8 +169,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE_5")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SKU_PROFILE_PRODUCT_ID_6
 
+# DBTITLE 1, JNR_SKU_PROFILE_PRODUCT_ID_6
 
 df_6=spark.sql("""
     SELECT
@@ -187,8 +187,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("JNR_SKU_PROFILE_PRODUCT_ID_6")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_UDH_SKU_STYLE_IMG_SKU_NBR_7
 
+# DBTITLE 1, JNR_UDH_SKU_STYLE_IMG_SKU_NBR_7
 
 df_7=spark.sql("""
     SELECT
@@ -207,8 +207,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("JNR_UDH_SKU_STYLE_IMG_SKU_NBR_7")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE1_8
 
+# DBTITLE 1, SQ_Shortcut_To_SKU_PROFILE1_8
 
 df_8=spark.sql("""
     SELECT
@@ -222,8 +222,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("SQ_Shortcut_To_SKU_PROFILE1_8")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SKU_PROFILE_SKU_DESC_IMG_PRODUCT_ID_9
 
+# DBTITLE 1, JNR_SKU_PROFILE_SKU_DESC_IMG_PRODUCT_ID_9
 
 df_9=spark.sql("""
     SELECT
@@ -244,8 +244,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("JNR_SKU_PROFILE_SKU_DESC_IMG_PRODUCT_ID_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_LOAD_TSTMP_10
 
+# DBTITLE 1, EXP_LOAD_TSTMP_10
 
 df_10=spark.sql("""
     SELECT
@@ -263,8 +263,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("EXP_LOAD_TSTMP_10")
 
 # COMMAND ----------
-# DBTITLE 1, UDH_SKU_STYLE_PRE
 
+# DBTITLE 1, UDH_SKU_STYLE_PRE
 
 spark.sql("""INSERT INTO UDH_SKU_STYLE_PRE SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

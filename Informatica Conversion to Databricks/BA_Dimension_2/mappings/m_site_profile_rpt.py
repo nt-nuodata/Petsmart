@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, EMPLOYEE_PROFILE_0
 
+# DBTITLE 1, EMPLOYEE_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -88,8 +88,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("EMPLOYEE_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_EMPLOYEE_PROFILE_1
 
+# DBTITLE 1, SQ_Shortcut_to_EMPLOYEE_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_EMPLOYEE_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_2
 
+# DBTITLE 1, SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -218,8 +218,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_3
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -327,8 +327,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_SITE_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_Detail_Outer_Join_4
 
+# DBTITLE 1, JNR_Detail_Outer_Join_4
 
 df_4=spark.sql("""
     SELECT
@@ -442,8 +442,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("JNR_Detail_Outer_Join_4")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_STORE_TYPE_5
 
+# DBTITLE 1, LKP_STORE_TYPE_5
 
 df_5=spark.sql("""
     SELECT
@@ -462,8 +462,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("LKP_STORE_TYPE_5")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_DISTRICT_6
 
+# DBTITLE 1, LKP_DISTRICT_6
 
 df_6=spark.sql("""
     SELECT
@@ -478,8 +478,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("LKP_DISTRICT_6")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SLSCMP_STORE_7
 
+# DBTITLE 1, LKP_SLSCMP_STORE_7
 
 df_7=spark.sql("""
     SELECT
@@ -500,8 +500,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("LKP_SLSCMP_STORE_7")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_LOCATION_TYPE_8
 
+# DBTITLE 1, LKP_LOCATION_TYPE_8
 
 df_8=spark.sql("""
     SELECT
@@ -516,8 +516,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("LKP_LOCATION_TYPE_8")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SALES_RANKING_WK_9
 
+# DBTITLE 1, LKP_SALES_RANKING_WK_9
 
 df_9=spark.sql("""
     SELECT
@@ -563,8 +563,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("LKP_SALES_RANKING_WK_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SUPER_REGION_10
 
+# DBTITLE 1, EXP_SUPER_REGION_10
 
 df_10=spark.sql("""
     SELECT
@@ -592,8 +592,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("EXP_SUPER_REGION_10")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SUPER_REGION_11
 
+# DBTITLE 1, LKP_SUPER_REGION_11
 
 df_11=spark.sql("""
     SELECT
@@ -609,8 +609,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("LKP_SUPER_REGION_11")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_COMPANY_12
 
+# DBTITLE 1, LKP_COMPANY_12
 
 df_12=spark.sql("""
     SELECT
@@ -625,8 +625,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("LKP_COMPANY_12")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_COUNTRY_13
 
+# DBTITLE 1, LKP_COUNTRY_13
 
 df_13=spark.sql("""
     SELECT
@@ -645,8 +645,8 @@ df_13=spark.sql("""
 df_13.createOrReplaceTempView("LKP_COUNTRY_13")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_DM_PG_STORE_14
 
+# DBTITLE 1, LKP_DM_PG_STORE_14
 
 df_14=spark.sql("""
     SELECT
@@ -661,8 +661,8 @@ df_14=spark.sql("""
 df_14.createOrReplaceTempView("LKP_DM_PG_STORE_14")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_STATE_15
 
+# DBTITLE 1, LKP_STATE_15
 
 df_15=spark.sql("""
     SELECT
@@ -681,8 +681,8 @@ df_15=spark.sql("""
 df_15.createOrReplaceTempView("LKP_STATE_15")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_EQUINE_MERCH_16
 
+# DBTITLE 1, LKP_EQUINE_MERCH_16
 
 df_16=spark.sql("""
     SELECT
@@ -697,8 +697,8 @@ df_16=spark.sql("""
 df_16.createOrReplaceTempView("LKP_EQUINE_MERCH_16")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_PRICE_ZONE_17
 
+# DBTITLE 1, LKP_PRICE_ZONE_17
 
 df_17=spark.sql("""
     SELECT
@@ -717,8 +717,8 @@ df_17=spark.sql("""
 df_17.createOrReplaceTempView("LKP_PRICE_ZONE_17")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_STORE_TIME_ZONE_18
 
+# DBTITLE 1, LKP_STORE_TIME_ZONE_18
 
 df_18=spark.sql("""
     SELECT
@@ -733,8 +733,8 @@ df_18=spark.sql("""
 df_18.createOrReplaceTempView("LKP_STORE_TIME_ZONE_18")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_USR_DC_NAMES_19
 
+# DBTITLE 1, LKP_USR_DC_NAMES_19
 
 df_19=spark.sql("""
     SELECT
@@ -763,8 +763,8 @@ df_19=spark.sql("""
 df_19.createOrReplaceTempView("LKP_USR_DC_NAMES_19")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_PRICE_AD_ZONE_20
 
+# DBTITLE 1, LKP_PRICE_AD_ZONE_20
 
 df_20=spark.sql("""
     SELECT
@@ -783,8 +783,8 @@ df_20=spark.sql("""
 df_20.createOrReplaceTempView("LKP_PRICE_AD_ZONE_20")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Conv_21
 
+# DBTITLE 1, EXP_Conv_21
 
 df_21=spark.sql("""
     SELECT
@@ -804,8 +804,8 @@ df_21=spark.sql("""
 df_21.createOrReplaceTempView("EXP_Conv_21")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_USR_REGION_NAMES_22
 
+# DBTITLE 1, LKP_USR_REGION_NAMES_22
 
 df_22=spark.sql("""
     SELECT
@@ -835,8 +835,8 @@ df_22=spark.sql("""
 df_22.createOrReplaceTempView("LKP_USR_REGION_NAMES_22")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_DM_PG_MGR_DVL_23
 
+# DBTITLE 1, LKP_DM_PG_MGR_DVL_23
 
 df_23=spark.sql("""
     SELECT
@@ -855,8 +855,8 @@ df_23=spark.sql("""
 df_23.createOrReplaceTempView("LKP_DM_PG_MGR_DVL_23")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_USR_DISTRICT_NAMES_24
 
+# DBTITLE 1, LKP_USR_DISTRICT_NAMES_24
 
 df_24=spark.sql("""
     SELECT
@@ -877,8 +877,8 @@ df_24=spark.sql("""
 df_24.createOrReplaceTempView("LKP_USR_DISTRICT_NAMES_24")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_LOYALTY_PGM_TYPE_25
 
+# DBTITLE 1, LKP_LOYALTY_PGM_TYPE_25
 
 df_25=spark.sql("""
     SELECT
@@ -893,8 +893,8 @@ df_25=spark.sql("""
 df_25.createOrReplaceTempView("LKP_LOYALTY_PGM_TYPE_25")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_PETSMART_DMA_26
 
+# DBTITLE 1, LKP_PETSMART_DMA_26
 
 df_26=spark.sql("""
     SELECT
@@ -913,8 +913,8 @@ df_26=spark.sql("""
 df_26.createOrReplaceTempView("LKP_PETSMART_DMA_26")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_REGION_27
 
+# DBTITLE 1, LKP_REGION_27
 
 df_27=spark.sql("""
     SELECT
@@ -929,8 +929,8 @@ df_27=spark.sql("""
 df_27.createOrReplaceTempView("LKP_REGION_27")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_EQUINE_SITE_28
 
+# DBTITLE 1, LKP_EQUINE_SITE_28
 
 df_28=spark.sql("""
     SELECT
@@ -945,8 +945,8 @@ df_28=spark.sql("""
 df_28.createOrReplaceTempView("LKP_EQUINE_SITE_28")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_LOYALTY_PGM_STATUS_29
 
+# DBTITLE 1, LKP_LOYALTY_PGM_STATUS_29
 
 df_29=spark.sql("""
     SELECT
@@ -961,8 +961,8 @@ df_29=spark.sql("""
 df_29.createOrReplaceTempView("LKP_LOYALTY_PGM_STATUS_29")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Remove_30
 
+# DBTITLE 1, EXP_Remove_30
 
 df_30=spark.sql("""
     SELECT
@@ -1270,8 +1270,8 @@ df_30=spark.sql("""
 df_30.createOrReplaceTempView("EXP_Remove_30")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_RPT
 
+# DBTITLE 1, SITE_PROFILE_RPT
 
 spark.sql("""INSERT INTO SITE_PROFILE_RPT SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

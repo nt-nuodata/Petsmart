@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, UPC_Flat_0
 
+# DBTITLE 1, UPC_Flat_0
 
 df_0=spark.sql("""
     SELECT
@@ -26,8 +26,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("UPC_Flat_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_UPC_Flat_1
 
+# DBTITLE 1, SQ_Shortcut_to_UPC_Flat_1
 
 df_1=spark.sql("""
     SELECT
@@ -41,8 +41,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_UPC_Flat_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_UPC_2
 
+# DBTITLE 1, LKP_UPC_2
 
 df_2=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKP_UPC_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_UPC_3
 
+# DBTITLE 1, EXP_UPC_3
 
 df_3=spark.sql("""
     SELECT
@@ -89,8 +89,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_UPC_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_UPC_CD_4
 
+# DBTITLE 1, EXP_UPC_CD_4
 
 df_4=spark.sql("""
     SELECT
@@ -102,8 +102,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_UPC_CD_4")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_5
 
+# DBTITLE 1, UPDTRANS_5
 
 df_5=spark.sql("""
     SELECT
@@ -138,8 +138,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("UPDTRANS_5")
 
 # COMMAND ----------
-# DBTITLE 1, UPC
 
+# DBTITLE 1, UPC
 
 spark.sql("""INSERT INTO UPC SELECT UPC_ID AS UPC_ID,
 UPC_CD AS UPC_CD,

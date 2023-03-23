@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DD07V_0
 
+# DBTITLE 1, DD07V_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DD07V_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_DD07V_1
 
+# DBTITLE 1, SQ_Shortcut_to_DD07V_1
 
 df_1=spark.sql("""
     SELECT
@@ -49,8 +49,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_DD07V_1")
 
 # COMMAND ----------
-# DBTITLE 1, ARTICLE_CATEGORY
 
+# DBTITLE 1, ARTICLE_CATEGORY
 
 spark.sql("""INSERT INTO ARTICLE_CATEGORY SELECT ARTICLE_CATEGORY_ID AS ARTICLE_CATEGORY_ID,
 ARTICLE_CATEGORY_CD AS ARTICLE_CATEGORY_CD,

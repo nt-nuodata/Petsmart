@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DW_LOAD_CONTROL_0
 
+# DBTITLE 1, DW_LOAD_CONTROL_0
 
 df_0=spark.sql("""
     SELECT
@@ -41,8 +41,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DW_LOAD_CONTROL_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_DW_LOAD_CONTROL1_1
 
+# DBTITLE 1, SQ_Shortcut_to_DW_LOAD_CONTROL1_1
 
 df_1=spark.sql("""
     SELECT
@@ -73,8 +73,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_DW_LOAD_CONTROL1_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_STX_TRUNC_DATE_2
 
+# DBTITLE 1, EXP_STX_TRUNC_DATE_2
 
 df_2=spark.sql("""
     SELECT
@@ -87,8 +87,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_STX_TRUNC_DATE_2")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_STX_COUNT_3
 
+# DBTITLE 1, AGG_STX_COUNT_3
 
 df_3=spark.sql("""
     SELECT
@@ -117,8 +117,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("AGG_STX_COUNT_3")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_TRANS_TXN_4
 
+# DBTITLE 1, SALES_TRANS_TXN_4
 
 df_4=spark.sql("""
     SELECT
@@ -210,8 +210,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SALES_TRANS_TXN_4")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_TRANS_TXN_5
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_TRANS_TXN_5
 
 df_5=spark.sql("""
     SELECT
@@ -305,8 +305,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("SQ_Shortcut_to_SALES_TRANS_TXN_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_EDW_TRUNC_DATE_6
 
+# DBTITLE 1, EXP_EDW_TRUNC_DATE_6
 
 df_6=spark.sql("""
     SELECT
@@ -319,8 +319,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_EDW_TRUNC_DATE_6")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_EDW_COUNT_7
 
+# DBTITLE 1, AGG_EDW_COUNT_7
 
 df_7=spark.sql("""
     SELECT
@@ -349,8 +349,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("AGG_EDW_COUNT_7")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_EDW_STX_8
 
+# DBTITLE 1, JNR_EDW_STX_8
 
 df_8=spark.sql("""
     SELECT
@@ -370,8 +370,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("JNR_EDW_STX_8")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CHANNEL_CD_CALC_9
 
+# DBTITLE 1, EXP_CHANNEL_CD_CALC_9
 
 df_9=spark.sql("""
     SELECT
@@ -395,8 +395,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("EXP_CHANNEL_CD_CALC_9")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_EDW_STX_COUNT_10
 
+# DBTITLE 1, AGG_EDW_STX_COUNT_10
 
 df_10=spark.sql("""
     SELECT
@@ -416,8 +416,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("AGG_EDW_STX_COUNT_10")
 
 # COMMAND ----------
-# DBTITLE 1, BATCH_LOAD_AUD_LOG
 
+# DBTITLE 1, BATCH_LOAD_AUD_LOG
 
 spark.sql("""INSERT INTO BATCH_LOAD_AUD_LOG SELECT DAY_DT AS DAY_DT,
 BATCH_DATE AS BATCH_DATE,
@@ -436,16 +436,16 @@ SALES_VARIANCE AS SALES_VARIANCE,
 PLAN_VARIANCE AS PLAN_VARIANCE FROM AGG_EDW_STX_COUNT_10""")
 
 # COMMAND ----------
-# DBTITLE 1, FLAT_DW_LOAD_CONTROL_STX
 
+# DBTITLE 1, FLAT_DW_LOAD_CONTROL_STX
 
 spark.sql("""INSERT INTO FLAT_DW_LOAD_CONTROL_STX SELECT COUNT AS COUNT,
 DW_LOAD_CONTROL_DT AS DW_LOAD_CONTROL_DT,
 DS_CHANNEL AS DS_CHANNEL FROM AGG_STX_COUNT_3""")
 
 # COMMAND ----------
-# DBTITLE 1, FLAT_SALES_TRANS_TXN_EDW
 
+# DBTITLE 1, FLAT_SALES_TRANS_TXN_EDW
 
 spark.sql("""INSERT INTO FLAT_SALES_TRANS_TXN_EDW SELECT COUNT AS COUNT,
 DATE_LOADED AS DW_LOAD_CONTROL_DT,

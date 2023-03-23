@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, LABEL_TYPE_0
 
+# DBTITLE 1, LABEL_TYPE_0
 
 df_0=spark.sql("""
     SELECT
@@ -26,8 +26,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("LABEL_TYPE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_LABEL_TYPE_1
 
+# DBTITLE 1, SQ_Shortcut_to_LABEL_TYPE_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_LABEL_TYPE_1")
 
 # COMMAND ----------
-# DBTITLE 1, LABEL_DAY_STORE_SKU_2
 
+# DBTITLE 1, LABEL_DAY_STORE_SKU_2
 
 df_2=spark.sql("""
     SELECT
@@ -69,8 +69,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LABEL_DAY_STORE_SKU_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_LABEL_DAY_STORE_SKU_3
 
+# DBTITLE 1, SQ_Shortcut_to_LABEL_DAY_STORE_SKU_3
 
 df_3=spark.sql("""
     SELECT
@@ -84,8 +84,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_LABEL_DAY_STORE_SKU_3")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_Label_Type_4
 
+# DBTITLE 1, JNR_Label_Type_4
 
 df_4=spark.sql("""
     SELECT
@@ -101,8 +101,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("JNR_Label_Type_4")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_Label_Type_5
 
+# DBTITLE 1, FIL_Label_Type_5
 
 df_5=spark.sql("""
     SELECT
@@ -117,8 +117,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("FIL_Label_Type_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_Label_type_6
 
+# DBTITLE 1, EXP_Label_type_6
 
 df_6=spark.sql("""
     SELECT
@@ -132,8 +132,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_Label_type_6")
 
 # COMMAND ----------
-# DBTITLE 1, LABEL_TYPE
 
+# DBTITLE 1, LABEL_TYPE
 
 spark.sql("""INSERT INTO LABEL_TYPE SELECT LABEL_TYPE_ID AS LABEL_TYPE_ID,
 LABEL_TYPE_DESC AS LABEL_TYPE_DESC,

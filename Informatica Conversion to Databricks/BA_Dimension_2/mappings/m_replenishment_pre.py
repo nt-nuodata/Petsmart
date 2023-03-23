@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, REPLENISHMENT_FILE_0
 
+# DBTITLE 1, REPLENISHMENT_FILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("REPLENISHMENT_FILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_REPLENISHMENT_FILE_1
 
+# DBTITLE 1, SQ_Shortcut_To_REPLENISHMENT_FILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -66,8 +66,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_REPLENISHMENT_FILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_COMMON_DATE_TRANS_2
 
+# DBTITLE 1, EXP_COMMON_DATE_TRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -105,8 +105,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_COMMON_DATE_TRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, REPLENISHMENT_PRE
 
+# DBTITLE 1, REPLENISHMENT_PRE
 
 spark.sql("""INSERT INTO REPLENISHMENT_PRE SELECT SKU_NBR AS SKU_NBR,
 STORE_NBR AS STORE_NBR,

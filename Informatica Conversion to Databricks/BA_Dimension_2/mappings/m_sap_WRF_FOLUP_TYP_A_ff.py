@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, WRF_FOLUP_TYP_A_0
 
+# DBTITLE 1, WRF_FOLUP_TYP_A_0
 
 df_0=spark.sql("""
     SELECT
@@ -36,6 +36,3 @@ df_0=spark.sql("""
         WRF_FOLUP_TYP_A""")
 
 df_0.createOrReplaceTempView("WRF_FOLUP_TYP_A_0")
-
-# COMMAND ----------
-# DBTITLE 1, sap_WRF_FOLUP_TYP_A_ff

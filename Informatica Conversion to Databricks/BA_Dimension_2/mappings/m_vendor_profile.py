@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SEQ
 
+# DBTITLE 1, SEQ
 
 spark.sql("""CREATE TABLE SEQ(NEXTVAL BIGINT,
 CURRVAL BIGINT,
@@ -23,8 +23,8 @@ CURRVAL BIGINT,
 Increment_By Int) VALUES(1000001, 1000000, 1)""")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE_PRE_1
 
+# DBTITLE 1, VENDOR_PROFILE_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -65,8 +65,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("VENDOR_PROFILE_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_VENDOR_PROFILE_PRE1_2
 
+# DBTITLE 1, SQ_Shortcut_to_VENDOR_PROFILE_PRE1_2
 
 df_2=spark.sql("""
     SELECT
@@ -107,8 +107,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SQ_Shortcut_to_VENDOR_PROFILE_PRE1_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_SQ_3
 
+# DBTITLE 1, EXP_SQ_3
 
 df_3=spark.sql("""
     SELECT
@@ -152,8 +152,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("EXP_SQ_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SITE_PROFILE_4
 
+# DBTITLE 1, LKP_SITE_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -174,8 +174,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_SITE_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_FINAL_5
 
+# DBTITLE 1, EXP_FINAL_5
 
 df_5=spark.sql("""
     SELECT
@@ -225,8 +225,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_FINAL_5")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_VENDOR_PROFILE_6
 
+# DBTITLE 1, LKP_VENDOR_PROFILE_6
 
 df_6=spark.sql("""
     SELECT
@@ -242,8 +242,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("LKP_VENDOR_PROFILE_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DC_7
 
+# DBTITLE 1, EXP_DC_7
 
 df_7=spark.sql("""SELECT STORE_NBR4 AS STORE_NBR4,
 STORE_NBR4 + 900000 AS VENDOR_ID4,
@@ -272,8 +272,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_7.createOrReplaceTempView("EXP_DC_7")
 
 # COMMAND ----------
-# DBTITLE 1, UPDATE_DC_INSERT_8
 
+# DBTITLE 1, UPDATE_DC_INSERT_8
 
 df_8=spark.sql("""
     SELECT
@@ -304,8 +304,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("UPDATE_DC_INSERT_8")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_MERCH_9
 
+# DBTITLE 1, EXP_MERCH_9
 
 df_9=spark.sql("""SELECT VENDOR_NBR1 AS VENDOR_NBR1,
 TO_INTEGER(VENDOR_NBR1) AS VENDOR_ID,
@@ -346,8 +346,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_9.createOrReplaceTempView("EXP_MERCH_9")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_INS_UPD_10
 
+# DBTITLE 1, UPD_INS_UPD_10
 
 df_10=spark.sql("""
     SELECT
@@ -389,8 +389,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("UPD_INS_UPD_10")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_NON_MERCH_11
 
+# DBTITLE 1, EXP_NON_MERCH_11
 
 df_11=spark.sql("""SELECT VENDOR_TYPE_ID3 AS VENDOR_TYPE_ID3,
 VENDOR_NBR3 AS VENDOR_NBR3,
@@ -427,8 +427,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_11.createOrReplaceTempView("EXP_NON_MERCH_11")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_NON_MERCH_INSERT_12
 
+# DBTITLE 1, UPD_NON_MERCH_INSERT_12
 
 df_12=spark.sql("""
     SELECT
@@ -464,8 +464,8 @@ df_12=spark.sql("""
 df_12.createOrReplaceTempView("UPD_NON_MERCH_INSERT_12")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE
 
+# DBTITLE 1, VENDOR_PROFILE
 
 spark.sql("""INSERT INTO VENDOR_PROFILE SELECT NEXTVAL AS VENDOR_ID,
 VENDOR_NAME AS VENDOR_NAME,
@@ -506,8 +506,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM UPD_INS_UPD_10""")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE
 
+# DBTITLE 1, VENDOR_PROFILE
 
 spark.sql("""INSERT INTO VENDOR_PROFILE SELECT NEXTVAL AS VENDOR_ID,
 VENDOR_NAME AS VENDOR_NAME,
@@ -548,8 +548,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM UPDATE_DC_INSERT_8""")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_PROFILE
 
+# DBTITLE 1, VENDOR_PROFILE
 
 spark.sql("""INSERT INTO VENDOR_PROFILE SELECT NEXTVAL AS VENDOR_ID,
 VENDOR_NAME AS VENDOR_NAME,

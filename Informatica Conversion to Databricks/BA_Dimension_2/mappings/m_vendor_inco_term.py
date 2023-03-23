@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Inco_Term_0
 
+# DBTITLE 1, Inco_Term_0
 
 df_0=spark.sql("""
     SELECT
@@ -27,8 +27,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Inco_Term_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Inco_Term_1
 
+# DBTITLE 1, SQ_Shortcut_to_Inco_Term_1
 
 df_1=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_Inco_Term_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKPTRANS_2
 
+# DBTITLE 1, LKPTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -62,8 +62,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKPTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_3
 
+# DBTITLE 1, UPDTRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -78,8 +78,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPDTRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, VENDOR_INCO_TERM
 
+# DBTITLE 1, VENDOR_INCO_TERM
 
 spark.sql("""INSERT INTO VENDOR_INCO_TERM SELECT IncoTermCd AS INCO_TERM_CD,
 IncoTermDesc AS INCO_TERM_DESC FROM UPDTRANS_3""")

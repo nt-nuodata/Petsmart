@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, new_move_info_0
 
+# DBTITLE 1, new_move_info_0
 
 df_0=spark.sql("""
     SELECT
@@ -28,8 +28,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("new_move_info_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_SHORTCUT_NEW_MOVE_INFO_1
 
+# DBTITLE 1, SQ_SHORTCUT_NEW_MOVE_INFO_1
 
 df_1=spark.sql("""
     SELECT
@@ -45,8 +45,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_SHORTCUT_NEW_MOVE_INFO_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CONVERT_2
 
+# DBTITLE 1, EXP_CONVERT_2
 
 df_2=spark.sql("""
     SELECT
@@ -62,8 +62,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_CONVERT_2")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_MOVE_REASON_3
 
+# DBTITLE 1, LKP_MOVE_REASON_3
 
 df_3=spark.sql("""
     SELECT
@@ -80,8 +80,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("LKP_MOVE_REASON_3")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_MOVE_TYPE_4
 
+# DBTITLE 1, LKP_MOVE_TYPE_4
 
 df_4=spark.sql("""
     SELECT
@@ -98,8 +98,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("LKP_MOVE_TYPE_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_RTRIM_5
 
+# DBTITLE 1, EXP_RTRIM_5
 
 df_5=spark.sql("""
     SELECT
@@ -121,8 +121,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_RTRIM_5")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_NULLS_6
 
+# DBTITLE 1, FIL_NULLS_6
 
 df_6=spark.sql("""
     SELECT
@@ -141,8 +141,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("FIL_NULLS_6")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_MOVEMENT_INFO_7
 
+# DBTITLE 1, LKP_MOVEMENT_INFO_7
 
 df_7=spark.sql("""
     SELECT
@@ -164,8 +164,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("LKP_MOVEMENT_INFO_7")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DetectChanges_8
 
+# DBTITLE 1, EXP_DetectChanges_8
 
 df_8=spark.sql("""
     SELECT
@@ -207,8 +207,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("EXP_DetectChanges_8")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_ins_upd_9
 
+# DBTITLE 1, UPD_ins_upd_9
 
 df_9=spark.sql("""
     SELECT
@@ -228,8 +228,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("UPD_ins_upd_9")
 
 # COMMAND ----------
-# DBTITLE 1, MOVEMENT_INFO
 
+# DBTITLE 1, MOVEMENT_INFO
 
 spark.sql("""INSERT INTO MOVEMENT_INFO SELECT MOVEMENT_ID AS MOVEMENT_ID,
 MOVE_CLASS_DESC AS MOVE_CLASS_DESC,

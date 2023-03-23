@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_SALES_PRE_0
 
+# DBTITLE 1, SALES_RANKING_SALES_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -37,8 +37,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SALES_RANKING_SALES_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_SALES_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SALES_RANKING_SALES_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SALES_RANKING_SALES_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_ONLY_NON_DOTCOM_STORES_2
 
+# DBTITLE 1, FIL_ONLY_NON_DOTCOM_STORES_2
 
 df_2=spark.sql("""
     SELECT
@@ -91,8 +91,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_ONLY_NON_DOTCOM_STORES_2")
 
 # COMMAND ----------
-# DBTITLE 1, AGG_WEEK_TOTALS_3
 
+# DBTITLE 1, AGG_WEEK_TOTALS_3
 
 df_3=spark.sql("""
     SELECT
@@ -132,8 +132,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("AGG_WEEK_TOTALS_3")
 
 # COMMAND ----------
-# DBTITLE 1, SALES_RANKING_TOTALS_PRE
 
+# DBTITLE 1, SALES_RANKING_TOTALS_PRE
 
 spark.sql("""INSERT INTO SALES_RANKING_TOTALS_PRE SELECT WEEK_DT AS WEEK_DT,
 TOTAL_52WK_SALES_AMT AS TOTAL_52WK_COMP_STORES_AMT,

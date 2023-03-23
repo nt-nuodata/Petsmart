@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, PLAN_STORE_DAY_0
 
+# DBTITLE 1, PLAN_STORE_DAY_0
 
 df_0=spark.sql("""
     SELECT
@@ -44,8 +44,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("PLAN_STORE_DAY_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_PLAN_STORE_DAY_1
 
+# DBTITLE 1, SQ_Shortcut_to_PLAN_STORE_DAY_1
 
 df_1=spark.sql("""
     SELECT
@@ -110,8 +110,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_PLAN_STORE_DAY_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_BATCH_DATE_2
 
+# DBTITLE 1, EXP_BATCH_DATE_2
 
 df_2=spark.sql("""
     SELECT
@@ -127,8 +127,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXP_BATCH_DATE_2")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_3
 
+# DBTITLE 1, UPDTRANS_3
 
 df_3=spark.sql("""
     SELECT
@@ -144,8 +144,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("UPDTRANS_3")
 
 # COMMAND ----------
-# DBTITLE 1, BATCH_LOAD_AUD_LOG
 
+# DBTITLE 1, BATCH_LOAD_AUD_LOG
 
 spark.sql("""INSERT INTO BATCH_LOAD_AUD_LOG SELECT DAY_DT AS DAY_DT,
 BATCH_DATE AS BATCH_DATE,

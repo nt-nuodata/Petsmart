@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS_0
 
+# DBTITLE 1, WEEKS_0
 
 df_0=spark.sql("""
     SELECT
@@ -46,8 +46,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("WEEKS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Weeks_1
 
+# DBTITLE 1, SQ_Shortcut_to_Weeks_1
 
 df_1=spark.sql("""
     SELECT
@@ -82,8 +82,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_Weeks_1")
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS
 
+# DBTITLE 1, WEEKS
 
 spark.sql("""INSERT INTO WEEKS SELECT WeekDt AS WEEK_DT,
 CalWk AS CAL_WK,
@@ -110,8 +110,8 @@ LyrWeekDt AS LYR_WEEK_DT,
 LwkWeekDt AS LWK_WEEK_DT FROM SQ_Shortcut_to_Weeks_1""")
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS
 
+# DBTITLE 1, WEEKS
 
 spark.sql("""INSERT INTO WEEKS SELECT WEEK_DT AS WEEK_DT,
 CAL_WK AS CAL_WK,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_0
 
+# DBTITLE 1, SITE_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -124,8 +124,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SITE_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, STORE_LAT_LONG_PRE_1
 
+# DBTITLE 1, STORE_LAT_LONG_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -139,8 +139,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("STORE_LAT_LONG_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Store_Lat_Long_2
 
+# DBTITLE 1, ASQ_Store_Lat_Long_2
 
 df_2=spark.sql("""
     SELECT
@@ -160,8 +160,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Store_Lat_Long_2")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE
 
+# DBTITLE 1, SITE_PROFILE
 
 spark.sql("""INSERT INTO SITE_PROFILE SELECT LOCATION_ID AS LOCATION_ID,
 LOCATION_TYPE_ID AS LOCATION_TYPE_ID,

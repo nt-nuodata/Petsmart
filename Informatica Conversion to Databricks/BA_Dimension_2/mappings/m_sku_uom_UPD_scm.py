@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SCM_ITEM_MASTER_PRE_0
 
+# DBTITLE 1, SCM_ITEM_MASTER_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -32,8 +32,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SCM_ITEM_MASTER_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_UOM_1
 
+# DBTITLE 1, SKU_UOM_1
 
 df_1=spark.sql("""
     SELECT
@@ -63,8 +63,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SKU_UOM_1")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_2
 
+# DBTITLE 1, SKU_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -148,8 +148,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SKU_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_SKU_UOM__SCM_ITEM_MASTER_3
 
+# DBTITLE 1, SQ_SKU_UOM__SCM_ITEM_MASTER_3
 
 df_3=spark.sql("""SELECT SKU_PROFILE.SKU_NBR AS SKU_NBR,
 SKU_PROFILE.PRODUCT_ID AS PRODUCT_ID1,
@@ -180,8 +180,8 @@ OR SCM_ITEM_MASTER_PRE.SCM_WEIGHT_UOM_CD != NVL(SKU_UOM.WEIGHT_UOM_CD, '0')
 df_3.createOrReplaceTempView("SQ_SKU_UOM__SCM_ITEM_MASTER_3")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_FIELDS_4
 
+# DBTITLE 1, EXP_FIELDS_4
 
 df_4=spark.sql("""
     SELECT
@@ -195,8 +195,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("EXP_FIELDS_4")
 
 # COMMAND ----------
-# DBTITLE 1, UPS_SKU_UOM_5
 
+# DBTITLE 1, UPS_SKU_UOM_5
 
 df_5=spark.sql("""
     SELECT
@@ -229,8 +229,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("UPS_SKU_UOM_5")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_UOM
 
+# DBTITLE 1, SKU_UOM
 
 spark.sql("""INSERT INTO SKU_UOM SELECT PRODUCT_ID AS PRODUCT_ID,
 UOM_CD AS UOM_CD,

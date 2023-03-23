@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_UOM_PRE_0
 
+# DBTITLE 1, SKU_UOM_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -36,8 +36,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_UOM_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_SHORTCUT_TO_UOM_CD_NOT_EXIST_1
 
+# DBTITLE 1, ASQ_SHORTCUT_TO_UOM_CD_NOT_EXIST_1
 
 df_1=spark.sql("""
     SELECT
@@ -57,8 +57,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_SHORTCUT_TO_UOM_CD_NOT_EXIST_1")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_2
 
+# DBTITLE 1, EXPTRANS_2
 
 df_2=spark.sql("""
     SELECT
@@ -71,8 +71,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("EXPTRANS_2")
 
 # COMMAND ----------
-# DBTITLE 1, UOM
 
+# DBTITLE 1, UOM
 
 spark.sql("""INSERT INTO UOM SELECT UOM_CD AS UOM_CD,
 UOM_CD AS UOM_DESC FROM EXPTRANS_2""")

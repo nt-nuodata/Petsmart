@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, USR_STORE_ATTRIBUTES_0
 
+# DBTITLE 1, USR_STORE_ATTRIBUTES_0
 
 df_0=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("USR_STORE_ATTRIBUTES_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_USR_STORE_ATTRIBUTES_1
 
+# DBTITLE 1, SQ_Shortcut_to_USR_STORE_ATTRIBUTES_1
 
 df_1=spark.sql("""
     SELECT
@@ -67,8 +67,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_USR_STORE_ATTRIBUTES_1")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_2
 
+# DBTITLE 1, SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -180,8 +180,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_3
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -194,8 +194,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SQ_Shortcut_to_SITE_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_SITE_PROFILE_4
 
+# DBTITLE 1, JNR_SITE_PROFILE_4
 
 df_4=spark.sql("""
     SELECT
@@ -226,8 +226,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("JNR_SITE_PROFILE_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DEFAULT_VALUES_5
 
+# DBTITLE 1, EXP_DEFAULT_VALUES_5
 
 df_5=spark.sql("""
     SELECT
@@ -285,8 +285,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_DEFAULT_VALUES_5")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_VET_TYPE_6
 
+# DBTITLE 1, LKP_VET_TYPE_6
 
 df_6=spark.sql("""
     SELECT
@@ -301,8 +301,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("LKP_VET_TYPE_6")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_FISH_SYSTEM_TYPE_7
 
+# DBTITLE 1, LKP_FISH_SYSTEM_TYPE_7
 
 df_7=spark.sql("""
     SELECT
@@ -317,8 +317,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("LKP_FISH_SYSTEM_TYPE_7")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_STORE_SIZE_TYPE_8
 
+# DBTITLE 1, LKP_STORE_SIZE_TYPE_8
 
 df_8=spark.sql("""
     SELECT
@@ -333,8 +333,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("LKP_STORE_SIZE_TYPE_8")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_STORE_CENTER_TYPE_9
 
+# DBTITLE 1, LKP_STORE_CENTER_TYPE_9
 
 df_9=spark.sql("""
     SELECT
@@ -349,8 +349,8 @@ df_9=spark.sql("""
 df_9.createOrReplaceTempView("LKP_STORE_CENTER_TYPE_9")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_GROOMERY_FLAG_RULE_10
 
+# DBTITLE 1, EXP_GROOMERY_FLAG_RULE_10
 
 df_10=spark.sql("""
     SELECT
@@ -398,8 +398,8 @@ df_10=spark.sql("""
 df_10.createOrReplaceTempView("EXP_GROOMERY_FLAG_RULE_10")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DEFAULT_DESC_11
 
+# DBTITLE 1, EXP_DEFAULT_DESC_11
 
 df_11=spark.sql("""
     SELECT
@@ -443,8 +443,8 @@ df_11=spark.sql("""
 df_11.createOrReplaceTempView("EXP_DEFAULT_DESC_11")
 
 # COMMAND ----------
-# DBTITLE 1, USR_STORE_ATTRIBUTES_PRE
 
+# DBTITLE 1, USR_STORE_ATTRIBUTES_PRE
 
 spark.sql("""INSERT INTO USR_STORE_ATTRIBUTES_PRE SELECT LOCATION_ID AS LOCATION_ID,
 STORE_NBR AS STORE_NBR,

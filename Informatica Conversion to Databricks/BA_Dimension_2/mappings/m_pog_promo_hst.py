@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, ZTB_PROMO_PRE_0
 
+# DBTITLE 1, ZTB_PROMO_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -37,8 +37,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("ZTB_PROMO_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_1
 
+# DBTITLE 1, SKU_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -122,8 +122,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SKU_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_PROFILE_2
 
+# DBTITLE 1, SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -235,8 +235,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, POG_PROMO_HST_3
 
+# DBTITLE 1, POG_PROMO_HST_3
 
 df_3=spark.sql("""
     SELECT
@@ -259,8 +259,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("POG_PROMO_HST_3")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_POG_PROMO_HST_4
 
+# DBTITLE 1, ASQ_Shortcut_to_POG_PROMO_HST_4
 
 df_4=spark.sql("""
     SELECT
@@ -305,8 +305,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("ASQ_Shortcut_to_POG_PROMO_HST_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXPTRANS_5
 
+# DBTITLE 1, EXPTRANS_5
 
 df_5=spark.sql("""
     SELECT
@@ -333,8 +333,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXPTRANS_5")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_6
 
+# DBTITLE 1, UPDTRANS_6
 
 df_6=spark.sql("""
     SELECT
@@ -358,8 +358,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("UPDTRANS_6")
 
 # COMMAND ----------
-# DBTITLE 1, POG_PROMO_HST
 
+# DBTITLE 1, POG_PROMO_HST
 
 spark.sql("""INSERT INTO POG_PROMO_HST SELECT PRODUCT_ID AS PRODUCT_ID,
 LOCATION_ID AS LOCATION_ID,

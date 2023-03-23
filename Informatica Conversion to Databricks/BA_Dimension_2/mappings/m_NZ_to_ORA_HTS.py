@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, HTS_0
 
+# DBTITLE 1, HTS_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("HTS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_HTS_1
 
+# DBTITLE 1, SQ_Shortcut_To_HTS_1
 
 df_1=spark.sql("""
     SELECT
@@ -39,8 +39,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_To_HTS_1")
 
 # COMMAND ----------
-# DBTITLE 1, HTS
 
+# DBTITLE 1, HTS
 
 spark.sql("""INSERT INTO HTS SELECT HTS_CODE_ID AS HTS_CODE_ID,
 HTS_CODE_DESC AS HTS_CODE_DESC FROM SQ_Shortcut_To_HTS_1""")

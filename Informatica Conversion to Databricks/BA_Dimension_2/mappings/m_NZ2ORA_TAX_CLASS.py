@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, TAX_CLASS_0
 
+# DBTITLE 1, TAX_CLASS_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("TAX_CLASS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_TAX_CLASS_1
 
+# DBTITLE 1, SQ_Shortcut_to_TAX_CLASS_1
 
 df_1=spark.sql("""
     SELECT
@@ -38,8 +38,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_TAX_CLASS_1")
 
 # COMMAND ----------
-# DBTITLE 1, TAX_CLASS
 
+# DBTITLE 1, TAX_CLASS
 
 spark.sql("""INSERT INTO TAX_CLASS SELECT TAX_CLASS_ID AS TAX_CLASS_ID,
 TAX_CLASS_DESC AS TAX_CLASS_DESC FROM SQ_Shortcut_to_TAX_CLASS_1""")

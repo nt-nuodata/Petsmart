@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_PRE_0
 
+# DBTITLE 1, MA_EVENT_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -43,8 +43,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MA_EVENT_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_1
 
+# DBTITLE 1, MA_EVENT_1
 
 df_1=spark.sql("""
     SELECT
@@ -93,8 +93,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("MA_EVENT_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MA_EVENT_2
 
+# DBTITLE 1, SQ_Shortcut_to_MA_EVENT_2
 
 df_2=spark.sql("""--Get Inserts
 SELECT ma_event_id, product_id, country_cd, start_dt, end_dt, ma_event_type_id,
@@ -184,8 +184,8 @@ SELECT ma_event_id, product_id, country_cd, start_dt, end_dt,
 df_2.createOrReplaceTempView("SQ_Shortcut_to_MA_EVENT_2")
 
 # COMMAND ----------
-# DBTITLE 1, FTR_MA_EVENT_3
 
+# DBTITLE 1, FTR_MA_EVENT_3
 
 df_3=spark.sql("""
     SELECT
@@ -221,8 +221,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("FTR_MA_EVENT_3")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_MA_EVENT_4
 
+# DBTITLE 1, UPD_MA_EVENT_4
 
 df_4=spark.sql("""
     SELECT
@@ -256,8 +256,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPD_MA_EVENT_4")
 
 # COMMAND ----------
-# DBTITLE 1, FTR_MA_EVENT_RESTATE_HIST_5
 
+# DBTITLE 1, FTR_MA_EVENT_RESTATE_HIST_5
 
 df_5=spark.sql("""
     SELECT
@@ -294,8 +294,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("FTR_MA_EVENT_RESTATE_HIST_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_MA_EVENT_RESTATE_HIST_6
 
+# DBTITLE 1, EXP_MA_EVENT_RESTATE_HIST_6
 
 df_6=spark.sql("""
     SELECT
@@ -330,8 +330,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_MA_EVENT_RESTATE_HIST_6")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT
 
+# DBTITLE 1, MA_EVENT
 
 spark.sql("""INSERT INTO MA_EVENT SELECT MA_EVENT_ID AS MA_EVENT_ID,
 OFFER_ID AS OFFER_ID,
@@ -373,8 +373,8 @@ UPDATE_DT AS UPDATE_DT,
 LOAD_DT AS LOAD_DT FROM UPD_MA_EVENT_4""")
 
 # COMMAND ----------
-# DBTITLE 1, MA_EVENT_RESTATE_HIST
 
+# DBTITLE 1, MA_EVENT_RESTATE_HIST
 
 spark.sql("""INSERT INTO MA_EVENT_RESTATE_HIST SELECT LOAD_DT AS LOAD_DT,
 MA_EVENT_ID AS MA_EVENT_ID,

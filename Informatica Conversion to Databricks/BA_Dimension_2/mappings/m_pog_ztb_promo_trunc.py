@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_0
 
+# DBTITLE 1, DAYS_0
 
 df_0=spark.sql("""
     SELECT
@@ -70,8 +70,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("DAYS_0")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_DAYS_1
 
+# DBTITLE 1, ASQ_Shortcut_To_DAYS_1
 
 df_1=spark.sql("""
     SELECT
@@ -80,8 +80,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("ASQ_Shortcut_To_DAYS_1")
 
 # COMMAND ----------
-# DBTITLE 1, FIL_TRUNC_2
 
+# DBTITLE 1, FIL_TRUNC_2
 
 df_2=spark.sql("""
     SELECT
@@ -95,8 +95,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("FIL_TRUNC_2")
 
 # COMMAND ----------
-# DBTITLE 1, POG_ZTB_PROMO
 
+# DBTITLE 1, POG_ZTB_PROMO
 
 spark.sql("""INSERT INTO POG_ZTB_PROMO SELECT SKU_NBR AS SKU_NBR,
 STORE_NBR AS STORE_NBR,
@@ -114,7 +114,7 @@ DATE_REFRESHED AS DATE_REFRESHED,
 DATE_DELETED AS DATE_DELETED FROM FIL_TRUNC_2""")
 
 # COMMAND ----------
-# DBTITLE 1, DUMMY_TARGET
 
+# DBTITLE 1, DUMMY_TARGET
 
 spark.sql("""INSERT INTO DUMMY_TARGET SELECT TABLE_NAME AS COMMENT FROM ASQ_Shortcut_To_DAYS_1""")

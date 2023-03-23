@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, MA_MOVEMENT_PRE_0
 
+# DBTITLE 1, MA_MOVEMENT_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -38,8 +38,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("MA_MOVEMENT_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_MA_MOVEMENT_PRE_1
 
+# DBTITLE 1, SQ_Shortcut_to_MA_MOVEMENT_PRE_1
 
 df_1=spark.sql("""
     SELECT
@@ -65,8 +65,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_MA_MOVEMENT_PRE_1")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_MA_MOVEMENT_DAY_2
 
+# DBTITLE 1, UPD_MA_MOVEMENT_DAY_2
 
 df_2=spark.sql("""
     SELECT
@@ -92,8 +92,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("UPD_MA_MOVEMENT_DAY_2")
 
 # COMMAND ----------
-# DBTITLE 1, MA_MOVEMENT_DAY
 
+# DBTITLE 1, MA_MOVEMENT_DAY
 
 spark.sql("""INSERT INTO MA_MOVEMENT_DAY SELECT DAY_DT AS DAY_DT,
 PRODUCT_ID AS PRODUCT_ID,

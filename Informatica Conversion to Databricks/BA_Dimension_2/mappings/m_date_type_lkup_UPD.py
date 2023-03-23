@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SEQ_DATE_TYPE_ID
 
+# DBTITLE 1, SEQ_DATE_TYPE_ID
 
 spark.sql("""CREATE TABLE SEQ_DATE_TYPE_ID(NEXTVAL BIGINT,
 CURRVAL BIGINT,
@@ -23,8 +23,8 @@ CURRVAL BIGINT,
 Increment_By Int) VALUES(60, 59, 1)""")
 
 # COMMAND ----------
-# DBTITLE 1, WEEKS_1
 
+# DBTITLE 1, WEEKS_1
 
 df_1=spark.sql("""
     SELECT
@@ -58,8 +58,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("WEEKS_1")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_WEEKS_2
 
+# DBTITLE 1, SQ_Shortcut_To_WEEKS_2
 
 df_2=spark.sql("""
     SELECT
@@ -96,8 +96,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SQ_Shortcut_To_WEEKS_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_WEEKS_3
 
+# DBTITLE 1, EXP_WEEKS_3
 
 df_3=spark.sql("""
     SELECT
@@ -128,8 +128,8 @@ df_3.createOrReplaceTempView("EXP_WEEKS_3")
 spark.sql("""UPDATE SEQ_DATE_TYPE_ID SET CURRVAL = (SELECT MAX(DATE_TYPE_ID) FROM EXP_WEEKS_3) , NEXTVAL = (SELECT MAX(DATE_TYPE_ID) FROM EXP_WEEKS_3) + (SELECT Increment_By FROM EXP_WEEKS_3)""")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_DATE_TYPE_ID1_4
 
+# DBTITLE 1, UPD_DATE_TYPE_ID1_4
 
 df_4=spark.sql("""
     SELECT
@@ -144,8 +144,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("UPD_DATE_TYPE_ID1_4")
 
 # COMMAND ----------
-# DBTITLE 1, DAYS_5
 
+# DBTITLE 1, DAYS_5
 
 df_5=spark.sql("""
     SELECT
@@ -203,8 +203,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("DAYS_5")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_To_DAYS_6
 
+# DBTITLE 1, SQ_Shortcut_To_DAYS_6
 
 df_6=spark.sql("""
     SELECT
@@ -242,8 +242,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("SQ_Shortcut_To_DAYS_6")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_DAYS_7
 
+# DBTITLE 1, EXP_DAYS_7
 
 df_7=spark.sql("""
     SELECT
@@ -259,8 +259,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("EXP_DAYS_7")
 
 # COMMAND ----------
-# DBTITLE 1, UPD_DATE_TYPE_ID_8
 
+# DBTITLE 1, UPD_DATE_TYPE_ID_8
 
 df_8=spark.sql("""
     SELECT
@@ -276,8 +276,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("UPD_DATE_TYPE_ID_8")
 
 # COMMAND ----------
-# DBTITLE 1, DATE_TYPE_LKUP
 
+# DBTITLE 1, DATE_TYPE_LKUP
 
 spark.sql("""INSERT INTO DATE_TYPE_LKUP SELECT DATE_TYPE_ID AS DATE_TYPE_ID,
 DATE_TYPE_DESC AS DATE_TYPE_DESC,
@@ -288,8 +288,8 @@ DATE_TYPE_5WK_STATUS AS DATE_TYPE_5WK_STATUS,
 TW_LW_FLAG AS TW_LW_FLAG FROM UPD_DATE_TYPE_ID_8""")
 
 # COMMAND ----------
-# DBTITLE 1, DATE_TYPE_LKUP
 
+# DBTITLE 1, DATE_TYPE_LKUP
 
 spark.sql("""INSERT INTO DATE_TYPE_LKUP SELECT DATE_TYPE_ID AS DATE_TYPE_ID,
 DATE_TYPE_DESC AS DATE_TYPE_DESC,

@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_0
 
+# DBTITLE 1, SKU_PROFILE_0
 
 df_0=spark.sql("""
     SELECT
@@ -96,8 +96,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SKU_PROFILE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SKU_PROFILE_1
 
+# DBTITLE 1, SQ_Shortcut_to_SKU_PROFILE_1
 
 df_1=spark.sql("""
     SELECT
@@ -181,8 +181,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_SKU_PROFILE_1")
 
 # COMMAND ----------
-# DBTITLE 1, Lkp_Brand_2
 
+# DBTITLE 1, Lkp_Brand_2
 
 df_2=spark.sql("""
     SELECT
@@ -203,8 +203,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("Lkp_Brand_2")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE
 
+# DBTITLE 1, SKU_PROFILE
 
 spark.sql("""INSERT INTO SKU_PROFILE SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

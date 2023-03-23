@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATT_CODE_0
 
+# DBTITLE 1, SAP_ATT_CODE_0
 
 df_0=spark.sql("""
     SELECT
@@ -25,8 +25,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("SAP_ATT_CODE_0")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATTRIBUTE_1
 
+# DBTITLE 1, SAP_ATTRIBUTE_1
 
 df_1=spark.sql("""
     SELECT
@@ -44,8 +44,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SAP_ATTRIBUTE_1")
 
 # COMMAND ----------
-# DBTITLE 1, SAP_ATT_VALUE_2
 
+# DBTITLE 1, SAP_ATT_VALUE_2
 
 df_2=spark.sql("""
     SELECT
@@ -59,8 +59,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("SAP_ATT_VALUE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SKU_PROFILE_3
 
+# DBTITLE 1, SKU_PROFILE_3
 
 df_3=spark.sql("""
     SELECT
@@ -144,8 +144,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SKU_PROFILE_3")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_PRODUCT_ATTRIBUTE_MV_4
 
+# DBTITLE 1, ASQ_PRODUCT_ATTRIBUTE_MV_4
 
 df_4=spark.sql("""
     SELECT
@@ -907,8 +907,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("ASQ_PRODUCT_ATTRIBUTE_MV_4")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_CONVERSION_5
 
+# DBTITLE 1, EXP_CONVERSION_5
 
 df_5=spark.sql("""
     SELECT
@@ -920,8 +920,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("EXP_CONVERSION_5")
 
 # COMMAND ----------
-# DBTITLE 1, PRODUCT_ATTRIBUTE_MV
 
+# DBTITLE 1, PRODUCT_ATTRIBUTE_MV
 
 spark.sql("""INSERT INTO PRODUCT_ATTRIBUTE_MV SELECT PRODUCT_ID AS PRODUCT_ID,
 SKU_NBR AS SKU_NBR,

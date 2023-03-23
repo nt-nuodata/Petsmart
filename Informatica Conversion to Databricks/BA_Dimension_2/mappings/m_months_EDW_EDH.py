@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, Months_0
 
+# DBTITLE 1, Months_0
 
 df_0=spark.sql("""
     SELECT
@@ -31,8 +31,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("Months_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_Months_1
 
+# DBTITLE 1, SQ_Shortcut_to_Months_1
 
 df_1=spark.sql("""
     SELECT
@@ -52,8 +52,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_Months_1")
 
 # COMMAND ----------
-# DBTITLE 1, MONTHS
 
+# DBTITLE 1, MONTHS
 
 spark.sql("""INSERT INTO MONTHS SELECT FISCAL_MO AS FISCAL_MO,
 FISCAL_HALF AS FISCAL_HALF,
@@ -65,8 +65,8 @@ FISCAL_QTR_NBR AS FISCAL_QTR_NBR,
 FISCAL_YR AS FISCAL_YR FROM SQ_Shortcut_to_Months_1""")
 
 # COMMAND ----------
-# DBTITLE 1, MONTHS
 
+# DBTITLE 1, MONTHS
 
 spark.sql("""INSERT INTO MONTHS SELECT FiscalMo AS FISCAL_MO,
 FiscalHalf AS FISCAL_HALF,

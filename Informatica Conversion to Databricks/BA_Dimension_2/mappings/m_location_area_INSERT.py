@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, STORE_AREA_PRE_0
 
+# DBTITLE 1, STORE_AREA_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -60,8 +60,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("STORE_AREA_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, LOCATION_1
 
+# DBTITLE 1, LOCATION_1
 
 df_1=spark.sql("""
     SELECT
@@ -113,8 +113,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("LOCATION_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_to_STORE_AREA_PRE_2
 
+# DBTITLE 1, ASQ_Shortcut_to_STORE_AREA_PRE_2
 
 df_2=spark.sql("""
     SELECT
@@ -165,8 +165,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Shortcut_to_STORE_AREA_PRE_2")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_LocationArea_load_XDate_3
 
+# DBTITLE 1, EXP_LocationArea_load_XDate_3
 
 df_3=spark.sql("""SELECT LOCATION_ID AS LOCATION_ID,
 AREA_ID AS AREA_ID,
@@ -179,8 +179,8 @@ Monotonically_Increasing_Id AS Monotonically_Increasing_Id FROM null""")
 df_3.createOrReplaceTempView("EXP_LocationArea_load_XDate_3")
 
 # COMMAND ----------
-# DBTITLE 1, LOCATION_AREA
 
+# DBTITLE 1, LOCATION_AREA
 
 spark.sql("""INSERT INTO LOCATION_AREA SELECT LOCATION_ID AS LOCATION_ID,
 AREA_ID AS AREA_ID,

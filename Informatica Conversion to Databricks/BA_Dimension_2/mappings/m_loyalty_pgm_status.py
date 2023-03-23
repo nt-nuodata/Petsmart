@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, LOYALTY_PRE_0
 
+# DBTITLE 1, LOYALTY_PRE_0
 
 df_0=spark.sql("""
     SELECT
@@ -34,8 +34,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("LOYALTY_PRE_0")
 
 # COMMAND ----------
-# DBTITLE 1, CURRENCY_1
 
+# DBTITLE 1, CURRENCY_1
 
 df_1=spark.sql("""
     SELECT
@@ -55,8 +55,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("CURRENCY_1")
 
 # COMMAND ----------
-# DBTITLE 1, ASQ_Shortcut_To_LOYALTY_PRE_2
 
+# DBTITLE 1, ASQ_Shortcut_To_LOYALTY_PRE_2
 
 df_2=spark.sql("""
     SELECT
@@ -71,8 +71,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("ASQ_Shortcut_To_LOYALTY_PRE_2")
 
 # COMMAND ----------
-# DBTITLE 1, LOYALTY_PGM_STATUS
 
+# DBTITLE 1, LOYALTY_PGM_STATUS
 
 spark.sql("""INSERT INTO LOYALTY_PGM_STATUS SELECT LOYALTY_PGM_STATUS_ID AS LOYALTY_PGM_STATUS_ID,
 LOYALTY_PGM_STATUS_DESC AS LOYALTY_PGM_STATUS_DESC FROM ASQ_Shortcut_To_LOYALTY_PRE_2""")

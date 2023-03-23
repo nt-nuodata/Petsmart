@@ -11,8 +11,8 @@ spark.sql("set spark.sql.legacy.timeParserPolicy = LEGACY")
 
 
 # COMMAND ----------
-# DBTITLE 1, UDH_SITE_EAGLE_STATUS_0
 
+# DBTITLE 1, UDH_SITE_EAGLE_STATUS_0
 
 df_0=spark.sql("""
     SELECT
@@ -26,8 +26,8 @@ df_0=spark.sql("""
 df_0.createOrReplaceTempView("UDH_SITE_EAGLE_STATUS_0")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_UDH_SITE_EAGLE_STATUS_1
 
+# DBTITLE 1, SQ_Shortcut_to_UDH_SITE_EAGLE_STATUS_1
 
 df_1=spark.sql("""
     SELECT
@@ -41,8 +41,8 @@ df_1=spark.sql("""
 df_1.createOrReplaceTempView("SQ_Shortcut_to_UDH_SITE_EAGLE_STATUS_1")
 
 # COMMAND ----------
-# DBTITLE 1, LKP_SITE_PROFILE_2
 
+# DBTITLE 1, LKP_SITE_PROFILE_2
 
 df_2=spark.sql("""
     SELECT
@@ -61,8 +61,8 @@ df_2=spark.sql("""
 df_2.createOrReplaceTempView("LKP_SITE_PROFILE_2")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_EAGLE_STATUS_3
 
+# DBTITLE 1, SITE_EAGLE_STATUS_3
 
 df_3=spark.sql("""
     SELECT
@@ -77,8 +77,8 @@ df_3=spark.sql("""
 df_3.createOrReplaceTempView("SITE_EAGLE_STATUS_3")
 
 # COMMAND ----------
-# DBTITLE 1, SQ_Shortcut_to_SITE_EAGLE_STATUS_4
 
+# DBTITLE 1, SQ_Shortcut_to_SITE_EAGLE_STATUS_4
 
 df_4=spark.sql("""
     SELECT
@@ -93,8 +93,8 @@ df_4=spark.sql("""
 df_4.createOrReplaceTempView("SQ_Shortcut_to_SITE_EAGLE_STATUS_4")
 
 # COMMAND ----------
-# DBTITLE 1, JNR_LEFTOUTERJOIN_5
 
+# DBTITLE 1, JNR_LEFTOUTERJOIN_5
 
 df_5=spark.sql("""
     SELECT
@@ -115,8 +115,8 @@ df_5=spark.sql("""
 df_5.createOrReplaceTempView("JNR_LEFTOUTERJOIN_5")
 
 # COMMAND ----------
-# DBTITLE 1, EXP_STRATEGY_6
 
+# DBTITLE 1, EXP_STRATEGY_6
 
 df_6=spark.sql("""
     SELECT
@@ -134,8 +134,8 @@ df_6=spark.sql("""
 df_6.createOrReplaceTempView("EXP_STRATEGY_6")
 
 # COMMAND ----------
-# DBTITLE 1, FILT_EXISTING_RECORDS_7
 
+# DBTITLE 1, FILT_EXISTING_RECORDS_7
 
 df_7=spark.sql("""
     SELECT
@@ -153,8 +153,8 @@ df_7=spark.sql("""
 df_7.createOrReplaceTempView("FILT_EXISTING_RECORDS_7")
 
 # COMMAND ----------
-# DBTITLE 1, UPDTRANS_8
 
+# DBTITLE 1, UPDTRANS_8
 
 df_8=spark.sql("""
     SELECT
@@ -170,8 +170,8 @@ df_8=spark.sql("""
 df_8.createOrReplaceTempView("UPDTRANS_8")
 
 # COMMAND ----------
-# DBTITLE 1, SITE_EAGLE_STATUS
 
+# DBTITLE 1, SITE_EAGLE_STATUS
 
 spark.sql("""INSERT INTO SITE_EAGLE_STATUS SELECT NEW_LOCATION_ID AS LOCATION_ID,
 NEW_EAGLE_LEVEL AS EAGLE_LEVEL,
